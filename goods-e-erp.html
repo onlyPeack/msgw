@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电商ERP</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/nk7zqc7fbqo20s7fxdne.png");
+        }
+        /*H-sectionFourth*/
+        .section_fourth{
+            width: 100%;
+            text-align: center;
+            overflow: auto;
+            padding-top: 40px;
+        }
+        .section_fourth>h1{
+            padding-top: 6.51vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        .section_fourth>div{
+            width: 18.62%;
+            height: 160px;
+            float: left;
+            margin-left: 2.2vw;
+            margin-bottom: 60px;
+        }
+        .section_fourth img{
+            width: 3.33vw;
+            margin-bottom: 25px;
+        }
+        .section_fourth h2{
+            font-size: 1.14vw;
+            line-height: 40px;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+        }
+        .section_fourth h3{
+            font-size: 0.72vw;
+            color: #828282;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 10.46vw;
+        }
+        /*E-sectionFourth*/
+        /*H-article*/
+        article{
+            text-align: center;
+            height: 415px;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/nk6hv4q9v3sgwxxn2dke.png');
+            color: white;
+            background-repeat: no-repeat;
+        }
+        article h1{
+            padding-top: 100px;
+            font-size: 45px;
+            margin-bottom: 60px;
+            color: white;
+        }
+        article h3{
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        /*E-article*/
+        /*H-sectionFirst*/
+        .section_first{
+            height: 930px;
+            text-align: center;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/idkklt3di7354tqs1e14.png');
+        }
+        .section_first h1{
+            padding-top: 73px;
+            color: white;
+            font-size: 45px;
+            margin-bottom: 70px;
+        }
+        .section_first img{
+            width: 71.71%;
+        }
+        /*E-sectionFirst*/
+        /*H-sectionText*/
+        .section_text h1{
+            text-align: center;
+            font-size: 45px;
+            padding-top: 130px;
+            padding-bottom: 100px;
+        }
+        /*E-sectionText*/
+        /*H-sectionSecond*/
+        .section_second{
+            height: 33.69vw;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/rsmwe4ypn9mz2o0gusgx.png');
+            background-size: contain;
+        }
+        .section_second>.section_second_list{
+            width: 18.75vw;
+            cursor: pointer;
+            font-size: 1.25vw;
+            color: white;
+            text-align: center;
+            background-color: rgba(10,40,84,.95);
+            line-height: 5.2vw;
+            margin-left: 19.27%;
+            float: left;
+            transition: .5s;
+        }
+        .section_second_text h1{
+            color: white;
+        }
+        .section_second>.section_second_list>div{
+            height: 5.2vw;
+            border-bottom: 1px solid rgba(255,255,255,.2);
+            position: relative;
+            text-indent: 6.77vw;
+            text-align: left;
+        }
+        .section_second img{
+            width: 1.77vw;
+            position:absolute;
+            top: 40%;
+            left: 20%;
+        }
+        .section_second div .section_second_first{
+            background: #3688FE;
+            height: 7.34vw;
+            line-height: 7.34vw;
+        }
+        .section_second .section_second_text{
+            float: left;
+            height: 33.69vw;
+            color: white;
+            padding-left: 5.72vw;
+            display: none;
+        }
+        .section_second .section_second_text h1{
+            padding-top: 3.28vw;
+            font-size: 1.25vw;
+        }
+        .section_second .section_second_text h2{
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .text_show{
+            display: block!important;
+        }
+        /*E-sectionSecond*/
+        .T_footer{
+            margin-top: 180px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">工业电商的最佳选择</h1>
+            <button>立即咨询</button>
+        </div>
+    </header>
+    <section class="section_fourth">
+        <div class="section_fourth_first">
+            <img src="image/goods-e/quick.png" alt="">
+            <h2>快速</h2>
+            <h3>时间就是金钱</h3>
+            <h3>一建搭建理想商城</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/wd.png" alt="">
+            <h2>稳定</h2>
+            <h3>保障商城订单高峰期高速</h3>
+            <h3>运行，不漏单，不多单，不错单</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/zero-cb.png" alt="">
+            <h2>零成本</h2>
+            <h3>"零"成本搭建</h3>
+            <h3>属于自己的云商城</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/ms-more.png" alt="">
+            <h2>模式多</h2>
+            <h3>支持模式多</h3>
+            <h3>模板丰富</h3>
+        </div>
+    </section>
+    <article>
+        <h1>云电商是什么?</h1>
+        <h3>专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式</h3>
+        <h3>提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户</h3>
+        <h3>快速开启工业电子商务。</h3>
+    </article>
+    <section class="section_first">
+        <h1>我们的支持</h1>
+        <img src="image/goods-e/table-1.png" alt="">
+    </section>
+    <section class="section_text">
+        <h1>我们的功能</h1>
+    </section>
+    <section class="section_second">
+        <div class="section_second_list">
+           <div class="section_second_first tab_list" onmouseenter="tabClick(this,0)"><img src="image/goods-e/scgl.png" alt=""><span>商城管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,1)"><img src="image/goods-e/ddgl.png" alt=""><span>订单管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,2)"><img src="image/goods-e/kc.png" alt=""><span>库存管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,3)"><img src="image/goods-e/vip.png" alt=""><span>会员管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,4)"><img src="image/goods-e/fx.png" alt=""><span>店铺管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,5)"><img src="image/goods-e/gyl.png" alt=""><span>供应链管理</span></div>
+        </div>
+        <div class="section_second_text text_show">
+            <h1>SKU数据</h1>
+            <h2>数以亿计的SKU使您摆脱繁杂的商品准备工作</h2>
+            <h1>商城模板</h1>
+            <h2>丰富美观的商城模板使您的商城让客户感受到您的婀娜多姿</h2>
+            <h1>商品营销</h1>
+            <h2>多种营销方式增加客户的粘性，让您的客户流连忘返</h2>
+            <h1>短信关怀</h1>
+            <h2>各种各样的关怀模板让您的客户感受到您对他的热情与关怀</h2>
+            <h1>......</h1>
+        </div>
+        <div class="section_second_text ">
+            <h1>商城订单</h1>
+            <h2>可灵活配置审核白建商城的的订单，让您的订单听从您的指挥，降低错误率，提高工作效率</h2>
+            <h1>第三方订单</h1>
+            <h2>自动下载第三方平台订单，过滤异常订单，避免繁杂的多平台操作工作</h2>
+            <h1>商务订单</h1>
+            <h2>可通过手动创建订单，扩展企业的业务方式，多维度对公司商品进行销售</h2>
+        </div>
+        <div class="section_second_text ">
+            <h1>自有库存</h1>
+            <h2>运营商可以发布自己的线下库存到该平台上进行销售</h2>
+            <h1>云库存</h1>
+            <h2>运营商还可以通过多种方式对接其他平台的库存并展示在自建商城上面，</h2>
+            <h2>从而降低企业的库存成本，扩大企业的业务范围</h2>
+        </div>
+        <div class="section_second_text ">
+            <h1>新用户</h1>
+            <h2>系统提供给商城运营商多种商城工具对商城进行推广,比如商城二维码，商城海报，</h2>
+            <h2>友情链接等工具协助运营商开发新用户</h2>
+            <h1>潜在用户</h1>
+            <h2>系统对商城推广获取的且末下单客户定义为潜在客户，商城运营商可通过分析追溯</h2>
+            <h2>客户的喜好与目标，从而推动客户达成订单</h2>
+            <h1>维护老客户</h1>
+            <h2>商城下过单的客户为老客户，商场运营商可通过对老客户进行慰问关怀，送积分，送</h2>
+            <h2>礼品等多种维系客户的方式增加客户的粘性以及忠诚度</h2>
+            <h1>......</h1>
+        </div>
+        <div class="section_second_text ">
+            <h1>店铺商品上架</h1>
+            <h2>可通过后台对各个平台的店铺商品进行管理，如商品信息维护，商品上下架，商品价格调整</h2>
+            <h1>店铺订单下载</h1>
+            <h2>通过后台自动或者是手动下载各平台店铺的订单进行统一处理</h2>
+            <h1>物流信息</h1>
+            <h2>订单发货后统对各个平台的订单进行发货物流更新</h2>
+        </div>
+        <div class="section_second_text ">
+            <h1>采购计划</h1>
+            <h2>可利用已销售数据制定采购策略，达到精准采购</h2>
+            <h1>供应商比价</h1>
+            <h2>同一个商品支持多家比价，选择最优供应商，保障平台利润最大化</h2>
+            <h1>库存管理</h1>
+            <h2>在库库存，在途库存，坏货库存精细管理，保障前端作业的高效落实，精准发货</h2>
+            <h1>供应商考核</h1>
+            <h2>通过策略制定，筛选优质供应商，保障平台体系的安全性与稳定性</h2>
+        </div>
+    </section>
+    <section class="section_fourth">
+        <h1>我们的优势</h1>
+        <div class="section_fourth_first">
+            <img src="image/goods-e/login.png" alt="">
+            <h2>单点登录</h2>
+            <h3>多功能使用仅需要登录一次。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/mbgh.png" alt="">
+            <h2>模板更换</h2>
+            <h3>在线更换商城模板，多种模</h3>
+            <h3>板组合方式使您的商城更加丰富。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/pay.png" alt="">
+            <h2>支付</h2>
+            <h3>支持多种支付方式，微信，支付宝，</h3>
+            <h3>对公格账，承兑等，满足您的业务需求。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/yx.png" alt="">
+            <h2>营销</h2>
+            <h3>积分，优惠券，满减，秒杀，</h3>
+            <h3>满送等多种营销方式供您选择。</h3>
+        </div>
+    </section>
+    <section class="section_fourth">
+        <div class="section_fourth_first">
+            <img src="image/goods-e/sctg.png" alt="">
+            <h2>商城推广</h2>
+            <h3>友链，二维码，海报等多种方式</h3>
+            <h3>供您选择，全方位获取新客户。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/cp-data.png" alt="">
+            <h2>产品数据</h2>
+            <h3>数以亿计的产品数据供您选</h3>
+            <h3>择，助您摆脱海量数据整理的烦恼。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/kd-template.png" alt="">
+            <h2>快递模板</h2>
+            <h3>多家快递PAI对接，多种模板供您选择，</h3>
+            <h3>降低发货的复杂性以及物流信息更新的滞后性。</h3>
+        </div>
+        <div>
+            <img src="image/goods-e/cloud-kc.png" alt="">
+            <h2>云库存</h2>
+            <h3>减少重资产，摆脱财务风险，专注</h3>
+            <h3>于销售前端，让您的销售团队更加专注。</h3>
+        </div>
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+        nav.style.top=scrollTop+'px';
+    }
+    //选项卡特效
+    function tabClick(even,index){
+        let arr=document.getElementsByClassName("tab_list");
+        let textArr=document.getElementsByClassName('section_second_text')
+        for(let i=0;i<arr.length;i++){
+            arr[i].className='tab_list';
+            textArr[i].className='section_second_text';
+        }
+        even.setAttribute("class","section_second_first tab_list");
+        textArr[index].setAttribute('class','section_second_text text_show');
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+</script>
+</body>
+</html>

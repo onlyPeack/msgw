@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/2gsu6hywgejdn5uapfh1.png");
+        }
+        header .header_contain{
+            top: 270px;
+        }
+        /*H-article*/
+        article{
+            text-align: center;
+            height: 18.95vw;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/jxlvt8xhr4clz4qa09kc.png');
+            color: white;
+            background-repeat: no-repeat;
+        }
+        article h1{
+            padding-top: 5.2vw;
+            font-size: 2.34vw;
+            margin-bottom: 3.12vw;
+            color: white;
+        }
+        article h3{
+            font-size: 1.25vw;
+            font-weight: normal;
+            margin-bottom: 0.78vw;
+        }
+        /*E-article*/
+        /*H-sectionFourth*/
+        .section_fourth{
+            text-align: center;
+            overflow: auto;
+            overflow-y: hidden;
+            padding-top: 2.08vw;
+        }
+        .section_fourth>h1{
+            padding-top: 10.41vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        .section_fourth>div{
+            width: 22.11vw;
+            height: 8.33vw;
+            float: left;
+            margin-left: 1.2vw;
+            margin-bottom: 10.41vw;
+
+        }
+        .section_fourth img{
+            margin-bottom: 25px;
+
+        }
+        .section_fourth h2{
+            font-size: 1.14vw;
+            line-height: 50px;
+            color: #5a5a5a;
+
+        }
+        .section_fourth h3{
+            font-size: 0.72vw;
+            color: #828282;
+            height: 22px;
+            line-height: 22px;
+
+            font-weight: 400;
+        }
+        .section_fourth h2,.section_fourth h3{
+            border-right: 1px solid #e5e5e5;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 4.27vw;
+        }
+        .section_fourth_last h2,.section_fourth_last h3{
+            border: 0;
+        }
+        /*E-sectionFourth*/
+        /*H-footer*/
+        footer{
+            text-align: center;
+            color: white;
+            height: 45.41vw;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/1mbmbz8m5ayjslb6rt44.png');
+        }
+        footer>h1{
+            padding-top: 4.01vw;
+            font-size: 2.34vw;
+            color: white;
+        }
+        .footer_contain div{
+            width: 24.21vw;
+            height: 15.62vw;
+            float: left;
+        }
+        .footer_contain{
+            padding: 1.04vw 0 1.04vw 13.54vw;
+            margin-top: 5.2vw;
+            overflow: auto;
+        }
+        .footer_contain h1{
+            font-family: MicrosoftYaHeiLight;
+            font-size: 3.12vw;
+            padding-top: 3.12vw;
+            margin-bottom: 2.08vw;
+            font-weight: 400;
+            color: white;
+        }
+        .footer_contain h2{
+            font-size: 1.45vw;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 0.78vw;
+        }
+        .RB_border{
+            border-right: 1px solid #afccf1;
+            border-bottom: 1px solid #afccf1;
+        }
+        .B_border {
+            border-bottom: 1px solid #afccf1;
+        }
+        .R_border{
+            border-right: 1px solid #afccf1;
+        }
+        /*E-footer*/
+        /*H-trueFooter*/
+        .true_footer{
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        .true_footer h1{
+            font-size: 45px;
+            padding-top: 103px;
+            margin-bottom:  65px;
+        }
+        /*E-trueFooter*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">梅施科技　　　</h1>
+            <h2>　　　　　　一工业Saas软件服务商</h2>
+        </div>
+    </header>
+    <article>
+        <h1>公司简介</h1>
+        <h3>公司立足于工业软件服务领域，以帮助行业打造生态产业联盟为重要使命，用云平台打通上下游供应链集成，加强人才、资金、技术</h3>
+        <h3>和服务等资源集聚，并倾力打造面向行业saas云服务，包括ERP、MES、 CRM、WMS、电子商务等解决方案。</h3>
+    </article>
+    <section class="section_fourth">
+        <h1>企业文化</h1>
+        <div class="section_fourth_first">
+            <img src="image/about-us/customer-top.png" alt="">
+            <h2>客户至上</h2>
+            <h3>以客户为中心，我们对创新的解决方案积极</h3>
+            <h3>倾听、响应、最大限度地契合客户需求，把</h3>
+            <h3>握行业趋势，与您分享最佳的行业信息化实</h3>
+            <h3>践。</h3>
+        </div>
+        <div>
+            <img src="image/about-us/yrwb.png" alt="">
+            <h2>以人为本</h2>
+            <h3>以人为本，让员工发挥专长，以事为先，持续</h3>
+            <h3>驱动工作模板化与精细化，一切流程IT化，价</h3>
+            <h3>值量化考核，构建积极向上的文化。</h3>
+            <h3>　</h3>
+        </div>
+        <div>
+            <img src="image/about-us/cx.png" alt="">
+            <h2>鼓励创新</h2>
+            <h3>以TRIZ创新方法为引导，突破思维惯性，在不</h3>
+            <h3>断地思维发散与收敛过程中，探索有效的产品</h3>
+            <h3>创新和管理创新方法，解决概念多、落地难、</h3>
+            <h3>决策慢和成果少等问题。</h3>
+        </div>
+        <div class="section_fourth_last">
+            <img src="image/about-us/team-gz.png" alt="">
+            <h2>团队合作</h2>
+            <h3>我们的团队坚持践行梅花品质，做雪凌霜，以</h3>
+            <h3>不屈不挠地工匠精神，打造精品，施惠于人，</h3>
+            <h3>施报社会。</h3>
+        </div>
+    </section>
+    <footer>
+        <h1>亮点特色</h1>
+        <div class="footer_contain">
+            <div class="RB_border">
+                <h1>01</h1>
+                <h2>用户可及的价格</h2>
+            </div>
+            <div class="RB_border">
+                <h1>02</h1>
+                <h2>模块化集成</h2>
+                <h2>满足一切所需</h2>
+            </div>
+            <div class="B_border">
+                <h1>03</h1>
+                <h2>开箱即用</h2>
+                <h2>像积木一样组装拆卸</h2>
+            </div>
+            <div class="R_border">
+                <h1>04</h1>
+                <h2>专家服务，一路保航</h2>
+            </div>
+            <div class="R_border">
+                <h1>05</h1>
+                <h2>灵活可配置</h2>
+                <h2>满足企业的个性化需求</h2>
+            </div>
+            <div>
+                <h1>06</h1>
+                <h2>帮助企业</h2>
+                <h2>解决管理中的各种挑战</h2>
+            </div>
+        </div>
+    </footer>
+    <section class="true_footer">
+        <h1>联系我们</h1>
+        <img src="image/about-us/set-33.png" alt="">
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    //let h = document.documentElement.clientHeight || document.body.clientHeight;
+    //let header=document.getElementsByTagName('header')[0];
+    //header.style.height=h+'px';
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>

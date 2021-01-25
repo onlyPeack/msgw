@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品-ERP-1</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/gfi8i0fcv7vnfbfyiaf0.png");
+        }
+        /*H-sectionFourth*/
+        .section_fourth{
+            text-align: center;
+            overflow: auto;
+            font-family: MicrosoftYaHei;
+        }
+        .section_fourth>h1{
+            padding-top: 100px;
+            font-size: 45px;
+            margin-bottom: 130px;
+        }
+        .section_fourth>div{
+            width: 9.63%;
+            height: 160px;
+            float: left;
+            margin-left: 10.5%;
+            margin-bottom: 60px;
+        }
+        .section_fourth img{
+            margin-bottom: 25px;
+        }
+        .section_fourth h2{
+            font-size: 20px;
+            line-height: 40px;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 14.5%;
+        }
+        /*E-sectionFourth*/
+        /*H-sectionFirst*/
+        .section_first{
+            height: 47.08vw;
+            text-align: center;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/2s6hthx5xr9ugdcjkbv9.png');
+        }
+        .section_first h1{
+            padding-top: 3.8vw;
+            color: white;
+            font-size: 2.34vw;
+            margin-bottom: 3.12vw;
+        }
+        .section_first h2{
+            color: white;
+            font-size: 1.25vw;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+        .section_first img{
+            width: 55.57vw;
+            margin-top: 2.08vw;
+        }
+        /*E-sectionFirst*/
+        /*H-sectionSecond*/
+        .section_second{
+            margin-top: 100px;
+            padding-left: 18.75%;
+        }
+        .section_second_img{
+            width: 15.83vw;
+            float: left;
+            margin-right: 1.04vw;
+            cursor: pointer;
+            position: relative;
+        }
+        .section_second_img>img{
+            width: 100%;
+        }
+        .section_second_img:hover .ghostImg{
+            opacity: 1;
+        }
+        .ghostImg{
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15.83vw;
+        }
+        .section_second>img{
+            margin-top: 120px;
+            padding-bottom: 60px;
+        }
+        /*E-sectionSecond*/
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+            <div class="header_contain">
+                <h1 class="header_title">云进销存ERP</h1>
+                <h2>开启云端进销存管理软件新时代</h2>
+                <a href="http://erp.msebc.com/"><button>免费试用</button></a>
+            </div>
+    </header>
+    <section class="section_fourth">
+        <h1>梅施ERP</h1>
+        <div class="section_fourth_first">
+            <img src="image/goods-all-erp/xtbg.png" alt="">
+            <h2>协同办公</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/cggl.png" alt="">
+            <h2>采购管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/kcgl.png" alt="">
+            <h2>库存管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/xsgl.png" alt="">
+            <h2>销售管理</h2>
+        </div>
+    </section>
+    <section class="section_fourth">
+        <div class="section_fourth_first">
+            <img src="image/goods-all-erp/khgx.png" alt="">
+            <h2>客户关系管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/rlzy.png" alt="">
+            <h2>人力资源</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/cwgl.png" alt="">
+            <h2>财务管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/jcgl.png" alt="">
+            <h2>决策分析</h2>
+        </div>
+    </section>
+    <section class="section_fourth">
+        <div class="section_fourth_first">
+            <img src="image/goods-all-erp/jcsj.png" alt="">
+            <h2>基础数据</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/xtgl.png" alt="">
+            <h2>系统管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/zjgl.png" alt="">
+            <h2>资金管理</h2>
+        </div>
+        <div>
+            <img src="image/goods-all-erp/scgl.png" alt="">
+            <h2>生产管理</h2>
+        </div>
+    </section>
+    <section class="section_first">
+        <h1>功能架构</h1>
+        <h2>"梅施云ERP”是一款基于SaaS模式打造， 专业的企业信息管理应用系统，在极大降低客户硬件和IT成本的前提下，</h2>
+        <h2>保证产品具有极好的灵活性、可用性，基于阿米巴管理模式，为行业中小企业量身定制的简单易操作，轻便、精准的整体性解决方案。</h2>
+        <img src="image/goods-all-erp/table.png" alt="">
+    </section>
+    <section class="section_second">
+        <div class="section_second_img">
+            <img src="image/goods-all-erp/1-default.png" alt="">
+            <a href="goods-cloud-erp.html">
+            <img src="image/goods-all-erp/1.png" alt="" class="ghostImg">
+            </a>
+        </div>
+        <div class="section_second_img">
+            <img src="image/goods-all-erp/2-default.png" alt="">
+            <a href="goods-e-erp.html">
+            <img src="image/goods-all-erp/2.png" alt="" class="ghostImg"></a>
+        </div>
+        <div class="section_second_img">
+            <img src="image/goods-all-erp/3-default.png" alt="">
+            <img src="image/goods-all-erp/3.png" alt="" class="ghostImg">
+        </div>
+        <div class="section_second_img">
+            <img src="image/goods-all-erp/4-default.png" alt="">
+            <img src="image/goods-all-erp/4.png" alt="" class="ghostImg">
+        </div>
+        <img src="image/goods-all-erp/dbd.png" alt="" style="width: 82%">
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.top=scrollTop+'px';
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+</script>
+</body>
+</html>

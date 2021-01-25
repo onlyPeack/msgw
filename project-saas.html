@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工业SAAS协同服务</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/4l1nawk6vac0y2kzcjqs.png");
+            background-repeat: no-repeat;
+        }
+        /*H-sectionFourth*/
+        .section_fourth{
+            text-align: center;
+            overflow: auto;
+            overflow-y: hidden;
+            padding-top: 2.08vw;
+        }
+        .section_fourth>h1{
+            padding-top: 5.2vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        .section_fourth>div{
+            width: 21.11vw;
+            height: auto;
+            float: left;
+            margin-left: 2.34vw;
+            margin-bottom: 4.68vw;
+
+        }
+        .section_fourth img{
+            margin-bottom: 25px;
+
+        }
+        .section_fourth h2{
+            font-size: 22px;
+            line-height: 40px;
+            color: #5a5a5a;
+
+        }
+        .section_fourth h3{
+            font-size: 14px;
+            color: #828282;
+            height: 14px;
+            line-height: 14px;
+            padding-top: 10px;
+
+            font-weight: 400;
+        }
+        .section_fourth h2,.section_fourth h3{
+            border-right: 1px solid #e5e5e5;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 4.27vw;
+        }
+        /*E-sectionFourth*/
+        /*H-sectionFirst*/
+        .section_first{
+            height: 54.68vw;
+            text-align: center;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/gxytv1zi3ugmf654ovmm.png');
+        }
+        .section_first h1{
+            padding-top: 3.8vw;
+            color: white;
+            font-size: 2.34vw;
+            margin-bottom: 3.12vw;
+        }
+        .section_first h2{
+            color: white;
+            font-size: 1.25vw;
+            font-weight: 400;
+            margin-top: 0.78vw;
+        }
+        .section_first img{
+            width: 71.71vw;
+            margin-top: 30px;
+        }
+        /*E-sectionFirst*/
+        /*H-footer*/
+        footer h1{
+            text-align: center;
+            font-size: 45px;
+            padding-top: 120px;
+            margin-bottom: 130px;
+        }
+        footer img{
+            width: 61.45vw;
+            margin-left: 19.27vw;
+        }
+        footer{
+            margin-bottom: 13.54vw;
+        }
+        /*E-footer*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">工业Saas协同服务</h1>
+            <h2>面向工业电气及设备领域的专业化saas协同服务平台</h2>
+        </div>
+    </header>
+    <section class="section_fourth">
+        <h1>工业Saas协同服务</h1>
+        <div class="section_fourth_first">
+            <img src="image/project/project-saas/gnff.png" alt="">
+            <h2>功能丰富</h2>
+            <h3>覆盖生产、进销存、财务、客户、人事、办</h3>
+            <h3>公等管理，为中小企业用户提供开箱可重用</h3>
+            <h3>能力，支持多项增值服务按需定制。</h3>
+        </div>
+        <div>
+            <img src="image/project/project-saas/jgxj.png" alt="">
+            <h2>架构先进</h2>
+            <h3>基于“ 双中台”设计架构，订单处理速度更</h3>
+            <h3>快，实时驱动数据运算，智能辅助决策。</h3>
+        </div>
+        <div>
+            <img src="image/project/project-saas/msdb.png" alt="">
+            <h2>模式多变</h2>
+            <h3>践行十年阿米巴经营模式经验，流程驱动内</h3>
+            <h3>部交易实时结算。</h3>
+        </div>
+        <div>
+            <img src="image/project/project-saas/zzly.png" alt="">
+            <h2>专注领域</h2>
+            <h3>专注于电自动化相关领域，源于十多年经</h3>
+            <h3>验积累，为行业应用而长，灵活生长管理应</h3>
+            <h3>用，赋能企业快速升级。</h3>
+        </div>
+    </section>
+    <section class="section_first">
+        <h1>应用架构</h1>
+        <h2>集成ERP 电商、 WMS、 OA、 CRM等云应用，以及云财务、云合同、云人事、云发票等第三方应用，为行业用户</h2>
+        <h2>按需定制信息化服务，满足企业业务管理+营销+智能运营的需求，并打通与产业链平台的业务协同，共享库存、共享仓储、共享技术。</h2>
+        <img src="image/goods-e/table-1.png" alt="">
+    </section>
+    <footer>
+        <h1>我们能为您做什么</h1>
+        <img src="image/project/project-saas/ffys.png" alt="">
+    </footer>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>

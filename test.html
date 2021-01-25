@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/vue/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/ms-template-request.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="lib/lib/ms-template-manage.umd.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="lib/editor.md-master/lib/marked.min.js"></script>
+    <script src="lib/editor.md-master/lib/prettify.min.js"></script>
+    <script src="lib/editor.md-master/lib/raphael.min.js"></script>
+    <script src="lib/editor.md-master/lib/underscore.min.js"></script>
+    <script src="lib/editor.md-master/lib/sequence-diagram.min.js"></script>
+    <script src="lib/editor.md-master/lib/flowchart.min.js"></script>
+    <script src="lib/editor.md-master/lib/jquery.flowchart.min.js"></script>
+<!--    <script src="lib/editor.md-master/js/editormd.min.js"></script>-->
+    <script src="lib/editor.md-master/editormd.min.js"></script>
+
+
+    <link rel="stylesheet" href="lib/editor.md-master/css/editormd.css">
+    <link rel="stylesheet" href="lib/editor.md-master/css/editormd.logo.css">
+    <link rel="stylesheet" href="lib/editor.md-master/css/editormd.preview.css">
+
+
+
+    <link rel="stylesheet" href="lib/lib/ms-template-manage.css">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: "MFLangSong_Noncommercial";
+            /*src:
+            url('font/MFLangSong_Noncommercial-Regular.ttf') format('truetype');
+            font-weight: normal;*/
+            src: url('lib/editor.md-master/fonts/fontawesome-webfont.eot');
+            src: url('lib/editor.md-master/fonts/fontawesome-webfont.eot?#iehack') format('embedded-opentype'),
+            url('lib/editor.md-master/fonts/fontawesome-webfont.woff') format('woff'),
+            url('lib/editor.md-master/fonts/FontAwesome.otf'),
+            url('lib/editor.md-master/fonts/fontawesome-webfont.ttf') format('truetype');
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+<!--    <hj-banner ref="hjHead"></hj-banner>-->
+    <div id="test-editor">
+                            <textarea style="display:none;">### 关于 Editor.md
+
+                        **Editor.md** 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。
+                            </textarea>
+        <textarea class="editormd-html-textarea" name="$id-html-code"></textarea>
+
+    </div>
+    <el-button @click="getMyData"></el-button>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left',
+                editor:undefined,
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        method:{
+            getMyData(){
+                console.log(this.editor.getHTML(),'getHTMl')
+            }
+        },
+        mounted() {
+            //console.log(this.$refs['hjHead'].getModule(),'getmodule')
+            //let request=new MsTemplateRequest()
+           // request.getTenantId('192.168.1.144')
+
+            this.editor = editormd("test-editor", {
+                    // width  : "100%",
+                    // height : "100%",
+                    path   : "lib/editormd/lib/",
+                saveHTMLToTextarea : true
+                });
+            console.log(this.editor.getHTML(),'getHTMl')
+        }
+    })
+</script>
+</html>

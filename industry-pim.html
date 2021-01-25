@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行业赋能-PIM数据中台</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/avxkczpodkdqvtq7gywf.png");
+        }
+        header .header_contain{
+            top: 270px;
+        }
+        /*H-sectionCard*/
+        .section_card{
+            margin-bottom: 62px;
+        }
+        .section_card>h1{
+            text-align: center;
+            font-size: 2.34vw;
+            padding-top: 5.2vw;
+            margin-bottom: 5.2vw;
+        }
+        .section_card div {
+            text-align: center;
+            border: 0;
+        }
+
+        .section_card div img {
+            margin-top: 4.16vw;
+        }
+
+        .section_card div h1 {
+            margin-top: 29px;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .section_card div .el-col-3 {
+            width: 24.27vw !important;
+        }
+
+        .section_card .section_first .el-col-3 {
+            margin-left: 11.97vw;
+        }
+
+        .section_card div .el-col-3 {
+            margin-right: 35px;
+        }
+
+        .section_card div .el-col-3 .el-card__body {
+            height: 19.27vw !important;
+        }
+
+        .section_card div h3 {
+            font-weight: normal;
+            color: #AAAAAA;
+            padding: 0 30px;
+            line-height: 20px;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        /*E-sectionCard*/
+        /*H-article*/
+        article h1{
+            padding-top: 10.41vw;
+            font-size: 2.34vw;
+            text-align: center;
+            margin-bottom: 6.25vw;
+        }
+        /*E-article*/
+        /*H-sectionSecond*/
+        .section_second{
+            height: 31.25vw;
+            background-repeat: no-repeat;
+            color: white;
+            background-size: contain;
+            text-indent: 16.14vw;
+        }
+        .section_second h1{
+            padding-top: 13.02vw;
+            font-size: 1.25vw;
+            margin-bottom: 1.56vw;
+            font-weight: 400;
+            color: white;
+        }
+        .section_second h3{
+            font-size: 0.93vw;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .even{
+            color: #404040;
+            text-indent: 60.41vw;
+        }
+        .even h1{
+            color: #404040;
+        }
+        .even h3{
+            color: #404040;
+        }
+        /*E-sectionSecond*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">梅施PIM数据中台</h1>
+            <h2>赋能渠道，搭建上下游数据通途</h2>
+        </div>
+    </header>
+    <section class="section_card">
+        <h1>产品概述</h1>
+        <el-row>
+            <div class="section_first">
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/industry/industry-pim/mro.png">
+                        <h1>MRO主数据库</h1>
+                        <h3>统一治理MRO产品主数据库，保持与品牌</h3>
+                        <h3>商官网数据同步更新。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/industry/industry-pim/number.png">
+                        <h1>数字化资产管理</h1>
+                        <h3>赋能下游分销商，统一品牌商品主数据、图</h3>
+                        <h3>片数据和内容数据等资产管理。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/industry/industry-pim/zzfw.png">
+                        <h1>增值服务按需服务</h1>
+                        <h3>与各工业品线上销售渠道打通，实现商家快</h3>
+                        <h3>速开店经营，全渠道推送。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+        </el-row>
+    </section>
+    <article>
+        <h1>主要产品</h1>
+    </article>
+    <section class="section_second" style="background-image:url('image/industry/industry-pim/qjxx.png');">
+        <h1>器件选型</h1>
+        <h3>提供在线选型工具，为工控电气企业提供快速嵌入</h3>
+        <h3>官网/商城提供器件选型与替换解决方案。</h3>
+    </section>
+    <section class="section_second even" style="background-image:url('image/industry/industry-pim/gywk.png');">
+        <h1>工业文库</h1>
+        <h3>通过快速搜索在线帮助客户查找样本、操作手册、</h3>
+        <h3>面价、证书、视频等文档资料，打通微信分享。</h3>
+    </section>
+    <section class="section_second" style="background-image:url('image/industry/industry-pim/3.png');">
+        <h1>MRO营销通</h1>
+        <h3>帮助企业开发MRO营销APP，支持产品WEB 3D在</h3>
+        <h3>线展示解决方案，打通线上线下信息。</h3>
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    //let h = document.documentElement.clientHeight || document.body.clientHeight;
+    //let header=document.getElementsByTagName('header')[0];
+    //header.style.height=h+'px';
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>

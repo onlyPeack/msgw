@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行业赋能-工业智库</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/07fjqah66ln3m0x74c3u.png");
+        }
+        header .header_contain{
+            top: 270px;
+        }
+        /*H-article*/
+        article{
+            text-align: center;
+            height: 415px;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/rg5sw9fdkkchodc3sli2.png');
+            color: white;
+            background-repeat: no-repeat;
+        }
+        article h1{
+            padding-top: 100px;
+            font-size: 45px;
+            color: white;
+            margin-bottom: 60px;
+        }
+        article h3{
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        /*E-article*/
+        /*H-sectionImg*/
+        .section_img{
+            padding-top: 60px;
+            text-align: center;
+        }
+        /*E-sectionImg*/
+        /*H-sectionFourth*/
+        .section_fourth{
+            text-align: center;
+            overflow: auto;
+            overflow-y: hidden;
+            padding-top: 40px;
+        }
+        .section_fourth>h1{
+            padding-top: 10.41vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        .section_fourth>div{
+            width: 21.5vw;
+            height: 160px;
+            float: left;
+            margin-left: 2.2vw;
+            margin-bottom: 200px;
+
+        }
+        .section_fourth img{
+            width: 4.16vw;
+            margin-bottom: 25px;
+
+        }
+        .section_fourth h2{
+            font-size: 1.14vw;
+            line-height: 40px;
+            color: #5a5a5a;
+
+        }
+        .section_fourth h3{
+            font-size: 0.83vw;
+            color: #828282;
+            height: 22px;
+            line-height: 22px;
+
+            font-weight: 400;
+            padding-top: 10px;
+        }
+        .section_fourth h2,.section_fourth h3{
+            border-right: 1px solid #e5e5e5;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 4.27vw;
+        }
+        .section_fourth_last h2,.section_fourth_last h3{
+            border: 0;
+        }
+        /*E-sectionFourth*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+            <div class="header_contain">
+                <h1 class="header_title">梅施工业智库</h1>
+                <h2>专业知识收储池，数字化工业社区</h2>
+            </div>
+    </header>
+    <article>
+        <h1>梅施-工业智库</h1>
+        <h3>集成品牌、产品库、工业文库、人脉、二手设备、众包服务等共享服务平台，帮助用户建设数字</h3>
+        <h3>化营销工具，通过用户提供的产品能力数据和服务能力数据，使用大数据+ AI技术帮助用户推广</h3>
+        <h3>产品和服务，并完成需求对接。</h3>
+    </article>
+    <section class="section_img">
+        <img src="http://gxcl-shop.qiniu.520mro.com/hlge96bvyo7rq9jprtak.png" alt="">
+    </section>
+    <section class="section_fourth">
+        <h1>我们的优势</h1>
+        <div class="section_fourth_first">
+            <img src="image/industry/industry-wit/hyff.png" alt="">
+            <h2>行业SKU丰富</h2>
+            <h3>涉及产品与技术门类丰富，从工厂配电到自</h3>
+            <h3>动化一站式收集。</h3>
+        </div>
+        <div>
+            <img src="image/industry/industry-wit/xqpd.png" alt="">
+            <h2>需求配对</h2>
+            <h3>会员企业免费发布需求，撮合交易。</h3>
+            <h3>　</h3>
+        </div>
+        <div>
+            <img src="image/industry/industry-wit/xzmm.png" alt="">
+            <h2>闲置器件买卖</h2>
+            <h3>提供二手设备交易服务。</h3>
+            <h3>　</h3>
+        </div>
+        <div class="section_fourth_last">
+            <img src="image/industry/industry-wit/sjpp.png" alt="">
+            <h2>商机匹配</h2>
+            <h3>支持企业匹配商机。</h3>
+            <h3>　</h3>
+        </div>
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    //let h = document.documentElement.clientHeight || document.body.clientHeight;
+    //let header=document.getElementsByTagName('header')[0];
+    //header.style.height=h+'px';
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>

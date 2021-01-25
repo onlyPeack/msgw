@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决方案-制造</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/mcgeiabu2tpu6tyvtiyk.png");
+
+        }
+        /*H-sectionFirst*/
+        .section_first{
+            margin-bottom: 75px;
+            overflow: auto;
+        }
+        .section_first h1{
+            text-align: center;
+            font-size: 2.34vw;
+            padding-top: 3.38vw;
+            margin-bottom: 3.9vw;
+        }
+        .section_first_img{
+            width: 9.63vw;
+            height: 32.6vw;
+            text-align: center;
+            color: white;
+            float: left;
+            background-repeat: no-repeat;
+            margin-right: 3px;
+        }
+        .section_first_img h2{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .section_first_first{
+            margin-left: 11.04vw;
+        }
+        .section_first_img h2:first-child{
+            padding-top: 14.06vw;
+        }
+        /*E-sectionFirst*/
+        /*H-article*/
+        article{
+            text-align: center;
+            height: 240px;
+            background-image: url('image/project/project-make/picture-1.png');
+            color: white;
+            background-repeat: no-repeat;
+        }
+        article h1{
+            padding-top: 100px;
+            font-size: 45px;
+            color: white;
+            margin-bottom: 60px;
+        }
+        /*E-article*/
+        /*H-sectionSecond*/
+        .section_second{
+            height: 26.66vw;
+            background-repeat: no-repeat;
+            color: white;
+            background-size: contain;
+            text-indent: 12.5vw;
+        }
+        .section_second h1{
+            padding-top: 5.2vw;
+            font-size: 1.66vw;
+            color: white;
+            margin-bottom: 2.6vw;
+        }
+        .section_second img{
+            width: 39.75vw;
+            margin-left: 12.5vw;
+        }
+        .even{
+            color: black;
+            text-indent: 46.87vw;
+        }
+        .even>img{
+            width: 40vw;
+            margin-left: 46.87vw;
+        }
+        .even>h1{
+            color: #404040;
+        }
+        /*E-sectionSecond*/
+        /*H-footer*/
+        footer{
+            text-align: center;
+            overflow: auto;
+        }
+        footer>h1{
+            padding-top: 9.11vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        footer>div{
+            width: 7.81vw;
+            height: 160px;
+            float: left;
+            margin-left: 5.72vw;
+            margin-bottom: 9.89vw;
+        }
+        footer img{
+            width: 3.64vw;
+            margin-bottom: 25px;
+        }
+        footer h2{
+            font-size: 1.25vw;
+            line-height: 40px;
+            color: #404040;
+        }
+        .footer_first{
+            margin-left: 18.75vw;
+        }
+        /*E-footer*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">梅施生产制造ERP (M-ERP)</h1>
+            <h2>打造生产全程信息化、 体化管理， 工业领域最佳应用，</h2>
+            <h2>解决企业成本高，效率低，过程不透明等问题</h2>
+        </div>
+    </header>
+    <section class="section_first">
+        <h1>企业制造面临了哪些问题?</h1>
+        <div class="section_first_img section_first_first" style="background-image: url('image/project/project-make/xmcb.png');">
+            <h2>项目成本</h2>
+            <h2>难管控</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/sczl.png');">
+            <h2>生产资料</h2>
+            <h2>不可控</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/scwl.png');">
+            <h2>生产物料</h2>
+            <h2>需求不准确</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/scry.png');">
+            <h2>生产人员</h2>
+            <h2>绩效考核难</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/jspx.png');">
+            <h2>生产人员</h2>
+            <h2>技术难培训</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/data-collect.png');">
+            <h2>生产过程</h2>
+            <h2>数据难收集</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/no-opacity.png');">
+            <h2>生产过程</h2>
+            <h2>不透明</h2>
+        </div>
+        <div class="section_first_img" style="background-image: url('image/project/project-make/jhfz.png');">
+            <h2>生产计划</h2>
+            <h2>复杂</h2>
+        </div>
+    </section>
+    <article>
+        <h1>M- ERP能帮我做什么?</h1>
+    </article>
+    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-1.png');">
+        <h1>生产一体化，信息化</h1>
+        <img src="image/project/project-make/xxh.png" alt="">
+    </section>
+    <section class="section_second even" style="background-image:url('image/project/project-make/other-picture-2.png');">
+        <h1>生产进度实时跟踪</h1>
+        <img src="image/project/project-make/scjd.png" alt="">
+    </section>
+    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-3.png');">
+        <h1>灵活敏捷生产</h1>
+        <img src="image/project/project-make/lhsc.png" alt="">
+    </section>
+    <section class="section_second even" style="background-image:url('image/project/project-make/other-picture-4.png');">
+        <h1>成本核算</h1>
+        <img src="image/project/project-make/cghs.png" alt="">
+    </section>
+    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-5.png');">
+        <h1>员工培训</h1>
+        <img src="image/project/project-make/ygpx.png" alt="">
+    </section>
+    <footer>
+        <h1>M-ERP优势</h1>
+        <div class="footer_first">
+            <img src="image/project/project-make/bj.png" alt="">
+            <h2>简单便捷</h2>
+        </div>
+        <div>
+            <img src="image/project/project-make/kk.png" alt="">
+            <h2>安全可靠</h2>
+        </div>
+        <div>
+            <img src="image/project/project-make/ss.png" alt="">
+            <h2>快速实施</h2>
+        </div>
+        <div>
+            <img src="image/project/project-make/height-expand.png" alt="">
+            <h2>高度拓展</h2>
+        </div>
+        <div>
+            <img src="image/project/project-make/js-support.png" alt="">
+            <h2>1对1技术支持</h2>
+        </div>
+    </footer>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>

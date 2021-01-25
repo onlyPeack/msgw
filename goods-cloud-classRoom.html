@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云课堂</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/ovbmqe2w42702lcn5scn.png");
+        }
+        /*H-sectionCard*/
+        .section_card{
+            margin-bottom: 3.22vw;
+        }
+        .section_card>h1{
+            text-align: center;
+            font-size: 2.34vw;
+            padding-top: 5.2vw;
+            margin-bottom: 5.2vw;
+        }
+        .section_card div {
+            text-align: center;
+            border: 0;
+        }
+
+        .section_card div img {
+            margin-top: 4.16vw;
+        }
+
+        .section_card div h1 {
+            margin-top: 29px;
+            font-size: 1.25vw;
+            margin-bottom: 44px;
+        }
+
+        .section_card div .el-col-3 {
+            width: 24.27% !important;
+            height: 356px !important;
+        }
+
+        .section_card .section_first .el-col-3 {
+            margin-left: 11.97%;
+        }
+
+        .section_card div .el-col-3 {
+            margin-right: 1.82vw;
+        }
+
+        .section_card div .el-col-3 .el-card__body {
+            height: 19.27vw !important;
+        }
+
+        .section_card div h3 {
+            font-weight: normal;
+            color: #AAAAAA;
+            padding: 0 30px;
+            line-height: 20px;
+            font-size: 0.83vw;
+            margin-bottom: 10px;
+        }
+        /*E-sectionCard*/
+        /*H-sectionThird*/
+        .section_third{
+            height: 45.67vw;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/mvpyu2sywf5bsrjv8303.png');
+            color: white;
+            margin-top: 6.77vw;
+        }
+        .section_third h1{
+            text-align: center;
+            font-size: 2.34vw;
+            padding-top: 4.68vw;
+            color: white;
+        }
+        .section_third_text{
+            margin-bottom: 30px;
+        }
+        .section_third_contain{
+            width: 35.11%;
+            margin-top: 10.41vw;
+            margin-left: 13.84%;
+            display: inline-block;
+        }
+        .section_third .section_third_text .section_third_text_title{
+            font-size: 1.25vw;
+            display: inline-block;
+            border-right: 2px solid white;
+            width: 20.62%;
+            height: 24px;
+            padding-left: 1.38%;
+            vertical-align: revert;
+            margin-right: 2.38%;
+        }
+        .section_third .section_third_text .section_third_text_text{
+            font-size: 0.93vw;
+            height: 24px;
+            line-height: 24px;
+        }
+        .section_third>img{
+            position: relative;
+            top: 15px;
+            margin-left: 50px;
+            width: 34.94vw;
+        }
+        /*E-sectionThird*/
+        /*H-sectionFourth*/
+        .section_fourth{
+            text-align: center;
+            overflow: auto;
+            overflow-y: hidden;
+            padding-top: 40px;
+        }
+        .section_fourth>h1{
+            padding-top: 100px;
+            font-size: 45px;
+            margin-bottom: 130px;
+        }
+        .section_fourth>div{
+            width: 23.11%;
+            height: 160px;
+            float: left;
+            margin-bottom: 200px;
+
+        }
+        .section_fourth img{
+            margin-bottom: 25px;
+        }
+        .section_fourth h2{
+            font-size: 22px;
+            line-height: 40px;
+            color: #5a5a5a;
+
+        }
+        .section_fourth h3{
+            font-size: 0.83vw;
+            color: #828282;
+            height: 22px;
+            line-height: 22px;
+            padding-top: 10px;
+
+            font-weight: 400;
+        }
+        .section_fourth h2,.section_fourth h3{
+            border-right: 1px solid #e5e5e5;
+        }
+        .section_fourth .section_fourth_first{
+            margin-left: 4.2%;
+        }
+        /*E-sectionFourth*/
+        /*H-article*/
+        article{
+            text-align: center;
+            color: white;
+            height: 93.06vh;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/6m5z6uifehngyn1bvrkb.png');
+        }
+        article>h1{
+            padding-top: 8.21vh;
+            font-size: 2.34vw;
+            color: white;
+        }
+        .article_contain div{
+            width: 24.21%;
+            height: 32.01vh;
+            float: left;
+        }
+        .article_contain{
+            padding: 0 20px;
+            margin-top: 5.2vw;
+        }
+        .article_contain h1{
+            font-family: MicrosoftYaHeiLight;
+            font-size: 3.12vw;
+            padding-top: 60px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            color: white;
+        }
+        .article_contain h2{
+            font-size: 1.45vw;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .RB_border{
+            border-right: 1px solid #afccf1;
+            border-bottom: 1px solid #afccf1;
+        }
+        .B_border {
+            border-bottom: 1px solid #afccf1;
+        }
+        .R_border{
+            border-right: 1px solid #afccf1;
+        }
+        /*E-article*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">梅施-工控云课堂</h1>
+            <h2>快速搭建你的自动化技术学院，自动化企业培训，一站式搞定</h2>
+            <h2>搭系统、找课程、排考试、约讲师、管数据</h2>
+            <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>
+        </div>
+    </header>
+    <section class="section_card">
+        <h1>学员端</h1>
+        <el-row>
+            <div class="section_first">
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/kc.png">
+                        <h1>课程学习</h1>
+                        <h3>丰富的自动化产品技术视频课程库，支持学</h3>
+                        <h3>员反复学习。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/test.png">
+                        <h1>考试练习</h1>
+                        <h3>丰富的产品技术在线题库，支持在线练习与</h3>
+                        <h3>岗位考试。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/zs.png">
+                        <h1>知识分享</h1>
+                        <h3>构筑公司知识库，发现知识地图。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+        </el-row>
+    </section>
+    <section class="section_card">
+        <el-row>
+            <div class="section_first">
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/study.png">
+                        <h1>学习轨迹</h1>
+                        <h3>展现员工的学习成长轨迹，如学习时长与考</h3>
+                        <h3>试成绩。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/yd.png">
+                        <h1>移动学习</h1>
+                        <h3>支持移动APP学习。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+            <div>
+                <el-col :span="3">
+                    <el-card shadow="hover">
+                        <img src="image/goods-cloud-classRoom/qw.png">
+                        <h1>趣味学习</h1>
+                        <h3>根据岗位学习地图，实现员工晋级与持续</h3>
+                        <h3>成长。</h3>
+                    </el-card>
+                </el-col>
+            </div>
+        </el-row>
+    </section>
+    <section class="section_third">
+        <h1>管理端</h1>
+        <div class="section_third_contain">
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/1.png" alt="">
+                <span class="section_third_text_title">员工管理</span>
+                <span class="section_third_text_text">支持批量导入员工，支持多种角色定义与灵活权限分配</span>
+            </div>
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/2.png" alt="">
+                <span class="section_third_text_title">课程上传</span>
+                <span class="section_third_text_text">快速上传视频课程，兼容多种文件格式，支持公共库下载</span>
+            </div>
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/3.png" alt="">
+                <span class="section_third_text_title">题库管理</span>
+                <span class="section_third_text_text">丰富的自动化产品技术题库支持，多知识点协同</span>
+            </div>
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/4.png" alt="">
+                <span class="section_third_text_title">智能组卷</span>
+                <span class="section_third_text_text">根据标签智能组卷,一键发布考试</span>
+            </div>
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/1.png" alt="">
+                <span class="section_third_text_title">消息推送</span>
+                <span class="section_third_text_text">通过后台自动推送消息</span>
+            </div>
+            <div class="section_third_text">
+                <img src="image/goods-cloud-classRoom/2.png" alt="">
+                <span class="section_third_text_title">统计管理</span>
+                <span class="section_third_text_text">支持多维度数据统计分析</span>
+            </div>
+        </div>
+        <img src="image/goods-cloud-classRoom/computer.png" alt="">
+    </section>
+    <section class="section_fourth">
+        <h1>技术服务优势</h1>
+        <div class="section_fourth_first">
+            <img src="image/goods-cloud-classRoom/bs.png" alt="">
+            <h2>灵活部署</h2>
+            <h3>支持saas部署低成本接入平台;也支持企业</h3>
+            <h3>私有化部署，专属带宽。</h3>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/more-app.png" alt="">
+            <h2>多端应用</h2>
+            <h3>支持PC、APP、 微信等多端应用，千万级用</h3>
+            <h3>户同时上线。</h3>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/exploit.png" alt="">
+            <h2>定制开发</h2>
+            <h3>可量身定制二次开发，模块化支撑，快速上线。</h3>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/iteration.png" alt="">
+            <h2>迭代发展</h2>
+            <h3>将逐步增加积分商城、学习社区、人才测评</h3>
+            <h3>等模块，并与云ERP无缝打通。</h3>
+        </div>
+    </section>
+    <article>
+        <h1>亮点特色</h1>
+        <div class="article_contain">
+            <div class="RB_border">
+                <h1>01</h1>
+                <h2>低成本打造您的专属学院</h2>
+            </div>
+            <div class="RB_border">
+                <h1>02</h1>
+                <h2>支持移动学习与考试</h2>
+            </div>
+            <div class="RB_border">
+                <h1>03</h1>
+                <h2>多岗位针对性学习</h2>
+            </div>
+            <div class="B_border">
+                <h1>04</h1>
+                <h2>碎片化学习缓解工学矛盾</h2>
+            </div>
+            <div class="R_border">
+                <h1>05</h1>
+                <h2>培训成本低课程可反复学习</h2>
+            </div>
+            <div class="R_border">
+                <h1>06</h1>
+                <h2>提升业务技能，</h2>
+                <h2>解决中小企业培训落地困难</h2>
+            </div>
+            <div class="R_border">
+                <h1>07</h1>
+                <h2>统计员工学习数</h2>
+                <h2>据，了解员工成长进度</h2>
+            </div>
+            <div>
+                <h1>08</h1>
+                <h2>丰富在线公共</h2>
+                <h2>课程与专业题库资源</h2>
+            </div>
+        </div>
+    </article>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.top=scrollTop+'px';
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电商ERP一体化</title>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="lib/element-ui/index.css">
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <script src="lib/element-ui/index.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/t7vixnhmognc0g865nhy.png");
+        }
+        /*H-article*/
+        article{
+            text-align: center;
+            height: 415px;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/fpty733u7btwenaxzrci.png');
+            color: white;
+            background-repeat: no-repeat;
+        }
+        article h1{
+            padding-top: 100px;
+            font-size: 45px;
+            margin-bottom: 60px;
+            color: white;
+        }
+        article h3{
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        /*E-article*/
+        /*H-sectionFirst*/
+        .section_first{
+            height: 59.89vw;
+            text-align: center;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/hdomfobw4ff25ceedu62.png');
+        }
+        .section_first h1{
+            padding-top: 4.42vw;
+            color: white;
+            font-size: 2.34vw;
+            margin-bottom: 3.9vw;
+        }
+        .section_first img{
+            width: 72.7vw;
+        }
+        /*E-sectionFirst*/
+        /*H-sectionSecond*/
+        .section_second{
+            height:56.92vw ;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/z0ajai3imlhsdxq7ndgo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .section_second h1{
+            color: white;
+            text-align: center;
+            font-size: 2.34vw;
+            padding-top: 3.9vw;
+        }
+        /*E-sectionSecond*/
+        /*H-footer*/
+        footer{
+            text-align: center;
+            overflow: auto;
+        }
+        footer>h1{
+            padding-top: 7.81vw;
+            font-size: 2.34vw;
+            margin-bottom: 6.77vw;
+        }
+        footer>div{
+            width: 14.58vw;
+            height: 160px;
+            float: left;
+            margin-left: 10.41vw;
+            margin-bottom: 190px;
+        }
+        footer img{
+            width: 3.64vw;
+            margin-bottom: 25px;
+        }
+        footer h2{
+            font-size: 1.25vw;
+            line-height: 40px;
+            color: #5a5a5a;
+            margin-bottom: 15px;
+        }
+        footer h3{
+            color: #5b5b5b;
+            font-size: 0.93vw;
+            font-weight: 400;
+        }
+        .footer_first{
+            margin-left: 18.75vw;
+
+        }
+        /*E-footer*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+            <div class="header_contain">
+                <h1 class="header_title">梅施云商+</h1>
+                <h2>部署快上手快业务处理快</h2>
+                <h2>Saas商城全渠道营销订单库存统一管理</h2>
+            </div>
+    </header>
+    <article>
+        <h1>梅施云商+</h1>
+        <h3>专业面向工业品服务的电子商务解决方案，为企业的数字化转型提供动态和持续的支撑，不仅帮助企业官方商城、</h3>
+        <h3>微商城等提供工业电商全渠道营销场景，且提供高效的OMS业务中台，实现高效订单处理和云仓储协同，</h3>
+        <h3>并面向第三方仓储、物流、技术服务、第三方支付等开放API接口，与梅施ERP系统高效协同集成。</h3>
+    </article>
+    <section class="section_first">
+        <h1>应用架构图</h1>
+        <img src="image/project/porject-erp/app-jg.png" alt="">
+    </section>
+    <section class="section_second">
+        <h1>服务体系</h1>
+    </section>
+    <footer>
+        <h1>标准ERP优势</h1>
+        <div class="footer_first">
+            <img src="image/project/porject-erp/dcjzc.png" alt="">
+            <h2>多场景支持</h2>
+            <h3>多种业务场景支持已运用至各行业</h3>
+        </div>
+        <div>
+            <img src="image/project/porject-erp/xjwfw.png" alt="">
+            <h2>先进微服务架构</h2>
+            <h3>企业级一体化全渠道业务系统框架</h3>
+        </div>
+        <div>
+            <img src="image/project/porject-erp/xjfw.png" alt="">
+            <h2>优质服务体系</h2>
+            <h3>伴随企业发展变化，持续提供支撑</h3>
+        </div>
+    </footer>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+    window.onscroll = function () {
+        let nav=document.getElementsByClassName("nav")[0];
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
+    }
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        }
+    })
+</script>
+</body>
+</html>
