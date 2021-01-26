@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>电商ERP</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="lib/element-ui/index.css">
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
     <!--    支持promise语法-->
     <script src="js/browser-polyfill.min.js"></script>
     <script src="lib/vue/vue.js"></script>
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
-    <script src="lib/element-ui/index.js"></script>
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <script src="lib/element-ui/lib/index.js"></script>
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/nk7zqc7fbqo20s7fxdne.png");
@@ -55,6 +59,46 @@
             margin-left: 10.46vw;
         }
         /*E-sectionFourth*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone{
+            padding:30px 0;
+        }
+        .section_fourth_Phone>div{
+
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            width: 94%;
+            margin: 0 auto;
+        }
+        .section_fourth_Phone>div>div{
+            padding: 0 30px;
+            height: 115px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .section_fourth_Phone>div>div>div{
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 12px;
+            max-width: 77%;
+        }
+        .section_fourth_Phone>div>div>div h2{
+            color: #404040;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone>div>div>div h3{
+            color: #5B5B5B;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .line_between{
+            height: 2px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionFourthPhone*/
         /*H-article*/
         article{
             text-align: center;
@@ -74,6 +118,23 @@
             font-weight: normal;
             margin-bottom: 15px;
         }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 334px;
+            }
+            article h1{
+                padding-top: 50px;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            article p{
+                font-size: 16px;
+                text-align: left;
+                width: 80%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
+        }
         /*E-article*/
         /*H-sectionFirst*/
         .section_first{
@@ -90,6 +151,35 @@
         .section_first img{
             width: 71.71%;
         }
+        @media screen and (max-width: 768px) {
+            .section_first{
+                height: 50vh;
+                background-size: cover;
+                background-position: center;
+            }
+            .section_first h1{
+                padding-top: 9.8vw;
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+            .section_first p{
+                font-size: 13pt;
+                color: white;
+                line-height: 30px;
+                margin-top: 20px;
+                padding: 0 13px;
+                text-align: left;
+            }
+            .section_first img{
+                width: 94%;
+            }
+            .section_first .blow-up{
+                color: white;
+                margin-top: 30px;
+                font-size: 12pt;
+            }
+        }
+
         /*E-sectionFirst*/
         /*H-sectionText*/
         .section_text h1{
@@ -97,6 +187,13 @@
             font-size: 45px;
             padding-top: 130px;
             padding-bottom: 100px;
+        }
+        @media screen and (max-width: 768px) {
+            .section_text h1{
+                font-size: 32px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
         }
         /*E-sectionText*/
         /*H-sectionSecond*/
@@ -158,6 +255,87 @@
             display: block!important;
         }
         /*E-sectionSecond*/
+        /*H-sectionSecondPhone*/
+        .section_second_Phone{
+            font-family: Microsoft YaHei;
+        }
+        .section_second_Phone>div{
+            width: 94%;
+            margin: 0 auto 35px auto;
+        }
+        .section_second_Phone>div>img{
+            width: 30px;
+            vertical-align: top;
+        }
+        .section_second_Phone>div>span{
+            color: #3688FE;
+            font-size: 22px;
+        }
+        .section_second_Phone>div>div{
+            width: 88%;
+            border: 2px solid #D4D4D4;
+            margin-top: 15px;
+            padding: 20px;
+        }
+        .section_second_Phone>div>div>h2{
+            color: #5a5a5a;
+            margin-bottom: 10px;
+            font-weight: bolder;
+        }
+        .section_second_Phone>div>div>span{
+            color: #5a5a5a;
+            margin-bottom: 20px;
+            display: inline-block;
+            line-height: 18px;
+        }
+        /*E-sectionSecondPhone*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+        }
+        .section_us_advantage h1{
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 165px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: #5A5A5A;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .section_us_advantage>div>div>h3{
+            color: #828282;
+            font-weight: normal;
+            text-align: left;
+            line-height: 18px;
+            padding: 0 10px;
+        }
+        .section_us_advantage .line_between{
+            margin-bottom: 25px;
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 100%;
+            top: 0;
+            left: 50vw;
+        }
+        /*E-sectionUsAdvantage*/
         .T_footer{
             margin-top: 180px;
         }
@@ -172,7 +350,7 @@
             <button>立即咨询</button>
         </div>
     </header>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <div class="section_fourth_first">
             <img src="image/goods-e/quick.png" alt="">
             <h2>快速</h2>
@@ -198,27 +376,68 @@
             <h3>模板丰富</h3>
         </div>
     </section>
+    <section class="section_fourth_Phone Phone">
+        <div>
+            <div>
+                <img src="image/goods-e/quick.png" alt="">
+                <div>
+                    <h2>快速</h2>
+                    <h3>时间就是金钱一建搭建理想商城</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-e/wd.png" alt="">
+                <div>
+                    <h2>稳定</h2>
+                    <h3>保障商城订单高峰期高速运行，不漏单，不多单，不错单</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-e/zero-cb.png" alt="">
+                <div>
+                    <h2>零成本</h2>
+                    <h3>"零"成本搭建属于自己的云商城</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-e/ms-more.png" alt="">
+                <div>
+                    <h2>模式多</h2>
+                    <h3>支持模式多模板丰富</h3>
+                </div>
+            </div>
+        </div>
+    </section>
     <article>
         <h1>云电商是什么?</h1>
-        <h3>专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式</h3>
-        <h3>提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户</h3>
-        <h3>快速开启工业电子商务。</h3>
+        <h3 class="PC">专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式</h3>
+        <h3 class="PC">提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户</h3>
+        <h3 class="PC">快速开启工业电子商务。</h3>
+        <p class="Phone">
+            专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户快速开启工业电子商务。
+        </p>
     </article>
     <section class="section_first">
         <h1>我们的支持</h1>
         <img src="image/goods-e/table-1.png" alt="">
+        <div class="Phone blow-up" @click="blowUp('image/goods-e/table-1.png')">
+            <span style="margin-right: 10px;">点击查看大图</span><i class="el-icon-zoom-in"></i>
+        </div>
     </section>
     <section class="section_text">
         <h1>我们的功能</h1>
     </section>
-    <section class="section_second">
+    <section class="section_second PC">
         <div class="section_second_list">
-           <div class="section_second_first tab_list" onmouseenter="tabClick(this,0)"><img src="image/goods-e/scgl.png" alt=""><span>商城管理</span></div>
-           <div class="tab_list" onmouseenter="tabClick(this,1)"><img src="image/goods-e/ddgl.png" alt=""><span>订单管理</span></div>
-           <div class="tab_list" onmouseenter="tabClick(this,2)"><img src="image/goods-e/kc.png" alt=""><span>库存管理</span></div>
-           <div class="tab_list" onmouseenter="tabClick(this,3)"><img src="image/goods-e/vip.png" alt=""><span>会员管理</span></div>
-           <div class="tab_list" onmouseenter="tabClick(this,4)"><img src="image/goods-e/fx.png" alt=""><span>店铺管理</span></div>
-           <div class="tab_list" onmouseenter="tabClick(this,5)"><img src="image/goods-e/gyl.png" alt=""><span>供应链管理</span></div>
+           <div class="section_second_first tab_list" onmouseenter="tabClick(this,0)"><img src="image/goods-e/scgl.png" alt="商城管理"><span>商城管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,1)"><img src="image/goods-e/ddgl.png" alt="订单管理"><span>订单管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,2)"><img src="image/goods-e/kc.png" alt="库存管理"><span>库存管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,3)"><img src="image/goods-e/vip.png" alt="会员管理"><span>会员管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,4)"><img src="image/goods-e/fx.png" alt="店铺管理"><span>店铺管理</span></div>
+           <div class="tab_list" onmouseenter="tabClick(this,5)"><img src="image/goods-e/gyl.png" alt="供应链管理"><span>供应链管理</span></div>
         </div>
         <div class="section_second_text text_show">
             <h1>SKU数据</h1>
@@ -277,7 +496,83 @@
             <h2>通过策略制定，筛选优质供应商，保障平台体系的安全性与稳定性</h2>
         </div>
     </section>
-    <section class="section_fourth">
+    <section class="section_second_Phone Phone">
+        <div>
+            <img src="image/goods-e/商城管理@2x.png" alt="商城管理">
+            <span>商城管理</span>
+            <div>
+                <h2>SKU数据</h2>
+                <span>数以亿计的SKU使您摆脱繁杂的商品准备工作</span>
+                <h2>商城模板</h2>
+                <span>丰富美观的商城模板使您的商城让客户感受到您的婀娜多姿</span>
+                <h2>商品营销</h2>
+                <span>多种营销方式增加客户的粘性，让您的客户流连忘返</span>
+                <h2>短信关怀</h2>
+                <span>各种各样的关怀模板让您的客户感受到您对他的热情与关怀</span>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-e/订单管理@2x.png" alt="订单管理">
+            <span>订单管理</span>
+            <div>
+                <h2>商城订单</h2>
+                <span>可灵活配置审核白建商城的的订单，让您的订单听从您的指挥，降低错误率，提高工作效率</span>
+                <h2>第三方订单</h2>
+                <span>自动下载第三方平台订单，过滤异常订单，避免繁杂的多平台操作工作</span>
+                <h2>商务订单</h2>
+                <span>可通过手动创建订单，扩展企业的业务方式，多维度对公司商品进行销售</span>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-e/库存管理@2x.png" alt="库存管理">
+            <span>库存管理</span>
+            <div>
+                <h2>自有库存</h2>
+                <span>运营商可以发布自己的线下库存到该平台上进行销售</span>
+                <h2>云库存</h2>
+                <span>运营商还可以通过多种方式对接其他平台的库存并展示在自建商城上面，从而降低企业的库存成本，扩大企业的业务范围</span>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-e/会员管理@2x.png" alt="会员管理">
+            <span>会员管理</span>
+            <div>
+                <h2>新用户</h2>
+                <span>系统提供给商城运营商多种商城工具对商城进行推广,比如商城二维码，商城海报，友情链接等工具协助运营商开发新用户</span>
+                <h2>潜在用户</h2>
+                <span>系统对商城推广获取的且末下单客户定义为潜在客户，商城运营商可通过分析追溯客户的喜好与目标，从而推动客户达成订单</span>
+                <h2>维护老客户</h2>
+                <span>商城下过单的客户为老客户，商场运营商可通过对老客户进行慰问关怀，送积分，送礼品等多种维系客户的方式增加客户的粘性以及忠诚度</span>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-e/店铺管理@2x.png" alt="店铺管理">
+            <span>店铺管理</span>
+            <div>
+                <h2>店铺商品上架</h2>
+                <span>可通过后台对各个平台的店铺商品进行管理，如商品信息维护，商品上下架，商品价格调整</span>
+                <h2>店铺订单下载</h2>
+                <span>通过后台自动或者是手动下载各平台店铺的订单进行统一处理</span>
+                <h2>物流信息</h2>
+                <span>订单发货后统对各个平台的订单进行发货物流更新</span>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-e/供应链管理@2x.png" alt="供应链管理">
+            <span>供应链管理</span>
+            <div>
+                <h2>采购计划</h2>
+                <span>可利用已销售数据制定采购策略，达到精准采购</span>
+                <h2>供应商比价</h2>
+                <span>同一个商品支持多家比价，选择最优供应商，保障平台利润最大化</span>
+                <h2>库存管理</h2>
+                <span>在库库存，在途库存，坏货库存精细管理，保障前端作业的高效落实，精准发货</span>
+                <h2>供应商考核</h2>
+                <span>通过策略制定，筛选优质供应商，保障平台体系的安全性与稳定性</span>
+            </div>
+        </div>
+    </section>
+    <section class="section_fourth PC">
         <h1>我们的优势</h1>
         <div class="section_fourth_first">
             <img src="image/goods-e/login.png" alt="">
@@ -303,7 +598,7 @@
             <h3>满送等多种营销方式供您选择。</h3>
         </div>
     </section>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <div class="section_fourth_first">
             <img src="image/goods-e/sctg.png" alt="">
             <h2>商城推广</h2>
@@ -329,17 +624,65 @@
             <h3>于销售前端，让您的销售团队更加专注。</h3>
         </div>
     </section>
+    <section class="section_us_advantage Phone">
+        <h1>我们的优势</h1>
+        <div>
+            <div>
+                <img src="image/goods-e/login.png" alt="">
+                <h2>单点登录</h2>
+                <h3>多功能使用仅需要登录一次。</h3>
+            </div>
+            <div>
+                <img src="image/goods-e/mbgh.png" alt="">
+                <h2>模板更换</h2>
+                <h3>在线更换商城模板，多种模板组合方式使您的商城更加丰富。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-e/pay.png" alt="">
+                <h2>支付</h2>
+                <h3>支持多种支付方式，微信，支付宝，对公格账，承兑等，满足您的业务需求。</h3>
+            </div>
+            <div>
+                <img src="image/goods-e/yx.png" alt="">
+                <h2>营销</h2>
+                <h3>积分，优惠券，满减，秒杀，满送等多种营销方式供您选择。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-e/sctg.png" alt="">
+                <h2>商城推广</h2>
+                <h3>友链，二维码，海报等多种方式供您选择，全方位获取新客户。</h3>
+            </div>
+            <div>
+                <img src="image/goods-e/cp-data.png" alt="">
+                <h2>产品数据</h2>
+                <h3>数以亿计的产品数据供您选择，助您摆脱海量数据整理的烦恼。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-e/kd-template.png" alt="">
+                <h2>快递模板</h2>
+                <h3>多家快递PAI对接，多种模板供您选择，降低发货的复杂性以及物流信息更新的滞后性。</h3>
+            </div>
+            <div>
+                <img src="image/goods-e/cloud-kc.png" alt="">
+                <h2>云库存</h2>
+                <h3>减少重资产，摆脱财务风险，专注于销售前端，让您的销售团队更加专注。</h3>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
 <script>
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-        nav.style.top=scrollTop+'px';
-    }
     //选项卡特效
     function tabClick(even,index){
         let arr=document.getElementsByClassName("tab_list");

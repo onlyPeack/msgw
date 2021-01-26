@@ -52,6 +52,7 @@
         }
         aside{
             top: 80vh;
+            right: 8px;
         }
         aside .PhoneQQ{
             display: block;

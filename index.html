@@ -3,89 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy," />
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
     <meta name='format-detection' content='telephone=no'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <title>苏州梅施信息科技有限公司</title>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<!--    支持es6基础语法-->
+
+    <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
-<!--    支持promise语法-->
+    <!--    支持promise语法-->
     <script src="js/browser-polyfill.min.js"></script>
     <script src="lib/vue/vue.js"></script>
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
-    <script src="lib/element-ui/index.js"></script>
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <script src="lib/element-ui/lib/index.js"></script>
 
     <style>
         /*H-header*/
         @media screen and (max-width: 768px) {
-            .PC{
-                display: none;
+            .PC {
+                display: none!important;
             }
-            .Phone{
-                display: inline-block;
+
+            .Phone {
+                display: inline-block!important;
             }
         }
-        #app{
+
+        #app {
             overflow: hidden;
         }
-        .el-carousel__item:nth-child(2n-1){
+
+        .el-carousel__item:nth-child(2n-1) {
             background-image: url('http://gxcl-shop.qiniu.520mro.com/yew83t7cdf6d9o9r6mfa.png');
             /*background-size: contain;*/
             background-repeat: no-repeat;
             background-position: center;
         }
+
         .el-carousel__item:nth-child(2n) {
             background-image: url('http://gxcl-shop.qiniu.520mro.com/aoecdmsq1tuzhgqnu9v6.png');
             /*background-size: contain;*/
             background-repeat: no-repeat;
             background-position: center;
         }
+
         .el-carousel__item:nth-child(3) {
             background-image: url('http://gxcl-shop.qiniu.520mro.com/fmol52kmnfawuut4r7oz.png');
             /*background-size: contain;*/
             background-repeat: no-repeat;
             background-position: center;
         }
-        .el-carousel__item h2{
+
+        .el-carousel__item h2 {
             color: white;
             text-align: center;
             /*font-size: 80px;*/
             font-size: 4.16vw;
             margin-bottom: 30px;
         }
-        .el-carousel__item hgroup{
+
+        .el-carousel__item hgroup {
             padding-top: 19.27vw;
         }
-        .el-carousel__item hgroup h2{
-            text-shadow:0px 2px 4px rgba(0, 0, 0, 0.4);
+
+        .el-carousel__item hgroup h2 {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
         }
-        .el-carousel--horizontal{
+
+        .el-carousel--horizontal {
             overflow-x: inherit;
             height: 100%;
         }
-        .el-carousel__container{
+
+        .el-carousel__container {
             height: 100%;
         }
-        .el-carousel__indicators{
+
+        .el-carousel__indicators {
             margin-bottom: 40px;
         }
-        .el-carousel__button{
+
+        .el-carousel__button {
             height: 7px;
             border-radius: 7px;
         }
 
         @media screen and (max-width: 768px) {
-            .el-carousel__item hgroup{
+            .el-carousel__item hgroup {
                 padding-top: 77.27vw;
             }
 
-            .el-carousel__item h2{
+            .el-carousel__item h2 {
                 font-size: 32pt;
-                line-height: 64pt;
                 text-align: center;
             }
         }
@@ -112,13 +126,15 @@
         }
 
         @media screen and (max-width: 768px) {
-            article{
+            article {
                 margin-top: 40pt;
             }
+
             article h1 {
                 font-size: 24pt;
                 margin-bottom: 22pt;
             }
+
             article h3 {
                 font-size: 12pt;
                 line-height: 21pt;
@@ -126,8 +142,8 @@
                 text-align: left;
             }
         }
-        /*E-article*/
 
+        /*E-article*/
 
 
         /*H-sectionCard*/
@@ -180,28 +196,33 @@
         .section_card div .button {
             margin-top: 10px;
         }
-        .section_card div .button a{
+
+        .section_card div .button a {
             color: #409eff;
         }
 
         @media screen and (max-width: 768px) {
-            .section_card{
+            .section_card {
                 margin-top: 30px;
             }
-            .el-row div:after{
+
+            .el-row div:after {
                 content: '';
                 clear: both;
                 display: table;
             }
-            .el-row div{
+
+            .el-row div {
                 width: 94.33%;
                 position: relative;
                 margin: 0 auto 20pt auto;
                 height: 70.33vw !important;
             }
+
             .section_card div .el-col-3 {
                 width: 100% !important;
             }
+
             .section_card .section_first .el-col-3 {
                 margin-left: 0;
             }
@@ -209,28 +230,32 @@
             .section_card div .el-col-3 {
                 margin-right: 0;
             }
-            .section_card div img{
+
+            .section_card div img {
                 margin-top: 6.66vw;
                 width: 9.06vw;
             }
-            .section_card div h1{
+
+            .section_card div h1 {
                 font-size: 16pt;
                 margin-top: 15pt;
             }
-            .section_card div h3{
+
+            .section_card div h3 {
                 font-size: 12pt;
                 margin-top: 17pt;
                 height: 80px;
             }
-            .el-card{
-                margin: 0!important;
+
+            .el-card {
+                margin: 0 !important;
                 width: 100% !important;
             }
+
             /*.section_card div .button{*/
             /*    position: absolute;*/
             /*    left: 40%;*/
             /*}*/
-
             /*.section_card div .el-col-3 .el-card__body{*/
             /*    height: 100%!important;*/
             /*}*/
@@ -238,7 +263,7 @@
 
 
         /*E-sectionCard*/
-        /*H-sectionSecond*/
+        /*H-sectionList*/
         .section_list {
             height: 31.25vw;
             background-image: url('http://gxcl-shop.qiniu.520mro.com/4t7deh9oy2yk5g8sibx2.png');
@@ -278,19 +303,23 @@
         .section_list_contain {
             padding-left: 3.28vw;
         }
-        .section_list_contain h1{
+
+        .section_list_contain h1 {
             color: white;
             margin-bottom: 20px;
         }
-        .section_list_contain h2{
+
+        .section_list_contain h2 {
             font-weight: 400;
             line-height: 24px;
             font-size: 24px;
             margin-bottom: 15px;
         }
-        .section_list_contain a{
-            color:  #3782FE;
+
+        .section_list_contain a {
+            color: #3782FE;
         }
+
         .section_list_contain button {
             color: #3782FE;
             background-color: white;
@@ -299,7 +328,7 @@
             border-radius: 16px;
             border: 0;
             font-size: 16px;
-            font-family:微软雅黑;
+            font-family: 微软雅黑;
             margin-top: 50px;
         }
 
@@ -307,12 +336,17 @@
             .section_list {
                 height: 89.73vw;
             }
-            .section_list > div{
+
+            .section_list > div {
                 width: 94.33vw;
                 margin: 0 auto;
             }
 
-            .section_list > h1{
+            .section_list div {
+                font-size: 5.25vw;
+            }
+
+            .section_list > h1 {
                 margin-top: 7.66vw;
                 font-size: 24pt;
                 margin-bottom: 6vw;
@@ -322,37 +356,39 @@
                 width: 33%;
             }
 
-            .el-tabs__nav{
-                transform: translateX(23vw) !important;
+            .el-tabs__nav {
+                transform: translateX(14vw) !important;
             }
 
-            .section_list > div h1{
+            .section_list > div h1 {
                 font-size: 16pt;
                 margin-bottom: 5pt;
             }
 
-            .section_list_contain h2{
+            .section_list_contain h2 {
                 font-size: 12pt;
             }
 
-            .section_list_contain button{
+            .section_list_contain button {
                 margin: 0 auto;
                 display: block;
             }
         }
 
-        /*E-sectionSecond*/
+        /*E-sectionList*/
         /*H-footer*/
-        footer h1{
+        footer h1 {
             font-size: 45px;
             text-align: center;
             margin-top: 20px;
         }
-        footer img{
+
+        footer img {
             margin-left: 400px;
             margin-top: 80px;
             margin-bottom: 190px;
         }
+
         /*E-footer*/
     </style>
 </head>
@@ -361,10 +397,13 @@
     <Myheader></Myheader>
     <header>
         <el-carousel :arrow="arrow">
-            <el-carousel-item v-for="item in slide" >
-                <hgroup>
-                <h2>{{ item.first }}</h2>
-                <h2>{{ item.second }}</h2></hgroup>
+            <el-carousel-item v-for="item in slide">
+                <hgroup v-if="!isMobile">
+                    <h2 v-for="text in item.pc">{{ text }}</h2>
+                </hgroup>
+                <hgroup v-else>
+                    <h2 v-for="text in item.mobile">{{ text }}</h2>
+                </hgroup>
             </el-carousel-item>
         </el-carousel>
     </header>
@@ -373,7 +412,8 @@
         <h3 class="PC">大道至简、颠覆重构，梅施云围绕工业品领域，为行业客户提供从进销存、</h3>
         <h3 class="PC">客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，</h3>
         <h3 class="PC">基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。</h3>
-        <h3 class="Phone">大道至简、颠覆重构，梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。</h3>
+        <h3 class="Phone">
+            大道至简、颠覆重构，梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。</h3>
     </article>
     <section class="section_card">
         <el-row>
@@ -464,10 +504,10 @@
             </el-tabs>
         </div>
     </section>
-<!--    <footer>-->
-<!--        <h1>合作伙伴</h1>-->
-<!--        <img src="image/index/set-2.png" alt="">-->
-<!--    </footer>-->
+    <!--    <footer>-->
+    <!--        <h1>合作伙伴</h1>-->
+    <!--        <img src="image/index/set-2.png" alt="">-->
+    <!--    </footer>-->
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
@@ -478,31 +518,41 @@
             return {
                 visible: false,
                 tabPosition: 'left',
-                timeout:100,
-                arrow:'hover',
-                slide:[{first:"用匠心和智慧打造软件精品",
-                        second:""
-                },{first:"可靠的技术架构、流畅的用户体验、",
-                    second:"贴心的客户服务"
-                },
-                    {first:"践行梅花精神，不畏艰难，",second:"撬动浩瀚的IT宇宙"}]
+                timeout: 100,
+                arrow: 'hover',
+                isMobile: false,
+                slide: [
+                    {
+                        pc:['用匠心和智慧打造软件精品'],
+                        mobile:['用匠心和智慧','打造软件精品']
+                    },
+                    {
+                        pc:['可靠的技术架构、流畅的用户体验、','贴心的客户服务'],
+                        mobile:['可靠的技术架构','流畅的用户体验','贴心的客户服务']
+                    },
+                    {
+                        pc:['践行梅花精神，不畏艰难，','撬动浩瀚的IT宇宙'],
+                        mobile:['践行梅花精神','不畏艰难','撬动浩瀚的IT宇宙']
+                    }
+                ]
                 // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
             }
         },
-        components:{
-            'Myfooter':httpVueLoader('components/Myfooter.vue'),
-            'Myaside':httpVueLoader('components/Myaside.vue'),
-            'Myheader':httpVueLoader('components/Myheader.vue')
+        components: {
+            'Myfooter': httpVueLoader('components/Myfooter.vue'),
+            'Myaside': httpVueLoader('components/Myaside.vue'),
+            'Myheader': httpVueLoader('components/Myheader.vue')
         },
-        created(){
-            this.arrow=window.window.screen.width >= 768?'hover':'never'
-            this.tabPosition=window.window.screen.width >= 768?'left':'top'
+        created() {
+            this.arrow = window.window.screen.width >= 768 ? 'hover' : 'never'
+            this.tabPosition = window.window.screen.width >= 768 ? 'left' : 'top'
+            this.isMobile = window.window.screen.width <= 768
         }
     })
     //保证进入时header为一屏高度
     let h = document.documentElement.clientHeight || document.body.clientHeight;
-    let header=document.getElementsByTagName('header')[0];
-    header.style.height=h+'px';
+    let header = document.getElementsByTagName('header')[0];
+    header.style.height = h + 'px';
 </script>
 </body>
 </html>

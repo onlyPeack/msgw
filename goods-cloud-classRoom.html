@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>云课堂</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="lib/element-ui/index.css">
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
     <!--    支持promise语法-->
     <script src="js/browser-polyfill.min.js"></script>
     <script src="lib/vue/vue.js"></script>
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
-    <script src="lib/element-ui/index.js"></script>
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <script src="lib/element-ui/lib/index.js"></script>
+
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/ovbmqe2w42702lcn5scn.png");
+        }
+        @media screen and (max-width: 768px) {
+            .header_contain h2{
+                line-height: 30px;
+                width: 93%;
+                margin: 0 auto;
+            }
         }
         /*H-sectionCard*/
         .section_card{
@@ -67,6 +79,51 @@
             margin-bottom: 10px;
         }
         /*E-sectionCard*/
+        /*H-sectionCardPhone*/
+        .section_card_phone h1{
+            font-size: 32px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        .section_card_phone>div{
+
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            width: 94%;
+            margin: 0 auto;
+        }
+        .section_card_phone>div>div{
+            padding: 0 30px;
+            height: 115px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .section_card_phone>div>div img{
+            width: 50px;
+        }
+        .section_card_phone>div>div>div{
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 12px;
+            max-width: 77%;
+        }
+        .section_card_phone>div>div>div h2{
+            color: #404040;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .section_card_phone>div>div>div h3{
+            color: #AAAAAA;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .line_between{
+            height: 2px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionCardPhone*/
         /*H-sectionThird*/
         .section_third{
             height: 45.67vw;
@@ -109,6 +166,46 @@
             top: 15px;
             margin-left: 50px;
             width: 34.94vw;
+        }
+        @media screen and (max-width: 768px) {
+            .section_third{
+                height: unset;
+                padding-bottom: 15px;
+            }
+            .section_third h1{
+                font-size: 32px;
+                padding-top: 9.68vw;
+                padding-bottom: 9.68vw;
+            }
+            .section_third>img{
+                width: 93%;
+                position: unset;
+                margin: 0 auto 30px auto;
+            }
+            .section_third_contain_phone>div{
+                width: 92%;
+                margin: 0 auto 12px auto;
+            }
+            .section_third_contain_phone>div>img{
+                vertical-align: top;
+            }
+            .section_third_contain_phone>div>div{
+                display: inline-block;
+                margin-left: 10px;
+                width: 90%;
+            }
+            .section_third_contain_phone>div>div>h3{
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 10px;
+            }
+            .section_third_contain_phone>div>div>h4{
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 10px;
+                line-height: 22px;
+            }
+
         }
         /*E-sectionThird*/
         /*H-sectionFourth*/
@@ -207,13 +304,17 @@
     <Myheader></Myheader>
     <header>
         <div class="header_contain">
-            <h1 class="header_title">梅施-工控云课堂</h1>
-            <h2>快速搭建你的自动化技术学院，自动化企业培训，一站式搞定</h2>
-            <h2>搭系统、找课程、排考试、约讲师、管数据</h2>
+            <h1 class="header_title PC">梅施-工控云课堂</h1>
+            <h1 class="header_title Phone">工控云课堂</h1>
+            <h2 class="PC">快速搭建你的自动化技术学院，自动化企业培训，一站式搞定</h2>
+            <h2 class="PC">搭系统、找课程、排考试、约讲师、管数据</h2>
+            <h2 class="Phone">
+                快速搭建你的自动化技术学院，自动化企业培训，一站式搞定搭系统、找课程、排考试、约讲师、管数据
+            </h2>
             <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>
         </div>
     </header>
-    <section class="section_card">
+    <section class="section_card PC">
         <h1>学员端</h1>
         <el-row>
             <div class="section_first">
@@ -247,7 +348,7 @@
             </div>
         </el-row>
     </section>
-    <section class="section_card">
+    <section class="section_card PC">
         <el-row>
             <div class="section_first">
                 <el-col :span="3">
@@ -280,41 +381,138 @@
             </div>
         </el-row>
     </section>
+    <section class="section_card_phone Phone">
+        <h1>学员端</h1>
+        <div>
+            <div>
+                <img src="image/goods-cloud-classRoom/kc.png" alt="">
+                <div>
+                    <h2>课程学习</h2>
+                    <h3>丰富的自动化产品技术视频课程库，支持学员反复学习。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-cloud-classRoom/test.png" alt="">
+                <div>
+                    <h2>考试练习</h2>
+                    <h3>丰富的产品技术在线题库，支持在线练习与岗位考试。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-cloud-classRoom/zs.png" alt="">
+                <div>
+                    <h2>知识分享</h2>
+                    <h3>构筑公司知识库，发现知识地图。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-cloud-classRoom/study.png" alt="学习轨迹">
+                <div>
+                    <h2>学习轨迹</h2>
+                    <h3>展现员工的学习成长轨迹，如学习时长与考试成绩。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-cloud-classRoom/yd.png" alt="移动学习">
+                <div>
+                    <h2>移动学习</h2>
+                    <h3>支持移动APP学习。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/goods-cloud-classRoom/qw.png" alt="趣味学习">
+                <div>
+                    <h2>趣味学习</h2>
+                    <h3>根据岗位学习地图，实现员工晋级与持续成长。</h3>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section_third">
         <h1>管理端</h1>
-        <div class="section_third_contain">
+        <img src="image/goods-cloud-classRoom/computer.png" alt="电脑" class="Phone">
+        <div class="section_third_contain_phone Phone">
+            <div>
+                <img src="image/goods-cloud-classRoom/1.png" alt="员工管理">
+                <div>
+                    <h3>员工管理</h3>
+                    <h4>支持批量导入员工，支持多种角色定义与灵活权限分配</h4>
+                </div>
+            </div>
+            <div>
+                <img src="image/goods-cloud-classRoom/2.png" alt="课程上传">
+                <div>
+                    <h3>课程上传</h3>
+                    <h4>快速上传视频课程，兼容多种文件格式，支持公共库下载</h4>
+                </div>
+            </div>
+            <div>
+                <img src="image/goods-cloud-classRoom/3.png" alt="题库管理">
+                <div>
+                    <h3>题库管理</h3>
+                    <h4>丰富的自动化产品技术题库支持，多知识点协同</h4>
+                </div>
+            </div>
+            <div>
+                <img src="image/goods-cloud-classRoom/4.png" alt="智能组卷">
+                <div>
+                    <h3>智能组卷</h3>
+                    <h4>根据标签智能组卷,一键发布考试</h4>
+                </div>
+            </div>
+            <div>
+                <img src="image/goods-cloud-classRoom/1.png" alt="消息推送">
+                <div>
+                    <h3>消息推送</h3>
+                    <h4>通过后台自动推送消息</h4>
+                </div>
+            </div>
+            <div>
+                <img src="image/goods-cloud-classRoom/2.png" alt="统计管理">
+                <div>
+                    <h3>统计管理</h3>
+                    <h4>支持多维度数据统计分析</h4>
+                </div>
+            </div>
+        </div>
+        <div class="section_third_contain PC">
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/1.png" alt="">
+                <img src="image/goods-cloud-classRoom/1.png" alt="员工管理">
                 <span class="section_third_text_title">员工管理</span>
                 <span class="section_third_text_text">支持批量导入员工，支持多种角色定义与灵活权限分配</span>
             </div>
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/2.png" alt="">
+                <img src="image/goods-cloud-classRoom/2.png" alt="课程上传">
                 <span class="section_third_text_title">课程上传</span>
                 <span class="section_third_text_text">快速上传视频课程，兼容多种文件格式，支持公共库下载</span>
             </div>
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/3.png" alt="">
+                <img src="image/goods-cloud-classRoom/3.png" alt="题库管理">
                 <span class="section_third_text_title">题库管理</span>
                 <span class="section_third_text_text">丰富的自动化产品技术题库支持，多知识点协同</span>
             </div>
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/4.png" alt="">
+                <img src="image/goods-cloud-classRoom/4.png" alt="智能组卷">
                 <span class="section_third_text_title">智能组卷</span>
                 <span class="section_third_text_text">根据标签智能组卷,一键发布考试</span>
             </div>
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/1.png" alt="">
+                <img src="image/goods-cloud-classRoom/1.png" alt="消息推送">
                 <span class="section_third_text_title">消息推送</span>
                 <span class="section_third_text_text">通过后台自动推送消息</span>
             </div>
             <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/2.png" alt="">
+                <img src="image/goods-cloud-classRoom/2.png" alt="统计管理">
                 <span class="section_third_text_title">统计管理</span>
                 <span class="section_third_text_text">支持多维度数据统计分析</span>
             </div>
         </div>
-        <img src="image/goods-cloud-classRoom/computer.png" alt="">
+        <img src="image/goods-cloud-classRoom/computer.png" alt="电脑" class="PC">
     </section>
     <section class="section_fourth">
         <h1>技术服务优势</h1>
@@ -386,13 +584,6 @@
     <Myaside></Myaside>
 </div>
 <script>
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.top=scrollTop+'px';
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
         data: function () {

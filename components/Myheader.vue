@@ -201,26 +201,28 @@
 </template>
 
 <script>
-    // console.log(window.screen.width,'width')
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav = document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        if(window.screen.height >= scrollTop){
-            nav.style.top = scrollTop + 'px';
-        }
-
-        //console.log("这是在组件里的事件")
-        if (window.screen.width >= 768) {
-            nav.style.backgroundColor = scrollTop === 0 ? 'rgba(0,0,0,0)' : '#1E2327'
-        }
-    }
     module.exports = {
         data() {
             return {
                 isShow: false
             }
+        },
+        mounted(){
+            //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
+            window.onscroll = function () {
+                let nav = document.getElementsByClassName("nav")[0];
+                let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                if(window.screen.height >= scrollTop){
+                    nav.style.top = scrollTop + 'px';
+                }
+
+                //console.log("这是在组件里的事件")
+                if (window.screen.width >= 768) {
+                    nav.style.backgroundColor = scrollTop === 0 ? 'rgba(0,0,0,0)' : '#1E2327'
+                }
+            }
         }
+
     }
 </script>
 <style>
@@ -378,7 +380,6 @@
         background-position: center;
     }
 
-    /*E-element ui 样式*/
     .header_contain {
         width: 100%;
         text-align: center;
@@ -414,6 +415,22 @@
         color: white;
         border-radius: 5px;
     }
-
+    @media screen and (max-width: 768px) {
+        header{
+            background-size: cover;
+            background-position: unset;
+        }
+        .header_contain{
+            top: 42vh;
+        }
+        .header_title{
+            font-size: 12.06vw;
+            line-height: 65px;
+            padding: 0 22px;
+        }
+        .header_contain h2{
+            font-size: 5.8vw;
+        }
+    }
     /*E-header*/
 </style>

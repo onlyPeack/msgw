@@ -142,7 +142,7 @@
                     </el-menu-item>
                 </el-menu>
             </el-collapse-transition>
-            <div style="padding: 20px;font-size: 10pt;width: 100%">
+            <div style="padding: 20px;font-size: 10pt;width: 87%">
                 <span>QQ：3376893959</span><div style="height: 10pt"></div>
                 <span>手机：17368056998</span><div style="height: 10pt"></div>
                 <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt"><div style="height: 10pt"></div>
@@ -221,7 +221,7 @@
             display: none;
         }
         .Phone{
-            display: inline-block;
+            display: block;
         }
         .T_footer{
             background-color: #283036;

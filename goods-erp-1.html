@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>产品-ERP-1</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="lib/element-ui/index.css">
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
     <!--    支持promise语法-->
     <script src="js/browser-polyfill.min.js"></script>
     <script src="lib/vue/vue.js"></script>
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
-    <script src="lib/element-ui/index.js"></script>
+
+
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <script src="lib/element-ui/lib/index.js"></script>
+
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/gfi8i0fcv7vnfbfyiaf0.png");
         }
+
         /*H-sectionFourth*/
         .section_fourth{
             text-align: center;
@@ -27,27 +35,63 @@
             font-size: 45px;
             margin-bottom: 130px;
         }
-        .section_fourth>div{
-            width: 9.63%;
+
+        @media screen and (max-width: 768px) {
+            .section_fourth>h1{
+                padding-top: 60px;
+                font-size: 32px;
+                margin-bottom: 60px;
+            }
+
+        }
+        /*E-sectionFourth*/
+        /*H-sectionItems*/
+        .section_items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .section_items>div{
+            width: 20.63%;
             height: 160px;
-            float: left;
-            margin-left: 10.5%;
+            text-align: center;
             margin-bottom: 60px;
         }
-        .section_fourth img{
+        .section_items img{
             margin-bottom: 25px;
+            transition: .5s;
         }
-        .section_fourth h2{
+        .section_items h2{
             font-size: 20px;
             line-height: 40px;
             color: #5a5a5a;
             margin-bottom: 10px;
             font-weight: 400;
         }
-        .section_fourth .section_fourth_first{
-            margin-left: 14.5%;
+
+        .section_items img:hover{
+            transform: scale(1.2);
         }
-        /*E-sectionFourth*/
+
+        @media screen and (max-width: 768px) {
+            .section_items{
+                width: 100%;
+            }
+            .section_items>div{
+                width: 26.63%;
+                margin-bottom: 0;
+            }
+            .section_items h2{
+                font-size: 14px;
+            }
+            .section_items img{
+                width: 40px;
+            }
+        }
+
+        /*E-sectionItems*/
         /*H-sectionFirst*/
         .section_first{
             height: 47.08vw;
@@ -69,6 +113,33 @@
         .section_first img{
             width: 55.57vw;
             margin-top: 2.08vw;
+        }
+        @media screen and (max-width: 768px) {
+            .section_first{
+                height: 75vh;
+                background-size: cover;
+                background-position: center;
+            }
+            .section_first h1{
+                padding-top: 9.8vw;
+                font-size: 38px;
+            }
+            .section_first p{
+                font-size: 13pt;
+                color: white;
+                line-height: 30px;
+                margin-top: 20px;
+                padding: 0 13px;
+                text-align: left;
+            }
+            .section_first img{
+                width: 94%;
+            }
+            .section_first .blow-up{
+                color: white;
+                margin-top: 25px;
+                font-size: 12pt;
+            }
         }
         /*E-sectionFirst*/
         /*H-sectionSecond*/
@@ -100,6 +171,27 @@
             margin-top: 120px;
             padding-bottom: 60px;
         }
+        @media screen and (max-width: 768px) {
+            .section_second{
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 0;
+            }
+            .section_second_img{
+                width: 100%;
+                margin-right: 0;
+            }
+            .section_second>img{
+                margin: 0 auto;
+                width: 95%;
+            }
+        }
+
+
+
+
+
         /*E-sectionSecond*/
 
     </style>
@@ -116,7 +208,9 @@
     </header>
     <section class="section_fourth">
         <h1>梅施ERP</h1>
-        <div class="section_fourth_first">
+    </section>
+    <section class="section_items">
+        <div>
             <img src="image/goods-all-erp/xtbg.png" alt="">
             <h2>协同办公</h2>
         </div>
@@ -132,9 +226,7 @@
             <img src="image/goods-all-erp/xsgl.png" alt="">
             <h2>销售管理</h2>
         </div>
-    </section>
-    <section class="section_fourth">
-        <div class="section_fourth_first">
+        <div>
             <img src="image/goods-all-erp/khgx.png" alt="">
             <h2>客户关系管理</h2>
         </div>
@@ -150,9 +242,7 @@
             <img src="image/goods-all-erp/jcgl.png" alt="">
             <h2>决策分析</h2>
         </div>
-    </section>
-    <section class="section_fourth">
-        <div class="section_fourth_first">
+        <div>
             <img src="image/goods-all-erp/jcsj.png" alt="">
             <h2>基础数据</h2>
         </div>
@@ -171,49 +261,51 @@
     </section>
     <section class="section_first">
         <h1>功能架构</h1>
-        <h2>"梅施云ERP”是一款基于SaaS模式打造， 专业的企业信息管理应用系统，在极大降低客户硬件和IT成本的前提下，</h2>
-        <h2>保证产品具有极好的灵活性、可用性，基于阿米巴管理模式，为行业中小企业量身定制的简单易操作，轻便、精准的整体性解决方案。</h2>
+        <h2 class="PC">"梅施·云ERP”是一款基于SaaS模式打造， 专业的企业信息管理应用系统，在极大降低客户硬件和IT成本的前提下，</h2>
+        <h2 class="PC">保证产品具有极好的灵活性、可用性，基于阿米巴管理模式，为行业中小企业量身定制的简单易操作，轻便、精准的整体性解决方案。</h2>
+        <p class="Phone">"梅施·云ERP”是一款基于SaaS模式打造， 专业的企业信息管理应用系统，在极大降低客户硬件和IT成本的前提下，保证产品具有极好的灵活性、可用性，基于阿米巴管理模式，为行业中小企业量身定制的简单易操作，轻便、精准的整体性解决方案。</p>
         <img src="image/goods-all-erp/table.png" alt="">
+        <div class="Phone blow-up" @click="blowUp('image/goods-all-erp/table.png')">
+            <span style="margin-right: 10px;">点击查看大图</span><i class="el-icon-zoom-in"></i>
+        </div>
     </section>
     <section class="section_second">
         <div class="section_second_img">
-            <img src="image/goods-all-erp/1-default.png" alt="">
-            <a href="goods-cloud-erp.html">
-            <img src="image/goods-all-erp/1.png" alt="" class="ghostImg">
+            <img src="image/goods-all-erp/1-default.png" alt="" class="PC">
+            <img src="image/goods-all-erp/1@2x.png" alt="" class="Phone" @click="blowUp('goods-cloud-erp.html')">
+            <a href="goods-cloud-erp.html" class="PC">
+                <img src="image/goods-all-erp/1.png" alt="" class="ghostImg">
             </a>
         </div>
         <div class="section_second_img">
-            <img src="image/goods-all-erp/2-default.png" alt="">
-            <a href="goods-e-erp.html">
-            <img src="image/goods-all-erp/2.png" alt="" class="ghostImg"></a>
+            <img src="image/goods-all-erp/2-default.png" alt="" class="PC">
+            <img src="image/goods-all-erp/2@2x.png" alt="" class="Phone" @click="blowUp('goods-e-erp.html')">
+            <a href="goods-e-erp.html" class="PC">
+                <img src="image/goods-all-erp/2.png" alt="" class="ghostImg">
+            </a>
         </div>
         <div class="section_second_img">
-            <img src="image/goods-all-erp/3-default.png" alt="">
-            <img src="image/goods-all-erp/3.png" alt="" class="ghostImg">
+            <img src="image/goods-all-erp/3-default.png" alt="" class="PC">
+            <img src="image/goods-all-erp/3@2x.png" alt="" class="Phone">
+            <img src="image/goods-all-erp/3.png" alt="" class="ghostImg PC">
         </div>
         <div class="section_second_img">
-            <img src="image/goods-all-erp/4-default.png" alt="">
-            <img src="image/goods-all-erp/4.png" alt="" class="ghostImg">
+            <img src="image/goods-all-erp/4-default.png" alt="" class="PC">
+            <img src="image/goods-all-erp/4@2x.png" alt="" class="Phone">
+            <img src="image/goods-all-erp/4.png" alt="" class="ghostImg PC">
         </div>
-        <img src="image/goods-all-erp/dbd.png" alt="" style="width: 82%">
+        <img src="image/goods-all-erp/dbd.png" alt="" style="width: 82%" @click="blowUp('image/goods-all-erp/dbd.png')">
     </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
 <script>
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.top=scrollTop+'px';
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
-        data: function () {
+        data(){
             return {
                 visible: false,
-                tabPosition: 'left'
+                tabPosition: 'left',
                 // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
             }
         },
@@ -221,6 +313,11 @@
             'Myfooter':httpVueLoader('components/Myfooter.vue'),
             'Myaside':httpVueLoader('components/Myaside.vue'),
             'Myheader':httpVueLoader('components/Myheader.vue')
+        },
+        methods:{
+            blowUp(url){
+                window.open(url,'_blank')
+            }
         }
     })
     //保证进入时header为一屏高度
