@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>产品-WMS</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -34,6 +38,24 @@
             font-size: 24px;
             font-weight: normal;
             margin-bottom: 15px;
+        }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 294px;
+                background-position: center;
+            }
+            article h1{
+                padding-top: 50px;
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            article p{
+                font-size: 16px;
+                text-align: left;
+                width: 90%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
         }
         /*E-article*/
         /*H-sectionFirst*/
@@ -119,6 +141,59 @@
             margin-bottom: 0.52vw;
         }
         /*E-sectionThird*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+        }
+        .section_us_advantage h1{
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 210px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: #5A5A5A;
+            font-size: 19px;
+            margin-bottom: 10px;
+
+        }
+        .section_us_advantage>div>div>h3{
+            color: #828282;
+            font-weight: normal;
+            text-align: left;
+            line-height: 18px;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 100%;
+            top: 0;
+            left: 50vw;
+        }
+        .line_between{
+            height: 2px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionUsAdvantage*/
         /*H-sectionFourth*/
         .section_fourth{
             text-align: center;
@@ -156,6 +231,40 @@
             margin-left: 10.15vw;
         }
         /*E-sectionFourth*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone h1{
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0;
+        }
+        .section_fourth_Phone>div{
+            width: 81%;
+            margin: 0 auto 20px auto;
+            border-radius: 999px;
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+
+        }
+        .section_fourth_Phone>div>img{
+            width: 50px;
+        }
+        .section_fourth_Phone>div>div{
+            margin-left: 20px;
+            padding-right: 44px;
+        }
+        .section_fourth_Phone>div h2{
+            font-size: 20px;
+            color: #5A5A5A;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone h3{
+            color: #828282;
+            font-weight: normal;
+            line-height: 18px;
+        }
+        /*E-sectionFourthPhone*/
         .T_footer{
             margin-top: 11.45vw;
         }
@@ -168,72 +277,82 @@
         <div class="header_contain">
             <h1 class="header_title">WMS仓储管理系统</h1>
             <h2>工业领域领先的一体化仓储管理方案</h2>
-<!--            <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>-->
+            <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>
         </div>
     </header>
     <article>
         <h1>梅施WMS能帮我做什么?</h1>
-        <h3>梅施WMS仓储管理系统是针对仓储精细化操作，专注于仓储实物现场管理与执行过程的管理软件系统。</h3>
-        <h3>梅施WMS主要面向工业领域的订单出入库操作。提供业界领先的一体化仓储管理解决方案。</h3>
+        <h3 class="PC">梅施WMS仓储管理系统是针对仓储精细化操作，专注于仓储实物现场管理与执行过程的管理软件系统。</h3>
+        <h3 class="PC">梅施WMS主要面向工业领域的订单出入库操作。提供业界领先的一体化仓储管理解决方案。</h3>
+        <p class="Phone">
+            梅施WMS仓储管理系统是针对仓储精细化操作，专注于仓储实物现场管理与执行过程的管理软件系统。梅施WMS主要面向工业领域的订单出入库操作。提供业界领先的一体化仓储管理解决方案。
+        </p>
     </article>
-    <section class="section_first">
+    <section class="section_first PC">
         <h1>全程条码化追踪</h1>
         <h2>仓库操作准确率提高，人员效率提高</h2>
         <h3>通过前期使用PDA对商品条码的采集，基础数据配置库位、容器、作业</h3>
         <h3>单据、指令的条码信息，实现仓库操作的全程条码跟踪。</h3>
     </section>
-    <section class="section_second">
+    <section class="section_second PC">
         <h1>空间标识细化</h1>
         <h2>通过商品属性与灵活的商家策略推荐商品存放位置</h2>
         <h3>按照商品的体积，包装等属性将商品存放至合适库位，提高仓库空间利用率，</h3>
         <h3>并可通过PDA设备直接查询商品存放位置，提高人员操作效率。</h3>
     </section>
-    <section class="section_third">
+    <section class="section_third PC">
         <h1>仓库作业信息化</h1>
         <h2>全程记录人员操作的过程，可追溯订单异常</h2>
         <h3>通过对仓库内每个作业环节和人员操作情况进行信息化管理和管控。所有作业</h3>
         <h3>流程和人员均在信息系统的规划指导下进行，对每一步骤和动作都进行分解，</h3>
         <h3>计算，并合理规划，提高人员操作的可执行性。</h3>
     </section>
-    <section class="section_fourth">
+    <section class="section_third_Phone Phone">
+        <div>
+            <img src="image/goods-WMS/1777.png" alt="全程条码化追踪" style="width: 100%">
+            <img src="image/goods-WMS/27777.png" alt="全程条码化追踪" style="width: 100%">
+            <img src="image/goods-WMS/37777.png" alt="全程条码化追踪" style="width: 100%">
+        </div>
+    </section>
+    <section class="section_fourth PC">
         <h1>WMS核心功能说明</h1>
         <div class="section_fourth_first">
-            <img src="image/goods-WMS/dck.png" alt="">
+            <img src="image/goods-WMS/dck.png" alt="多仓库管理">
             <h2>多货主，多仓库管理</h2>
             <h3>可维护多货主、多仓库其础信息，不同的</h3>
             <h3>货主可以配遇不同的操作流程，并且货主</h3>
             <h3>数据独立分开。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/zyjk.png" alt="">
+            <img src="image/goods-WMS/zyjk.png" alt="全程作业监控">
             <h2>全程作业监控</h2>
             <h3>对仓库内业务的进程进行记录和监控，降</h3>
             <h3>低人员操作失误，提高仓储运作效率。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/pda.png" alt="">
+            <img src="image/goods-WMS/pda.png" alt="全程PDA作业">
             <h2>全程PDA作业</h2>
             <h3>库内操作全程无纸化操作，大幅提升人员</h3>
             <h3>操作效率。可视化界面清晰、速度快、操</h3>
             <h3>作简易。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/jxh.png" alt="">
+            <img src="image/goods-WMS/jxh.png" alt="商品精细化管理">
             <h2>商品精细化管理</h2>
             <h3>支持多码管理， 支持优良品、残次品区分</h3>
             <h3>管理，支持批次管理。</h3>
         </div>
     </section>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <div class="section_fourth_first">
-            <img src="image/goods-WMS/no-code.png" alt="">
+            <img src="image/goods-WMS/no-code.png" alt="无条码解决方案">
             <h2>无条码解决方案</h2>
             <h3>针对工业领域部分品牌商品没有规则条码，</h3>
             <h3>既可以打印系统生成的条码，又可以通</h3>
             <h3>过无条码方式进行仓库出入库。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/clpz.png" alt="">
+            <img src="image/goods-WMS/clpz.png" alt="多种作业策略配置">
             <h2>多种作业策略配置</h2>
             <h3>系统提供强大的上架策略，拣选策略、波</h3>
             <h3>次策略、分配策略等，当仓库收到出入库</h3>
@@ -241,7 +360,7 @@
             <h3>令，解决仓库瓶颈。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/kcgl.png" alt="">
+            <img src="image/goods-WMS/kcgl.png" alt="全方位库存管理">
             <h2>全方位库存管理</h2>
             <h3>不管是收货、上架、 拣货和发货，还是仓</h3>
             <h3>库内的移库、盘点和调拨，系统都提供了</h3>
@@ -249,7 +368,7 @@
             <h3>的变化。</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/ckrw.png" alt="">
+            <img src="image/goods-WMS/ckrw.png" alt="仓库任务调度管控">
             <h2>仓库任务调度管控</h2>
             <h3>针对库内所有操作任务，管理员可根据任</h3>
             <h3>务内容进行主管分配或者操作人员可自主</h3>
@@ -257,44 +376,123 @@
             <h3>便于进行KPI考核。</h3>
         </div>
     </section>
-    <section class="section_fourth">
+    <section class="section_us_advantage Phone">
+        <h1>WMS核心功能说明</h1>
+        <div>
+            <div>
+                <img src="image/goods-WMS/dck.png" alt="多仓库管理">
+                <h2>多货主，多仓库管理</h2>
+                <h3>可维护多货主、多仓库其础信息，不同的货主可以配遇不同的操作流程，并且货主数据独立分开。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/zyjk.png" alt="全程作业监控">
+                <h2>全程作业监控</h2>
+                <h3>对仓库内业务的进程进行记录和监控，降低人员操作失误，提高仓储运作效率。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/pda.png" alt="全程PDA作业">
+                <h2>全程PDA作业</h2>
+                <h3>库内操作全程无纸化操作，大幅提升人员操作效率。可视化界面清晰、速度快、操作简易。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/jxh.png" alt="商品精细化管理">
+                <h2>商品精细化管理</h2>
+                <h3>支持多码管理， 支持优良品、残次品区分管理，支持批次管理。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/no-code.png" alt="无条码解决方案">
+                <h2>无条码解决方案</h2>
+                <h3>针对工业领域部分品牌商品没有规则条码，既可以打印系统生成的条码，又可以通过无条码方式进行仓库出入库。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/clpz.png" alt="多种作业策略配置">
+                <h2>多种作业策略配置</h2>
+                <h3>系统提供强大的上架策略，拣选策略、波次策略、分配策略等，当仓库收到出入库指令后会根据策略自动下发合适的操作指令，解决仓库瓶颈。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/kcgl.png" alt="全方位库存管理">
+                <h2>全方位库存管理</h2>
+                <h3>不管是收货、上架、 拣货和发货，还是仓库内的移库、盘点和调拨，系统都提供了完整的交易历史。并且随时记录库存状态的变化。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/ckrw.png" alt="仓库任务调度管控">
+                <h2>仓库任务调度管控</h2>
+                <h3>针对库内所有操作任务，管理员可根据任务内容进行主管分配或者操作人员可自主领取任务，系统记录每个人员的工作量，便于进行KPI考核。</h3>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
+    <section class="section_fourth PC">
         <h1>带来的价值</h1>
         <div class="section_fourth_first">
-            <img src="image/goods-WMS/gfgl.png" alt="">
+            <img src="image/goods-WMS/gfgl.png" alt="规范管理">
             <h2>规范管理</h2>
             <h3>优化岗位职责，实现优胜略汰</h3>
             <h3>采购业务整合统一 ,数据准确</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/dowm.png" alt="">
+            <img src="image/goods-WMS/dowm.png" alt="提效降错">
             <h2>提效降错</h2>
             <h3>使用PDA，差错率降到1%，</h3>
             <h3>流水线分包，效率提升10倍</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/up.png" alt="">
+            <img src="image/goods-WMS/up.png" alt="提升积极性">
             <h2>提升积极性</h2>
             <h3>操作简单，快速上手，员工绩</h3>
             <h3>效考核，公平公正</h3>
         </div>
         <div>
-            <img src="image/goods-WMS/more-science.png" alt="">
+            <img src="image/goods-WMS/more-science.png" alt="仓储规划更科学">
             <h2>仓储规划更科学</h2>
             <h3>提升仓库空间利用率，缩短</h3>
             <h3>了仓库作业路径</h3>
+        </div>
+    </section>
+    <section class="section_fourth_Phone Phone">
+        <h1>带来的价值</h1>
+        <div>
+            <img src="image/goods-WMS/gfgl.png" alt="规范管理">
+            <div>
+                <h2>规范管理</h2>
+                <h3>优化岗位职责，实现优胜略汰采购业务整合统一 ,数据准确</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/dowm.png" alt="提效降错">
+            <div>
+                <h2>提效降错</h2>
+                <h3>使用PDA，差错率降到1%，流水线分包，效率提升10倍</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/up.png" alt="提升积极性">
+            <div>
+                <h2>提升积极性</h2>
+                <h3>操作简单，快速上手，员工绩效考核，公平公正</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/more-science.png" alt="仓储规划更科学">
+            <div>
+                <h2>仓储规划更科学</h2>
+                <h3>提升仓库空间利用率，缩短了仓库作业路径</h3>
+            </div>
         </div>
     </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
 <script>
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.top=scrollTop+'px';
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
         data: function () {

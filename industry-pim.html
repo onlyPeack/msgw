@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>行业赋能-PIM数据中台</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -18,6 +22,11 @@
         }
         header .header_contain{
             top: 270px;
+        }
+        @media screen and (max-width: 768px) {
+            header{
+                height: 100vh!important;
+            }
         }
         /*H-sectionCard*/
         .section_card{
@@ -69,12 +78,52 @@
             margin-bottom: 5px;
         }
         /*E-sectionCard*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone h1{
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0;
+        }
+        .section_fourth_Phone>div{
+            width: 81%;
+            margin: 0 auto 20px auto;
+            border-radius: 999px;
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+
+        }
+        .section_fourth_Phone>div img{
+            width: 50px;
+        }
+        .section_fourth_Phone>div>div{
+            margin-left: 15px;
+
+        }
+        .section_fourth_Phone>div h2{
+            font-size: 20px;
+            color: #5A5A5A;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone h3{
+            color: #828282;
+            font-weight: normal;
+            line-height: 18px;
+        }
+        /*E-sectionFourthPhone*/
         /*H-article*/
         article h1{
             padding-top: 10.41vw;
             font-size: 2.34vw;
             text-align: center;
             margin-bottom: 6.25vw;
+        }
+        @media screen and (max-width: 768px) {
+            article h1{
+                font-size: 32px;
+                margin-bottom: 8.25vw;
+            }
         }
         /*E-article*/
         /*H-sectionSecond*/
@@ -120,13 +169,13 @@
             <h2>赋能渠道，搭建上下游数据通途</h2>
         </div>
     </header>
-    <section class="section_card">
+    <section class="section_card PC">
         <h1>产品概述</h1>
         <el-row>
             <div class="section_first">
                 <el-col :span="3">
                     <el-card shadow="hover">
-                        <img src="image/industry/industry-pim/mro.png">
+                        <img src="image/industry/industry-pim/mro.png" alt="MRO主数据库">
                         <h1>MRO主数据库</h1>
                         <h3>统一治理MRO产品主数据库，保持与品牌</h3>
                         <h3>商官网数据同步更新。</h3>
@@ -136,7 +185,7 @@
             <div>
                 <el-col :span="3">
                     <el-card shadow="hover">
-                        <img src="image/industry/industry-pim/number.png">
+                        <img src="image/industry/industry-pim/number.png" alt="数字化资产管理">
                         <h1>数字化资产管理</h1>
                         <h3>赋能下游分销商，统一品牌商品主数据、图</h3>
                         <h3>片数据和内容数据等资产管理。</h3>
@@ -146,7 +195,7 @@
             <div>
                 <el-col :span="3">
                     <el-card shadow="hover">
-                        <img src="image/industry/industry-pim/zzfw.png">
+                        <img src="image/industry/industry-pim/zzfw.png" alt="增值服务按需服务">
                         <h1>增值服务按需服务</h1>
                         <h3>与各工业品线上销售渠道打通，实现商家快</h3>
                         <h3>速开店经营，全渠道推送。</h3>
@@ -155,23 +204,54 @@
             </div>
         </el-row>
     </section>
+
+    <section class="section_fourth_Phone Phone">
+        <h1>产品概述</h1>
+        <div>
+            <img src="image/industry/industry-pim/mro.png" alt="MRO主数据库">
+            <div>
+                <h2>MRO主数据库</h2>
+                <h3>统一治理MRO产品主数据库，保持与品牌商官网数据同步更新。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/industry/industry-pim/number.png" alt="数字化资产管理">
+            <div>
+                <h2>数字化资产管理</h2>
+                <h3>赋能下游分销商，统一品牌商品主数据、图片数据和内容数据等资产管理。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/industry/industry-pim/zzfw.png" alt="增值服务按需服务">
+            <div>
+                <h2>增值服务按需服务</h2>
+                <h3>与各工业品线上销售渠道打通，实现商家快速开店经营，全渠道推送。</h3>
+            </div>
+        </div>
+    </section>
+
     <article>
         <h1>主要产品</h1>
     </article>
-    <section class="section_second" style="background-image:url('image/industry/industry-pim/qjxx.png');">
+    <section class="section_second PC" style="background-image:url('image/industry/industry-pim/qjxx.png');">
         <h1>器件选型</h1>
         <h3>提供在线选型工具，为工控电气企业提供快速嵌入</h3>
         <h3>官网/商城提供器件选型与替换解决方案。</h3>
     </section>
-    <section class="section_second even" style="background-image:url('image/industry/industry-pim/gywk.png');">
+    <section class="section_second even PC" style="background-image:url('image/industry/industry-pim/gywk.png');">
         <h1>工业文库</h1>
         <h3>通过快速搜索在线帮助客户查找样本、操作手册、</h3>
         <h3>面价、证书、视频等文档资料，打通微信分享。</h3>
     </section>
-    <section class="section_second" style="background-image:url('image/industry/industry-pim/3.png');">
+    <section class="section_second PC" style="background-image:url('image/industry/industry-pim/3.png');">
         <h1>MRO营销通</h1>
         <h3>帮助企业开发MRO营销APP，支持产品WEB 3D在</h3>
         <h3>线展示解决方案，打通线上线下信息。</h3>
+    </section>
+    <section class="section_second_Phone Phone" style="margin-bottom: -21pt;">
+        <img src="image/industry/industry-pim/器件选型.png" alt="器件选型" style="width: 100%">
+        <img src="image/industry/industry-pim/工业文库.png" alt="工业文库" style="width: 100%">
+        <img src="image/industry/industry-pim/mro-big.png" alt="mro-big" style="width: 100%">
     </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
@@ -181,12 +261,6 @@
     //let h = document.documentElement.clientHeight || document.body.clientHeight;
     //let header=document.getElementsByTagName('header')[0];
     //header.style.height=h+'px';
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
         data: function () {

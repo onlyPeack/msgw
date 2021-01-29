@@ -68,7 +68,7 @@
                     </el-dropdown-menu>
                 </el-dropdown>
             </li>
-            <li><a href="./about-us.html"><span>关于我们</span></a></li>
+            <li><a href="./about-us.html"><span>关于梅施</span></a></li>
             <!--            <li style="width: 100px">-->
             <!--                <button>登录</button>-->
             <!--            </li>-->
@@ -191,7 +191,7 @@
 
                 <el-menu-item index="4">
                     <a href="./about-us.html" slot="title">
-                        <div>关于我们</div>
+                        <div>关于梅施</div>
                     </a>
                 </el-menu-item>
             </el-menu>
@@ -418,10 +418,10 @@
     @media screen and (max-width: 768px) {
         header{
             background-size: cover;
-            background-position: unset;
+            background-position: center;
         }
         .header_contain{
-            top: 42vh;
+            top: 38vh;
         }
         .header_title{
             font-size: 12.06vw;

@@ -192,7 +192,7 @@
             .section_third_contain_phone>div>div{
                 display: inline-block;
                 margin-left: 10px;
-                width: 90%;
+                width: 86%;
             }
             .section_third_contain_phone>div>div>h3{
                 font-size: 20px;
@@ -252,6 +252,37 @@
             margin-left: 4.2%;
         }
         /*E-sectionFourth*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone h1{
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0;
+        }
+        .section_fourth_Phone>div{
+            width: 81%;
+            margin: 0 auto 20px auto;
+            border-radius: 999px;
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+
+        }
+        .section_fourth_Phone>div>div{
+            margin-left: 10px;
+
+        }
+        .section_fourth_Phone>div h2{
+            font-size: 20px;
+            color: #5A5A5A;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone h3{
+            color: #828282;
+            font-weight: normal;
+            line-height: 18px;
+        }
+        /*E-sectionFourthPhone*/
         /*H-article*/
         article{
             text-align: center;
@@ -297,6 +328,62 @@
             border-right: 1px solid #afccf1;
         }
         /*E-article*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/6m5z6uifehngyn1bvrkb.png');
+            padding-top: 36px;
+            margin-top: 45px;
+            padding-bottom: 36px;
+            margin-bottom: -28px;
+        }
+        .section_us_advantage h1{
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 120px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+            padding-top: 28px;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        .section_us_advantage>div>div>h3{
+            color: white;
+            font-weight: normal;
+            text-align: center;
+            line-height: 18px;
+            padding: 0 10px;
+        }
+        .section_us_advantage .line_between{
+
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 78%;
+            top: 91px;
+            left: 50vw;
+        }
+        /*E-sectionUsAdvantage*/
     </style>
 </head>
 <body>
@@ -480,67 +567,101 @@
                 </div>
             </div>
         </div>
-        <div class="section_third_contain PC">
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/1.png" alt="员工管理">
-                <span class="section_third_text_title">员工管理</span>
-                <span class="section_third_text_text">支持批量导入员工，支持多种角色定义与灵活权限分配</span>
+        <div style="display: flex;align-items: flex-end">
+            <div class="section_third_contain PC">
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/1.png" alt="员工管理">
+                    <span class="section_third_text_title">员工管理</span>
+                    <span class="section_third_text_text">支持批量导入员工，支持多种角色定义与灵活权限分配</span>
+                </div>
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/2.png" alt="课程上传">
+                    <span class="section_third_text_title">课程上传</span>
+                    <span class="section_third_text_text">快速上传视频课程，兼容多种文件格式，支持公共库下载</span>
+                </div>
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/3.png" alt="题库管理">
+                    <span class="section_third_text_title">题库管理</span>
+                    <span class="section_third_text_text">丰富的自动化产品技术题库支持，多知识点协同</span>
+                </div>
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/4.png" alt="智能组卷">
+                    <span class="section_third_text_title">智能组卷</span>
+                    <span class="section_third_text_text">根据标签智能组卷,一键发布考试</span>
+                </div>
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/1.png" alt="消息推送">
+                    <span class="section_third_text_title">消息推送</span>
+                    <span class="section_third_text_text">通过后台自动推送消息</span>
+                </div>
+                <div class="section_third_text">
+                    <img src="image/goods-cloud-classRoom/2.png" alt="统计管理">
+                    <span class="section_third_text_title">统计管理</span>
+                    <span class="section_third_text_text">支持多维度数据统计分析</span>
+                </div>
             </div>
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/2.png" alt="课程上传">
-                <span class="section_third_text_title">课程上传</span>
-                <span class="section_third_text_text">快速上传视频课程，兼容多种文件格式，支持公共库下载</span>
-            </div>
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/3.png" alt="题库管理">
-                <span class="section_third_text_title">题库管理</span>
-                <span class="section_third_text_text">丰富的自动化产品技术题库支持，多知识点协同</span>
-            </div>
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/4.png" alt="智能组卷">
-                <span class="section_third_text_title">智能组卷</span>
-                <span class="section_third_text_text">根据标签智能组卷,一键发布考试</span>
-            </div>
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/1.png" alt="消息推送">
-                <span class="section_third_text_title">消息推送</span>
-                <span class="section_third_text_text">通过后台自动推送消息</span>
-            </div>
-            <div class="section_third_text">
-                <img src="image/goods-cloud-classRoom/2.png" alt="统计管理">
-                <span class="section_third_text_title">统计管理</span>
-                <span class="section_third_text_text">支持多维度数据统计分析</span>
-            </div>
+            <img src="image/goods-cloud-classRoom/computer.png" alt="电脑" class="PC" height="400">
         </div>
-        <img src="image/goods-cloud-classRoom/computer.png" alt="电脑" class="PC">
+
     </section>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <h1>技术服务优势</h1>
         <div class="section_fourth_first">
-            <img src="image/goods-cloud-classRoom/bs.png" alt="">
+            <img src="image/goods-cloud-classRoom/bs.png" alt="灵活部署">
             <h2>灵活部署</h2>
             <h3>支持saas部署低成本接入平台;也支持企业</h3>
             <h3>私有化部署，专属带宽。</h3>
         </div>
         <div>
-            <img src="image/goods-cloud-classRoom/more-app.png" alt="">
+            <img src="image/goods-cloud-classRoom/more-app.png" alt="多端应用">
             <h2>多端应用</h2>
             <h3>支持PC、APP、 微信等多端应用，千万级用</h3>
             <h3>户同时上线。</h3>
         </div>
         <div>
-            <img src="image/goods-cloud-classRoom/exploit.png" alt="">
+            <img src="image/goods-cloud-classRoom/exploit.png" alt="定制开发">
             <h2>定制开发</h2>
             <h3>可量身定制二次开发，模块化支撑，快速上线。</h3>
         </div>
         <div>
-            <img src="image/goods-cloud-classRoom/iteration.png" alt="">
+            <img src="image/goods-cloud-classRoom/iteration.png" alt="迭代发展">
             <h2>迭代发展</h2>
             <h3>将逐步增加积分商城、学习社区、人才测评</h3>
             <h3>等模块，并与云ERP无缝打通。</h3>
         </div>
     </section>
-    <article>
+    <section class="section_fourth_Phone Phone">
+        <h1>技术服务优势</h1>
+        <div>
+            <img src="image/goods-cloud-classRoom/bs.png" alt="灵活部署">
+            <div>
+                <h2>灵活部署</h2>
+                <h3>支持saas部署低成本接入平台;也支持企业私有化部署，专属带宽。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/more-app.png" alt="多端应用">
+            <div>
+                <h2>多端应用</h2>
+                <h3>支持PC、APP、 微信等多端应用，千万级用户同时上线。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/exploit.png" alt="定制开发">
+            <div>
+                <h2>定制开发</h2>
+                <h3>可量身定制二次开发，模块化支撑，快速上线。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-cloud-classRoom/iteration.png" alt="迭代发展">
+            <div>
+                <h2>迭代发展</h2>
+                <h3>将逐步增加积分商城、学习社区、人才测评等模块，并与云ERP无缝打通。</h3>
+            </div>
+        </div>
+    </section>
+    <article class="PC">
         <h1>亮点特色</h1>
         <div class="article_contain">
             <div class="RB_border">
@@ -580,6 +701,53 @@
             </div>
         </div>
     </article>
+    <section class="section_us_advantage Phone">
+        <h1>亮点特色</h1>
+        <div>
+            <div>
+                <h2>01</h2>
+                <h3>低成本打造您的专属学院</h3>
+            </div>
+            <div>
+                <h2>02</h2>
+                <h3>支持移动学习与考试</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <h2>03</h2>
+                <h3>多岗位针对性学习</h3>
+            </div>
+            <div>
+                <h2>04</h2>
+                <h3>碎片化学习缓解工学矛盾</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <h2>05</h2>
+                <h3>培训成本低课程可反复学习</h3>
+            </div>
+            <div>
+                <h2>06</h2>
+                <h3>提升业务技能，解决中小企业培训落地困难</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <h2>07</h2>
+                <h3>统计员工学习数据，了解员工成长进度</h3>
+            </div>
+            <div>
+                <h2>08</h2>
+                <h3>丰富在线公共课程与专业题库资源</h3>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>

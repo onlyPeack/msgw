@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>云ERP</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -15,6 +19,13 @@
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/by0yas12t5okdw4flihz.png");
+        }
+        @media screen and (max-width: 768px) {
+            .header_contain h2{
+                margin: 0 auto;
+                width: 93%;
+                line-height: 30px;
+            }
         }
         /*E-header*/
         /*H-article*/
@@ -34,6 +45,24 @@
         article h3{
             font-size: 24px;
             font-weight: normal;
+        }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 163px;
+                background-position: center;
+            }
+            article h1{
+                padding-top: 40px;
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            article p{
+                font-size: 14px;
+                text-align: center;
+                width: 100%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
         }
         /*E-article*/
         /*H-sectionFirst*/
@@ -58,6 +87,7 @@
         .section_first div .el-tabs__item {
             width: 200px;
             color: white;
+            opacity: .5;
             line-height: 60px;
             height: 60px;
             font-size: 16px;
@@ -70,6 +100,43 @@
         .section_first div .section_list_contain .button{
             margin-top: 8px;
             margin-bottom: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .section_first{
+                height: 590px;
+            }
+            .section_first>h1{
+                padding-top: 60px;
+            }
+            .el-tabs__header{
+                width: 90%;
+            }
+            .section_first div .el-tabs__item {
+                width: 25%;
+            }
+            .el-tabs__nav{
+                white-space: unset;
+                float: unset;
+            }
+            #tab-1{
+                padding: 0;
+            }
+            #tab-2{
+                padding: 0;
+            }
+            .el-tabs .el-tabs__item[aria-selected="true"]{
+                opacity: 1;
+            }
+            .section_list_contain p{
+                font-size: 16px;
+                text-align: left;
+                width: 90%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
+            .el-tabs img{
+                width: 100%;
+            }
         }
         /*E-sectionFirst*/
         /*H-sectionSecond*/
@@ -176,7 +243,8 @@
     </header>
     <article>
         <h1>梅施云ERP-生意管理好帮手</h1>
-        <h3>全面实现采购、销售、库存和应收、应付款专业处理</h3>
+        <h3 class="PC">全面实现采购、销售、库存和应收、应付款专业处理</h3>
+        <p class="Phone">全面实现采购、销售、库存和应收、应付款专业处理</p>
     </article>
     <section class="section_first">
         <h1>梅施云ERP</h1>
@@ -184,32 +252,36 @@
             <el-tabs>
                 <el-tab-pane label="采购管理">
                     <div class="section_list_contain">
-                        <h2>提供采购订单、采购退货和采购入库单，可开启审核，可自定义管理审核流程;</h2>
-                        <h2>支持以销订购、预警补货和备货补货等多种补货方式。</h2>
+                        <h2 class="PC">提供采购订单、采购退货和采购入库单，可开启审核，可自定义管理审核流程;</h2>
+                        <h2 class="PC">支持以销订购、预警补货和备货补货等多种补货方式。</h2>
+                        <p class="Phone">提供采购订单、采购退货和采购入库单，可开启审核，可自定义管理审核流程;支持以销订购、预警补货和备货补货等多种补货方式。</p>
                         <a href="http://erp.msebc.com/"><el-button type="text" class="button">免费试用》</el-button></a>
                         <img src="image/goods-erp/cggl.png" alt="">
                     </div>
                 </el-tab-pane>
                 <el-tab-pane label="销售管理">
                     <div class="section_list_contain">
-                        <h2>提供销售报价、销售订单和销售退货单，可开启审核，单据审核流程自定义配</h2>
-                        <h2>置;支持税金计算、销售开票等功能。</h2>
+                        <h2 class="PC">提供销售报价、销售订单和销售退货单，可开启审核，单据审核流程自定义配</h2>
+                        <h2 class="PC">置;支持税金计算、销售开票等功能。</h2>
+                        <p class="Phone">提供销售报价、销售订单和销售退货单，可开启审核，单据审核流程自定义配置;支持税金计算、销售开票等功能。</p>
                         <a href="http://erp.msebc.com/"><el-button type="text" class="button">免费试用》</el-button></a>
                         <img src="image/goods-erp/xsgl.png" alt="">
                     </div>
                 </el-tab-pane>
                 <el-tab-pane label="资金管理">
                     <div class="section_list_contain">
-                        <h2>可按单收款或按客户(供应商)收款;清晰查询和资金往来明细对账;可根据</h2>
-                        <h2>业务类型查看不同的账户资金收支明细，实时掌握资金往来情况。</h2>
+                        <h2 class="PC">可按单收款或按客户(供应商)收款;清晰查询和资金往来明细对账;可根据</h2>
+                        <h2 class="PC">业务类型查看不同的账户资金收支明细，实时掌握资金往来情况。</h2>
+                        <p class="Phone">可按单收款或按客户(供应商)收款;清晰查询和资金往来明细对账;可根据业务类型查看不同的账户资金收支明细，实时掌握资金往来情况。</p>
                         <a href="http://erp.msebc.com/"><el-button type="text" class="button">免费试用》</el-button></a>
                         <img src="image/goods-erp/zjgl.png" alt="">
                     </div>
                 </el-tab-pane>
                 <el-tab-pane label="库存管理">
                     <div class="section_list_contain">
-                        <h2>调拨、盘点、组装、拆卸、即时库存查询等，提供其他出/入库单、调拨单、</h2>
-                        <h2>组装/拆卸单、成本调整单和商品库存盘点等功能。</h2>
+                        <h2 class="PC">调拨、盘点、组装、拆卸、即时库存查询等，提供其他出/入库单、调拨单、</h2>
+                        <h2 class="PC">组装/拆卸单、成本调整单和商品库存盘点等功能。</h2>
+                        <p class="Phone">调拨、盘点、组装、拆卸、即时库存查询等，提供其他出/入库单、调拨单、组装/拆卸单、成本调整单和商品库存盘点等功能。</p>
                         <a href="http://erp.msebc.com/"><el-button type="text" class="button">免费试用》</el-button></a>
                         <img src="image/goods-erp/set-42.png" alt="">
                     </div>
@@ -291,13 +363,6 @@
     <Myaside></Myaside>
 </div>
 <script>
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.top=scrollTop+'px';
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     let vue=new Vue({
         el: '#app',
         data: {

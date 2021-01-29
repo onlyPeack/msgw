@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>行业赋能-工业智库</title>
+    <title>行业赋能-工享荟</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -18,6 +22,11 @@
         }
         header .header_contain{
             top: 270px;
+        }
+        @media screen and (max-width: 768px) {
+            header{
+                height: 100vh!important;
+            }
         }
         /*H-article*/
         article{
@@ -38,11 +47,33 @@
             font-weight: normal;
             margin-bottom: 15px;
         }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 334px;
+            }
+            article h1{
+                padding-top: 40px;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            article p{
+                font-size: 16px;
+                text-align: left;
+                width: 85%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
+        }
         /*E-article*/
         /*H-sectionImg*/
         .section_img{
             padding-top: 60px;
             text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            .section_img img{
+                width: 93%;
+            }
         }
         /*E-sectionImg*/
         /*H-sectionFourth*/
@@ -95,6 +126,40 @@
             border: 0;
         }
         /*E-sectionFourth*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone h1{
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0;
+        }
+        .section_fourth_Phone>div{
+            width: 81%;
+            margin: 0 auto 20px auto;
+            border-radius: 999px;
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+
+        }
+        .section_fourth_Phone>div img{
+            width: 50px;
+        }
+        .section_fourth_Phone>div>div{
+            margin-left: 10px;
+
+        }
+        .section_fourth_Phone>div h2{
+            font-size: 20px;
+            color: #5A5A5A;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone h3{
+            color: #828282;
+            font-weight: normal;
+            line-height: 18px;
+        }
+        /*E-sectionFourthPhone*/
     </style>
 </head>
 <body>
@@ -102,44 +167,78 @@
     <Myheader></Myheader>
     <header>
             <div class="header_contain">
-                <h1 class="header_title">梅施工业智库</h1>
+                <h1 class="header_title">梅施工享荟</h1>
                 <h2>专业知识收储池，数字化工业社区</h2>
             </div>
     </header>
     <article>
-        <h1>梅施-工业智库</h1>
-        <h3>集成品牌、产品库、工业文库、人脉、二手设备、众包服务等共享服务平台，帮助用户建设数字</h3>
-        <h3>化营销工具，通过用户提供的产品能力数据和服务能力数据，使用大数据+ AI技术帮助用户推广</h3>
-        <h3>产品和服务，并完成需求对接。</h3>
+        <h1>梅施-工享荟</h1>
+        <h3 class="PC">集成品牌、产品库、工业文库、人脉、二手设备、众包服务等共享服务平台，帮助用户建设数字</h3>
+        <h3 class="PC">化营销工具，通过用户提供的产品能力数据和服务能力数据，使用大数据+ AI技术帮助用户推广</h3>
+        <h3 class="PC">产品和服务，并完成需求对接。</h3>
+        <p class="Phone">
+            集成品牌、产品库、工业文库、人脉、二手设备、众包服务等共享服务平台，帮助用户建设数字化营销工具，通过用户提供的产品能力数据和服务能力数据，使用大数据+ AI技术帮助用户推广产品和服务，并完成需求对接。
+        </p>
     </article>
     <section class="section_img">
-        <img src="http://gxcl-shop.qiniu.520mro.com/hlge96bvyo7rq9jprtak.png" alt="">
+        <img src="http://gxcl-shop.qiniu.520mro.com/wjghvjtellvxn8so8347.png" alt="工享荟">
     </section>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <h1>我们的优势</h1>
         <div class="section_fourth_first">
-            <img src="image/industry/industry-wit/hyff.png" alt="">
+            <img src="image/industry/industry-wit/hyff.png" alt="行业SKU丰富">
             <h2>行业SKU丰富</h2>
             <h3>涉及产品与技术门类丰富，从工厂配电到自</h3>
             <h3>动化一站式收集。</h3>
         </div>
         <div>
-            <img src="image/industry/industry-wit/xqpd.png" alt="">
+            <img src="image/industry/industry-wit/xqpd.png" alt="需求配对">
             <h2>需求配对</h2>
             <h3>会员企业免费发布需求，撮合交易。</h3>
             <h3>　</h3>
         </div>
         <div>
-            <img src="image/industry/industry-wit/xzmm.png" alt="">
+            <img src="image/industry/industry-wit/xzmm.png" alt="闲置器件买卖">
             <h2>闲置器件买卖</h2>
             <h3>提供二手设备交易服务。</h3>
             <h3>　</h3>
         </div>
         <div class="section_fourth_last">
-            <img src="image/industry/industry-wit/sjpp.png" alt="">
+            <img src="image/industry/industry-wit/sjpp.png" alt="商机匹配">
             <h2>商机匹配</h2>
             <h3>支持企业匹配商机。</h3>
             <h3>　</h3>
+        </div>
+    </section>
+    <section class="section_fourth_Phone Phone">
+        <h1>我们的优势</h1>
+        <div>
+            <img src="image/industry/industry-wit/hyff.png" alt="行业SKU丰富">
+            <div>
+                <h2>行业SKU丰富</h2>
+                <h3>涉及产品与技术门类丰富，从工厂配电到自动化一站式收集。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/industry/industry-wit/xqpd.png" alt="需求配对">
+            <div>
+                <h2>需求配对</h2>
+                <h3>会员企业免费发布需求，撮合交易。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/industry/industry-wit/xzmm.png" alt="闲置器件买卖">
+            <div>
+                <h2>闲置器件买卖</h2>
+                <h3>提供二手设备交易服务。</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/industry/industry-wit/sjpp.png" alt="商机匹配">
+            <div>
+                <h2>商机匹配</h2>
+                <h3>支持企业匹配商机。</h3>
+            </div>
         </div>
     </section>
     <Myfooter></Myfooter>
@@ -150,12 +249,6 @@
     //let h = document.documentElement.clientHeight || document.body.clientHeight;
     //let header=document.getElementsByTagName('header')[0];
     //header.style.height=h+'px';
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
         data: function () {

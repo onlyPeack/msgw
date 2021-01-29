@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>解决方案-制造</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -16,6 +20,13 @@
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/mcgeiabu2tpu6tyvtiyk.png");
 
+        }
+        @media screen and (max-width: 768px) {
+            .header_contain h2{
+                margin: 0 auto;
+                width: 93%;
+                line-height: 30px;
+            }
         }
         /*H-sectionFirst*/
         .section_first{
@@ -47,6 +58,40 @@
         .section_first_img h2:first-child{
             padding-top: 14.06vw;
         }
+        @media screen and (max-width: 768px) {
+            .section_first{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+            .section_first h1{
+                font-size: 28px;
+                width: 100%;
+                margin: 40px 0;
+            }
+            .section_first_first{
+                margin-left: 0;
+            }
+            .section_first_img{
+                width: 23%;
+                height: 23vw;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: 3px;
+            }
+            .section_first_img h2:first-child{
+                padding-top: 0;
+            }
+            .section_first_img h2{
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+        }
         /*E-sectionFirst*/
         /*H-article*/
         article{
@@ -61,6 +106,21 @@
             font-size: 45px;
             color: white;
             margin-bottom: 60px;
+        }
+        @media screen and (max-width: 768px) {
+            article{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 120px;
+                background-size: cover;
+                background-position: center;
+            }
+            article h1{
+                font-size: 28px;
+                padding-top: 0;
+                margin-bottom: 0;
+            }
         }
         /*E-article*/
         /*H-sectionSecond*/
@@ -122,6 +182,35 @@
         .footer_first{
             margin-left: 18.75vw;
         }
+        @media screen and (max-width: 768px) {
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            footer>h1{
+                font-size: 28px;
+                width: 100%;
+                margin-bottom: 10.77vw;
+            }
+            .footer_first{
+                margin-left: 0;
+            }
+            footer>div{
+                width: 27%;
+                margin-left: 0;
+                margin-bottom: 10px;
+                height: 140px;
+            }
+            footer img{
+                width: 13vw;
+                margin-bottom: 10px;
+            }
+            footer h2{
+                font-size: 16px;
+                color: #5A5A5A;
+            }
+        }
         /*E-footer*/
     </style>
 </head>
@@ -131,8 +220,9 @@
     <header>
         <div class="header_contain">
             <h1 class="header_title">梅施生产制造ERP (M-ERP)</h1>
-            <h2>打造生产全程信息化、 体化管理， 工业领域最佳应用，</h2>
-            <h2>解决企业成本高，效率低，过程不透明等问题</h2>
+            <h2 class="PC">打造生产全程信息化、一体化管理， 工业领域最佳应用，</h2>
+            <h2 class="PC">解决企业成本高，效率低，过程不透明等问题</h2>
+            <h2 class="Phone">打造生产全程信息化、一体化管理， 工业领域最佳应用，解决企业成本高，效率低，过程不透明等问题</h2>
         </div>
     </header>
     <section class="section_first">
@@ -173,46 +263,53 @@
     <article>
         <h1>M- ERP能帮我做什么?</h1>
     </article>
-    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-1.png');">
+    <section class="section_second PC" style="background-image:url('image/project/project-make/other-picture-1.png');">
         <h1>生产一体化，信息化</h1>
         <img src="image/project/project-make/xxh.png" alt="">
     </section>
-    <section class="section_second even" style="background-image:url('image/project/project-make/other-picture-2.png');">
+    <section class="section_second even PC" style="background-image:url('image/project/project-make/other-picture-2.png');">
         <h1>生产进度实时跟踪</h1>
         <img src="image/project/project-make/scjd.png" alt="">
     </section>
-    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-3.png');">
+    <section class="section_second PC" style="background-image:url('image/project/project-make/other-picture-3.png');">
         <h1>灵活敏捷生产</h1>
         <img src="image/project/project-make/lhsc.png" alt="">
     </section>
-    <section class="section_second even" style="background-image:url('image/project/project-make/other-picture-4.png');">
+    <section class="section_second even PC" style="background-image:url('image/project/project-make/other-picture-4.png');">
         <h1>成本核算</h1>
         <img src="image/project/project-make/cghs.png" alt="">
     </section>
-    <section class="section_second" style="background-image:url('image/project/project-make/other-picture-5.png');">
+    <section class="section_second PC" style="background-image:url('image/project/project-make/other-picture-5.png');">
         <h1>员工培训</h1>
         <img src="image/project/project-make/ygpx.png" alt="">
+    </section>
+    <section class="section_second_Phone Phone">
+        <img src="image/project/project-make/生产一体化.png" alt="生产一体化" style="width: 100%">
+        <img src="image/project/project-make/生产进度.png" alt="生产进度" style="width: 100%">
+        <img src="image/project/project-make/灵活敏捷生产.png" alt="灵活敏捷生产" style="width: 100%">
+        <img src="image/project/project-make/成本核算.png" alt="灵活敏捷生产" style="width: 100%">
+        <img src="image/project/project-make/员工培训.png" alt="灵活敏捷生产" style="width: 100%">
     </section>
     <footer>
         <h1>M-ERP优势</h1>
         <div class="footer_first">
-            <img src="image/project/project-make/bj.png" alt="">
+            <img src="image/project/project-make/bj.png" alt="简单便捷">
             <h2>简单便捷</h2>
         </div>
         <div>
-            <img src="image/project/project-make/kk.png" alt="">
+            <img src="image/project/project-make/kk.png" alt="安全可靠">
             <h2>安全可靠</h2>
         </div>
         <div>
-            <img src="image/project/project-make/ss.png" alt="">
+            <img src="image/project/project-make/ss.png" alt="快速实施">
             <h2>快速实施</h2>
         </div>
         <div>
-            <img src="image/project/project-make/height-expand.png" alt="">
+            <img src="image/project/project-make/height-expand.png" alt="高度拓展">
             <h2>高度拓展</h2>
         </div>
         <div>
-            <img src="image/project/project-make/js-support.png" alt="">
+            <img src="image/project/project-make/js-support.png" alt="1对1技术支持">
             <h2>1对1技术支持</h2>
         </div>
     </footer>
@@ -224,12 +321,6 @@
     let h = document.documentElement.clientHeight || document.body.clientHeight;
     let header=document.getElementsByTagName('header')[0];
     header.style.height=h+'px';
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     new Vue({
         el: '#app',
         data: function () {

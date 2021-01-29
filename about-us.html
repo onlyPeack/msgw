@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>关于我们</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -18,6 +22,11 @@
         }
         header .header_contain{
             top: 270px;
+        }
+        @media screen and (max-width: 768px) {
+            header{
+                height: 100vh!important;
+            }
         }
         /*H-article*/
         article{
@@ -37,6 +46,24 @@
             font-size: 1.25vw;
             font-weight: normal;
             margin-bottom: 0.78vw;
+        }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 296px;
+                background-position: center;
+            }
+            article h1{
+                padding-top: 40px;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            article p{
+                font-size: 16px;
+                text-align: left;
+                width: 85%;
+                line-height: 24px;
+                margin: 0 auto;
+            }
         }
         /*E-article*/
         /*H-sectionFourth*/
@@ -87,6 +114,52 @@
             border: 0;
         }
         /*E-sectionFourth*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone{
+            padding:30px 0;
+        }
+        .section_fourth_Phone h1{
+            font-size: 32px;
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        .section_fourth_Phone>div{
+
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            width: 94%;
+            margin: 0 auto;
+        }
+        .section_fourth_Phone>div>div{
+            padding: 0 30px;
+            height: 155px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .section_fourth_Phone>div>div>div{
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 12px;
+            max-width: 77%;
+        }
+        .section_fourth_Phone>div>div>div h2{
+            color: #404040;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone>div>div>div h3{
+            color: #AAAAAA;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+        .line_between{
+            height: 2px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionFourthPhone*/
         /*H-footer*/
         footer{
             text-align: center;
@@ -134,6 +207,62 @@
             border-right: 1px solid #afccf1;
         }
         /*E-footer*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/6m5z6uifehngyn1bvrkb.png');
+            padding-top: 36px;
+            margin-top: 45px;
+            padding-bottom: 36px;
+            margin-bottom: -28px;
+        }
+        .section_us_advantage h1{
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 120px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+            padding-top: 28px;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        .section_us_advantage>div>div>h3{
+            color: white;
+            font-weight: normal;
+            text-align: center;
+            line-height: 18px;
+            padding: 0 10px;
+        }
+        .section_us_advantage .line_between{
+
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 78%;
+            top: 91px;
+            left: 50vw;
+        }
+        /*E-sectionUsAdvantage*/
         /*H-trueFooter*/
         .true_footer{
             text-align: center;
@@ -158,13 +287,14 @@
     </header>
     <article>
         <h1>公司简介</h1>
-        <h3>公司立足于工业软件服务领域，以帮助行业打造生态产业联盟为重要使命，用云平台打通上下游供应链集成，加强人才、资金、技术</h3>
-        <h3>和服务等资源集聚，并倾力打造面向行业saas云服务，包括ERP、MES、 CRM、WMS、电子商务等解决方案。</h3>
+        <h3 class="PC">公司立足于工业软件服务领域，以帮助行业打造生态产业联盟为重要使命，用云平台打通上下游供应链集成，加强人才、资金、技术</h3>
+        <h3 class="PC">和服务等资源集聚，并倾力打造面向行业saas云服务，包括ERP、MES、 CRM、WMS、电子商务等解决方案。</h3>
+        <p class="Phone">公司立足于工业软件服务领域，以帮助行业打造生态产业联盟为重要使命，用云平台打通上下游供应链集成，加强人才、资金、技术和服务等资源集聚，并倾力打造面向行业saas云服务，包括ERP、MES、 CRM、WMS、电子商务等解决方案。</p>
     </article>
-    <section class="section_fourth">
+    <section class="section_fourth PC">
         <h1>企业文化</h1>
         <div class="section_fourth_first">
-            <img src="image/about-us/customer-top.png" alt="">
+            <img src="image/about-us/customer-top.png" alt="客户至上">
             <h2>客户至上</h2>
             <h3>以客户为中心，我们对创新的解决方案积极</h3>
             <h3>倾听、响应、最大限度地契合客户需求，把</h3>
@@ -172,7 +302,7 @@
             <h3>践。</h3>
         </div>
         <div>
-            <img src="image/about-us/yrwb.png" alt="">
+            <img src="image/about-us/yrwb.png" alt="以人为本">
             <h2>以人为本</h2>
             <h3>以人为本，让员工发挥专长，以事为先，持续</h3>
             <h3>驱动工作模板化与精细化，一切流程IT化，价</h3>
@@ -180,7 +310,7 @@
             <h3>　</h3>
         </div>
         <div>
-            <img src="image/about-us/cx.png" alt="">
+            <img src="image/about-us/cx.png" alt="鼓励创新">
             <h2>鼓励创新</h2>
             <h3>以TRIZ创新方法为引导，突破思维惯性，在不</h3>
             <h3>断地思维发散与收敛过程中，探索有效的产品</h3>
@@ -188,14 +318,50 @@
             <h3>决策慢和成果少等问题。</h3>
         </div>
         <div class="section_fourth_last">
-            <img src="image/about-us/team-gz.png" alt="">
+            <img src="image/about-us/team-gz.png" alt="团队合作">
             <h2>团队合作</h2>
             <h3>我们的团队坚持践行梅花品质，做雪凌霜，以</h3>
             <h3>不屈不挠地工匠精神，打造精品，施惠于人，</h3>
             <h3>施报社会。</h3>
         </div>
     </section>
-    <footer>
+    <section class="section_fourth_Phone Phone">
+        <h1>企业文化</h1>
+        <div>
+            <div>
+                <img src="image/about-us/customer-top.png" alt="客户至上">
+                <div>
+                    <h2>客户至上</h2>
+                    <h3>以客户为中心，我们对创新的解决方案积极倾听、响应、最大限度地契合客户需求，把握行业趋势，与您分享最佳的行业信息化实践。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/about-us/yrwb.png" alt="以人为本">
+                <div>
+                    <h2>以人为本</h2>
+                    <h3>以人为本，让员工发挥专长，以事为先，持续驱动工作模板化与精细化，一切流程IT化，价值量化考核，构建积极向上的文化。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/about-us/cx.png" alt="鼓励创新">
+                <div>
+                    <h2>鼓励创新</h2>
+                    <h3>以TRIZ创新方法为引导，突破思维惯性，在不断地思维发散与收敛过程中，探索有效的产品创新和管理创新方法，解决概念多、落地难、决策慢和成果少等问题。</h3>
+                </div>
+            </div>
+            <div class="line_between"></div>
+            <div>
+                <img src="image/about-us/team-gz.png" alt="团队合作">
+                <div>
+                    <h2>团队合作</h2>
+                    <h3>我们的团队坚持践行梅花品质，做雪凌霜，以不屈不挠地工匠精神，打造精品，施惠于人，施报社会。</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="PC">
         <h1>亮点特色</h1>
         <div class="footer_contain">
             <div class="RB_border">
@@ -228,6 +394,42 @@
             </div>
         </div>
     </footer>
+    <section class="section_us_advantage Phone">
+        <h1>亮点特色</h1>
+        <div>
+            <div>
+                <h2>01</h2>
+                <h3>用户可及的价格</h3>
+            </div>
+            <div>
+                <h2>02</h2>
+                <h3>模块化集成满足一切所需</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <h2>03</h2>
+                <h3>开箱即用像积木一样组装拆卸</h3>
+            </div>
+            <div>
+                <h2>04</h2>
+                <h3>专家服务，一路保航</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <h2>05</h2>
+                <h3>灵活可配置满足企业的个性化需求</h3>
+            </div>
+            <div>
+                <h2>06</h2>
+                <h3>帮助企业解决管理中的各种挑战</h3>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
     <section class="true_footer">
         <h1>联系我们</h1>
         <img src="image/about-us/set-33.png" alt="">

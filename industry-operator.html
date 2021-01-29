@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>行业赋能-工商代运营</title>
+    <meta name="keywords"
+          content="工业ERP，ERP，电商ERP，企业管理系统，进销存，CRM，商城，管理系统，梅施，苏州梅施，和稷，和稷工业,梅施科技,梅施软件,梅施云商,云ERP,云仓储,工业电商,云进销存,云CRM,工业SAAS,电商ERP,hj,ms,gy,"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
     <!--    支持es6基础语法-->
     <script src="js/browser.min.js"></script>
@@ -18,6 +22,11 @@
         }
         header .header_contain{
             top: 270px;
+        }
+        @media screen and (max-width: 768px) {
+            header{
+                height: 100vh!important;
+            }
         }
         /*H-sectionFirst*/
         .section_first{
@@ -45,6 +54,30 @@
         .section_first_img h2:first-child{
             padding-top: 5.72vw;
         }
+        @media screen and (max-width: 768px) {
+            .section_first{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .section_first h1{
+                font-size: 32px;
+                margin: 40px 0;
+                width: 100%;
+                padding-top: 0;
+            }
+            .section_first_img{
+                width: 38%;
+                height: 29.62vw;
+                margin-bottom: 2vw;
+                padding: 11px 20px;
+            }
+            .section_first_img h2{
+                font-size: 17px;
+                padding-top: 0;
+                line-height: 20px;
+            }
+        }
         /*E-sectionFirst*/
         /*H-article*/
         article{
@@ -53,13 +86,23 @@
             background-image: url('image/industry/industry-operator/background-1.png');
             color: white;
             background-repeat: no-repeat;
+            background-position: center;
             margin-top: 3.9vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         article h1{
-            padding-top: 5.2vw;
             font-size: 2.34vw;
             color: white;
-            margin-bottom: 3.12vw;
+        }
+        @media screen and (max-width: 768px) {
+            article{
+                height: 26.5vw;
+            }
+            article h1{
+                font-size: 26px;
+            }
         }
         /*E-article*/
         /*H-sectionSecond*/
@@ -166,6 +209,12 @@
         .footer_organ div:last-child{
             border: 0;
         }
+        @media screen and (max-width: 768px) {
+            footer h1{
+                font-size: 32px;
+                padding-top: 60px;
+            }
+        }
         /*E-footer*/
     </style>
 </head>
@@ -199,21 +248,26 @@
     <article>
         <h1>工业电商代运营能帮我做什么?</h1>
     </article>
-    <section class="section_second" style="background-image:url('image/industry/industry-operator/1.png');">
+    <section class="section_second PC" style="background-image:url('image/industry/industry-operator/1.png');">
         <h1>视觉设计</h1>
-        <img src="image/industry/industry-operator/text-1.png" alt="">
+        <img src="image/industry/industry-operator/text-1.png" alt="视觉设计">
     </section>
-    <section class="section_second even" style="background-image:url('image/industry/industry-operator/2.png');">
+    <section class="section_second even PC" style="background-image:url('image/industry/industry-operator/2.png');">
         <h1>营销推广</h1>
-        <img src="image/industry/industry-operator/text-2.png" alt="">
+        <img src="image/industry/industry-operator/text-2.png" alt="营销推广">
     </section>
-    <section class="section_second" style="background-image:url('image/industry/industry-operator/picture-3.png');">
+    <section class="section_second PC" style="background-image:url('image/industry/industry-operator/picture-3.png');">
         <h1>网站优化</h1>
-        <img src="image/industry/industry-operator/wzyh.png" alt="">
+        <img src="image/industry/industry-operator/wzyh.png" alt="网站优化">
+    </section>
+    <section class="section_second_Phone Phone">
+        <img src="image/industry/industry-operator/视觉设计.png" alt="视觉设计" style="width: 100%;">
+        <img src="image/industry/industry-operator/营销推广.png" alt="营销推广" style="width: 100%;">
+        <img src="image/industry/industry-operator/网站优化.png" alt="网站优化" style="width: 100%;">
     </section>
     <footer>
         <h1>我们的优势</h1>
-        <div class="footer_organ">
+        <div class="footer_organ PC">
             <div class="organ_icon organ_first" onmouseenter="tabCard(this)">
                 <div></div>
                 <img src="image/industry/industry-operator/zzys.png" alt="">
@@ -271,6 +325,13 @@
                 </hgroup>
             </div>
         </div>
+        <div class="Phone" style="width: 95%;margin: 0 auto">
+            <img src="image/industry/industry-operator/优势1.png" alt="优势1" style="width: 100%">
+            <img src="image/industry/industry-operator/优势2.png" alt="优势2" style="width: 100%">
+            <img src="image/industry/industry-operator/优势3.png" alt="优势3" style="width: 100%">
+            <img src="image/industry/industry-operator/优势4.png" alt="优势4" style="width: 100%">
+            <img src="image/industry/industry-operator/优势5.png" alt="优势5" style="width: 100%">
+        </div>
     </footer>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
@@ -280,12 +341,6 @@
     //let h = document.documentElement.clientHeight || document.body.clientHeight;
     //let header=document.getElementsByTagName('header')[0];
     //header.style.height=h+'px';
-    //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-    window.onscroll = function () {
-        let nav=document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        nav.style.backgroundColor=scrollTop===0?'rgba(0,0,0,0)':'black'
-    }
     //选项卡特效
     function tabCard(even) {
         let arr=document.getElementsByClassName('organ_icon');

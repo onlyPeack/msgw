@@ -137,12 +137,12 @@
 
                     <el-menu-item index="5">
                         <a href="./about-us.html" slot="title">
-                            <div style="color: rgba(255,255,255,.7);font-weight: bolder">关于我们</div>
+                            <div style="color: rgba(255,255,255,.7);font-weight: bolder">关于梅施</div>
                         </a>
                     </el-menu-item>
                 </el-menu>
             </el-collapse-transition>
-            <div style="padding: 20px;font-size: 10pt;width: 87%">
+            <div style="padding: 20px;width: 87%">
                 <span>QQ：3376893959</span><div style="height: 10pt"></div>
                 <span>手机：17368056998</span><div style="height: 10pt"></div>
                 <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt"><div style="height: 10pt"></div>
