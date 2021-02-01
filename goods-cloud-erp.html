@@ -48,16 +48,16 @@
         }
         @media screen and (max-width: 768px) {
             article{
-                height: 163px;
+                height: 153px;
                 background-position: center;
             }
             article h1{
                 padding-top: 40px;
-                font-size: 28px;
-                margin-bottom: 30px;
+                font-size: 24px;
+                margin-bottom: 20px;
             }
             article p{
-                font-size: 14px;
+                font-size: 12px;
                 text-align: center;
                 width: 100%;
                 line-height: 24px;
@@ -103,16 +103,18 @@
         }
         @media screen and (max-width: 768px) {
             .section_first{
-                height: 590px;
+                height: 540px;
             }
             .section_first>h1{
-                padding-top: 60px;
+                padding-top: 40px;
+                font-size: 24px;
             }
             .el-tabs__header{
                 width: 90%;
             }
             .section_first div .el-tabs__item {
                 width: 25%;
+                font-size: 12px;
             }
             .el-tabs__nav{
                 white-space: unset;
@@ -128,7 +130,7 @@
                 opacity: 1;
             }
             .section_list_contain p{
-                font-size: 16px;
+                font-size: 12px;
                 text-align: left;
                 width: 90%;
                 line-height: 24px;
@@ -173,16 +175,53 @@
             font-size: 45px;
             font-weight: 500;
         }
+        @media screen and (max-width: 768px) {
+            .section_second{
+                padding-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .section_second h1{
+                font-size: 24px;
+                width: 100%;
+            }
+            .section_second h3{
+                font-size: 14px;
+                line-height: 22px;
+                width: 100%;
+                padding: 0 20px;
+                margin-bottom: 40px;
+            }
+            .section_second .section_second_img{
+                width: 31%;
+                height: 110px;
+                margin-bottom: 1vw;
+            }
+            .section_second_img img{
+                padding-top: 18px;
+                width: 35px;
+            }
+            .section_second_img h1{
+                font-size: 14px;
+                margin-top: 12px;
+            }
+        }
         /*E-sectionSecond*/
         /*H-sectionThird*/
         .section_third{
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .section_third h1{
+            width: 100%;
             font-size: 45px;
             padding-top: 155px;
         }
         .section_third h3{
+            width: 100%;
             font-size: 20px;
             font-weight: normal;
             color: #666;
@@ -190,10 +229,28 @@
             margin-bottom: 31px;
         }
         .section_third .section_third_img{
-            display: inline-block;
+
             width: 512px;
             height: 385px;
             margin-right: 18px;
+        }
+        @media screen and (max-width: 768px) {
+            .section_third h1{
+                font-size: 24px;
+                padding-top: 40px;
+                margin-bottom: 40px;
+            }
+            .section_third .section_third_img{
+                margin: 0 auto 15px auto!important;
+                background-size: contain;
+                width: 90%;
+                height: unset;
+                background-repeat: no-repeat;
+            }
+            .section_third_img img{
+                width: 100%;
+
+            }
         }
         /*E-sectionThird*/
         /*H-footer*/
@@ -225,7 +282,61 @@
         .footer_first{
             margin-left: 330px;
         }
+
         /*E-footer*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+        }
+        .section_us_advantage h1{
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 160px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: #5A5A5A;
+            font-size: 15px;
+            margin-bottom: 10px;
+
+        }
+        .section_us_advantage>div>div>h3{
+            color: #828282;
+            font-weight: normal;
+            text-align: left;
+            line-height: 18px;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 1px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 100%;
+            top: 0;
+            left: 50vw;
+        }
+        .line_between{
+            height: 1px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionUsAdvantage*/
     </style>
 </head>
 <body>
@@ -235,8 +346,9 @@
         <div>
             <div class="header_contain">
                 <h1 class="header_title">云ERP·标准版</h1>
-                <h2>轻松实现异地协同，多点办公，智能分析业务数据</h2>
-                <h2>让企业管理更高效，更便捷</h2>
+                <h2 class="PC">轻松实现异地协同，多点办公，智能分析业务数据</h2>
+                <h2 class="PC">让企业管理更高效，更便捷</h2>
+                <h2 class="Phone">轻松实现异地协同，多点办公，智能分析业务数据让企业管理更高效，更便捷</h2>
                 <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>
             </div>
         </div>
@@ -295,25 +407,25 @@
         <h3>云进销存广泛应用于多门店、多仓库的小型商贸企业的供应链管理</h3>
         <div class="section_second_img" style="background-image: url('image/goods-erp/yx.png');">
             <div>
-            <img src="image/goods-erp/医学%20(2).png" alt="">
+            <img src="image/goods-erp/yx-2.png" alt="医学">
             <h1>医学</h1>
             </div>
         </div>
         <div class="section_second_img" style="background-image: url('image/goods-erp/food.png');">
             <div>
-            <img src="image/goods-erp/食品%20(2).png" alt="">
+            <img src="image/goods-erp/food-2.png" alt="食品">
             <h1>食品</h1>
             </div>
         </div>
         <div class="section_second_img" style="background-image: url('image/goods-erp/fzxm.png');">
             <div>
-            <img src="image/goods-erp/服装鞋帽%20(2).png" alt="">
+            <img src="image/goods-erp/fzxm-2.png" alt="服装鞋帽">
             <h1>服装鞋帽</h1>
             </div>
         </div>
         <div class="section_second_img" style="background-image: url('image/goods-erp/jjjc.png');">
             <div>
-            <img src="image/goods-erp/家具建材%20(2).png" alt="">
+            <img src="image/goods-erp/jjjc-2.png" alt="家具建材">
             <h1>家具建材</h1>
             </div>
         </div>
@@ -332,33 +444,72 @@
     </section>
     <section class="section_third">
         <h1>手机电脑，随时使用</h1>
-        <h3>手机客户端　PC网页版</h3>
-        <div class="section_third_img" style="background-image: url('image/goods-erp/ydd.png');margin-left: 33px"></div>
-        <div class="section_third_img" style="background-image: url('image/goods-erp/pc.png');"><a href="http://erptest.msebc.com/#/login?trial=1"><img src="image/goods-erp/pc.png" alt=""></a></div>
+        <h3 class="PC">手机客户端　PC网页版</h3>
+        <div class="section_third_img PC" style="background-image: url('image/goods-erp/ydd.png');margin-left: 33px"></div>
+        <div class="section_third_img PC" style="background-image: url('image/goods-erp/pc.png');">
+            <a href="http://erptest.msebc.com/#/login?trial=1"><img src="image/goods-erp/pc.png" alt=""></a>
+        </div>
+        <div class="section_third_img Phone" style="margin-left: 33px">
+            <img src="http://gxcl-shop.qiniu.520mro.com/foa7ahxyghygm1sx84u6.png" alt="Phone">
+        </div>
+        <div class="section_third_img Phone">
+            <a href="http://erptest.msebc.com/#/login?trial=1">
+                <img src="http://gxcl-shop.qiniu.520mro.com/t63w9ihp99zj3xis8p32.png" alt="PC">
+            </a>
+        </div>
     </section>
-    <footer>
+    <footer class="PC">
         <h1>云ERP·标准ERP优势</h1>
         <div class="footer_first">
-            <img src="image/goods-erp/hydz.png" alt="">
+            <img src="image/goods-erp/hydz.png" alt="行业定制">
             <h2>行业定制</h2>
             <h2>服务千万客户</h2>
         </div>
         <div>
-            <img src="image/goods-erp/znfx.png" alt="">
+            <img src="image/goods-erp/znfx.png" alt="智能分析">
             <h2>智能分析</h2>
             <h2>让报表更走心</h2>
         </div>
         <div>
-            <img src="image/goods-erp/jc.png" alt="">
+            <img src="image/goods-erp/jc.png" alt="集成云之家">
             <h2>集成云之家</h2>
             <h2>移动办公</h2>
         </div>
         <div>
-            <img src="image/goods-erp/cw.png" alt="">
+            <img src="image/goods-erp/cw.png" alt="财务业务智能">
             <h2>财务业务智能</h2>
             <h2>集成，灵活扩展</h2>
         </div>
     </footer>
+    <section class="section_us_advantage Phone">
+        <h1>云ERP·标准ERP优势</h1>
+        <div>
+            <div>
+                <img src="image/goods-erp/hydz.png" alt="行业定制">
+                <h2>行业定制</h2>
+                <h2>服务千万客户</h2>
+            </div>
+            <div>
+                <img src="image/goods-erp/znfx.png" alt="智能分析">
+                <h2>智能分析</h2>
+                <h2>让报表更走心</h2>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-erp/jc.png" alt="集成云之家">
+                <h2>集成云之家</h2>
+                <h2>移动办公</h2>
+            </div>
+            <div>
+                <img src="image/goods-erp/cw.png" alt="财务业务智能">
+                <h2>财务业务智能</h2>
+                <h2>集成，灵活扩展</h2>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>

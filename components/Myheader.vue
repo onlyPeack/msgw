@@ -57,7 +57,7 @@
                             <el-dropdown-item>PIM数据中台</el-dropdown-item>
                         </a>
                         <a href="./industry-wit.html">
-                            <el-dropdown-item>工业智库</el-dropdown-item>
+                            <el-dropdown-item>工享荟</el-dropdown-item>
                         </a>
                         <a href="./industry-integration.html">
                             <el-dropdown-item>工业物联集成</el-dropdown-item>
@@ -169,7 +169,7 @@
                     <el-menu-item index="4-2">
                         <a href="./industry-wit.html" slot="title">
                             <ul style="list-style-type:disc;">
-                                <li>工业智库</li>
+                                <li>工享荟</li>
                             </ul>
                         </a>
                     </el-menu-item>
@@ -424,12 +424,12 @@
             top: 38vh;
         }
         .header_title{
-            font-size: 12.06vw;
+            font-size: 40px;
             line-height: 65px;
             padding: 0 22px;
         }
         .header_contain h2{
-            font-size: 5.8vw;
+            font-size: 20px;
         }
     }
     /*E-header*/

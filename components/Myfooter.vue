@@ -15,7 +15,7 @@
             </div>
             <div class="T_footer_third">
                 <h3><a href="../industry-pim.html">PIM数据中台</a></h3>
-                <h3><a href="../industry-wit.html">工业智库</a></h3>
+                <h3><a href="../industry-wit.html">工享荟</a></h3>
                 <h3><a href="../industry-integration.html">工业物联集成</a></h3>
                 <h3><a href="../industry-operator.html">工业电商代运营</a></h3>
             </div>
@@ -34,7 +34,7 @@
         </section>
         <section class="T_footer Phone">
             <el-collapse-transition active-text-color="#283036" default-active="2">
-                <el-menu default-active="2" class="el-menu-vertical-demo">
+                <el-menu default-active="6" class="el-menu-vertical-demo">
                     <el-submenu index="2">
                         <template slot="title">
                             <span style="font-weight: bolder">产品</span>
@@ -115,7 +115,7 @@
                         <el-menu-item index="4-2">
                             <a href="./industry-wit.html" slot="title">
                                 <ul style="list-style-type:disc;">
-                                    <li>工业智库</li>
+                                    <li>工享荟</li>
                                 </ul>
                             </a>
                         </el-menu-item>
@@ -140,14 +140,23 @@
                             <div style="color: rgba(255,255,255,.7);font-weight: bolder">关于梅施</div>
                         </a>
                     </el-menu-item>
+                    <el-submenu index="6">
+                        <template slot="title">
+                            <span style="font-weight: bolder">售前咨询</span>
+                        </template>
+                        <div style="padding-left: 20px;">
+                            <span>QQ：3376893959</span><div style="height: 10pt"></div>
+                            <span>手机：17368056998</span><div style="height: 10pt"></div>
+                            <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt"><div style="height: 10pt"></div>
+                            <span>关注梅施科技</span>
+                            <div style="border-bottom: 1px solid #31393C;height: 20pt;width: 100%;margin-bottom: 10pt;"></div>
+                        </div>
+
+                    </el-submenu>
                 </el-menu>
             </el-collapse-transition>
             <div style="padding: 20px;width: 87%">
-                <span>QQ：3376893959</span><div style="height: 10pt"></div>
-                <span>手机：17368056998</span><div style="height: 10pt"></div>
-                <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt"><div style="height: 10pt"></div>
-                <span>关注梅施科技</span>
-                <div style="border-bottom: 1px solid #31393C;height: 20pt;width: 100%;margin-bottom: 10pt;"></div>
+
                 <span>Copyright©2018-2040</span><div style="height: 10pt"></div>
                 <span>梅施信息科技有限公司All Rights Reserved</span><div style="height: 10pt"></div>
                 <span>苏ICP备20015156号-1 | </span><img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png" alt=""><span>苏公网安备32050902101170</span>
@@ -159,6 +168,15 @@
 </template>
 
 <script>
+    module.exports = {
+        data() {
+            return {
+                isShow: false,
+                activeName:'5'
+            }
+        },
+
+    }
 </script>
 
 <style>
@@ -243,6 +261,9 @@
         }
         .T_footer .el-submenu__title:hover{
             background-color: unset;
+        }
+        .el-menu{
+            border-right: 0;
         }
     }
 </style>
