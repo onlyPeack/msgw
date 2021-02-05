@@ -201,6 +201,13 @@
 </template>
 
 <script>
+    function debounce(fn, wait) {
+        var timeout = null;
+        return function() {
+            if(timeout !== null) clearTimeout(timeout);
+            timeout = setTimeout(fn, wait);
+        }
+    }
     module.exports = {
         data() {
             return {
@@ -209,18 +216,28 @@
         },
         mounted(){
             //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-            window.onscroll = function () {
-                let nav = document.getElementsByClassName("nav")[0];
+            // window.onscroll = function () {
+            //
+            // }
+            let nav = document.getElementsByClassName("nav")[0];
+            document.addEventListener('scroll',debounce (function () {
                 let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-                if(window.screen.height >= scrollTop){
-                    nav.style.top = scrollTop + 'px';
+                console.log(window.screen.height)
+                if(window.screen.height < scrollTop||scrollTop===0){
+                    nav.style.position='absolute'
+                    nav.className='nav '
+                }else{
+                    nav.style.position='sticky'
+                    nav.className='nav navFix'
                 }
-
-                //console.log("这是在组件里的事件")
+                //
+                // //console.log("这是在组件里的事件")
                 if (window.screen.width >= 768) {
                     nav.style.backgroundColor = scrollTop === 0 ? 'rgba(0,0,0,0)' : '#1E2327'
                 }
-            }
+            },1000/120))
+
+
         }
 
     }
@@ -267,7 +284,9 @@
         width: 100%;
         height: 3.12vw;
     }
-
+    .navFix{
+        margin-bottom: -3.12vw;
+    }
     nav:hover {
         background-color: #1E2327 !important;
     }
@@ -351,7 +370,9 @@
             background-color: black;
             height: 15.29vw;
         }
-
+        .navFix{
+            margin-bottom: -15.29vw;
+        }
         nav .menuBtn {
             float: right;
             color: white;
@@ -378,6 +399,8 @@
         height: 697px;
         position: relative;
         background-position: center;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .header_contain {
