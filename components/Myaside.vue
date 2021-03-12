@@ -2,7 +2,7 @@
     <aside>
 <!--        <img src="../image/index/QQ-default.png" alt="">-->
         <img src="image/index/QQ-default.png" alt="" class="PCQQ">
-        <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=3376893959&site=qq&menu=yes">
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3368906505&site=qq&menu=yes">
 <!--            <img src="../image/index/QQ-result.png" alt="" class="QQ_show">-->
             <img src="image/index/QQ-result.png" alt="" class="QQ_show PCQQ">
 <!--            <img src="../image/index/咨询@2x.png" alt="" class="QQ_show PhoneQQ">-->
