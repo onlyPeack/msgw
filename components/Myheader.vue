@@ -54,7 +54,7 @@
               </span>
                     <el-dropdown-menu slot="dropdown">
                         <a href="./industry-pim.html">
-                            <el-dropdown-item>PIM数据中台</el-dropdown-item>
+                            <el-dropdown-item>工业品数据库</el-dropdown-item>
                         </a>
                         <a href="./industry-wit.html">
                             <el-dropdown-item>工享荟</el-dropdown-item>
@@ -162,7 +162,7 @@
                     <el-menu-item index="4-1">
                         <a href="./industry-pim.html" slot="title">
                             <ul style="list-style-type:disc;">
-                                <li>PIM数据中台</li>
+                                <li>工业品数据库</li>
                             </ul>
                         </a>
                     </el-menu-item>

@@ -19,12 +19,11 @@
     <script src="js/browser-polyfill.min.js"></script>
     <script src="lib/vue/vue.js"></script>
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
-    <script src="lib/swiper/package/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="./css/ms-animation.css">
     <link rel="stylesheet" href="./lib/swiper/package/swiper-bundle.min.css">
     <script src="lib/element-ui/lib/index.js"></script>
-
     <style>
         /*H-header*/
         @media screen and (max-width: 768px) {
@@ -528,6 +527,13 @@
 </div>
 <script src="./js/elementAnimate.js"></script>
 <script>
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header = document.getElementsByTagName('header')[0];
+    header.style.height = h + 'px';
+</script>
+<script src="lib/swiper/package/swiper-bundle.min.js"></script>
+<script>
 
     new Vue({
         el: '#app',
@@ -573,7 +579,8 @@
             new elementAnimate([...document.getElementsByTagName('section'),...document.getElementsByTagName('article')],'titleTranslate 1s forwards')
             let swiper=new Swiper ('.swiper-container', {
                 loop: true, // 循环模式选项
-
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
                 // 如果需要分页器
                 pagination: {
                     el: '.swiper-pagination',
@@ -595,10 +602,7 @@
             },10)
         }
     })
-    //保证进入时header为一屏高度
-    let h = document.documentElement.clientHeight || document.body.clientHeight;
-    let header = document.getElementsByTagName('header')[0];
-    header.style.height = h + 'px';
+
 </script>
 </body>
 </html>
