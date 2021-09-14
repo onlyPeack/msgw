@@ -27,7 +27,7 @@
             <img src="http://gxcl-shop.qiniu.520mro.com/warv29otvrzi4h77ubpc.png" alt="微信" slot="reference" class="aside-img">
             <div class="aside-message">
                 <span>客服微信/客服二维码</span>
-                <h2>18221052910</h2>
+                <h2>18262161770</h2>
                 <img src="http://gxcl-shop.qiniu.520mro.com/adciyl0dpbnrdr7ft13f.png" alt="微信客服">
             </div>
         </el-popover>
