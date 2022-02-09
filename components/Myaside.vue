@@ -10,6 +10,27 @@
         </a>
         <el-popover
                 placement="left"
+                width="277"
+                class="PC"
+                trigger="hover">
+            <img src="http://gxcl-shop.qiniu.520mro.com/07d39i3hegawmr45b3c0.png" alt="下载" slot="reference" class="aside-img">
+            <div class="aside-message">
+                <span>扫码下载梅施云APP</span>
+                <div style="display: flex;justify-content: space-around;padding-top: 10px;">
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/gymtpmejz0cs1ptkavb0.png" alt="ios端">
+                        <div style="text-align: center">ios端</div>
+                    </div>
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/gymtpmejz0cs1ptkavb0.png" alt="安卓端">
+                        <div style="text-align: center">安卓端</div>
+                    </div>
+                </div>
+
+            </div>
+        </el-popover>
+        <el-popover
+                placement="left"
                 width="150"
                 class="PC"
                 trigger="hover">
@@ -36,7 +57,7 @@
                 width="150"
                 class="PC"
                 trigger="hover">
-            <img src="http://gxcl-shop.qiniu.520mro.com/9gmzx388d6a7nx1zlm1b.png" alt="QQ" slot="reference" class="aside-img">
+            <img src="http://gxcl-shop.qiniu.520mro.com/9gmzx388d6a7nx1zlm1b.png" alt="QQ" slot="reference" class="aside-img" @click="goQQ">
             <div class="aside-message">
                 <span>客服QQ</span>
                 <h2>3368906505</h2>
@@ -58,7 +79,11 @@
 
 <script>
     module.exports= {
-
+        methods:{
+            goQQ(){
+                window.open('http://wpa.qq.com/msgrd?v=3&uin=3368906505&site=qq&menu=yes','_blank')
+            }
+        }
     }
 </script>
 

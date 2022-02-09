@@ -16,6 +16,8 @@
     <script src="lib/http-vue-loader/httpVueLoader.js"></script>
     <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
     <script src="lib/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="./css/ms-animation.css">
+    <script src="./js/elementAnimate.js"></script>
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/nk7zqc7fbqo20s7fxdne.png");
@@ -102,28 +104,28 @@
         /*H-article*/
         article{
             text-align: center;
-            height: 415px;
-            background-image: url('http://gxcl-shop.qiniu.520mro.com/nk6hv4q9v3sgwxxn2dke.png');
+            height: 39.7rem;
+            background-image: url('http://gxcl-shop.qiniu.520mro.com/rq7eq61qq3nbba0u21eh.png');
             color: white;
             background-repeat: no-repeat;
         }
-        article h1{
-            padding-top: 100px;
-            font-size: 45px;
-            margin-bottom: 60px;
+        article h2{
+            padding-top: 11rem;
+            margin-bottom: 7.3rem;
             color: white;
         }
-        article h3{
-            font-size: 24px;
+        article h5{
+            font-size: 1.8rem;
             font-weight: normal;
-            margin-bottom: 15px;
+            width: 120rem;
+            margin: 0 auto;
         }
         @media screen and (max-width: 768px) {
             article{
                 height: 230px;
                 background-size: cover;
             }
-            article h1{
+            article h2{
                 padding-top: 40px;
                 font-size: 24px;
                 margin-bottom: 20px;
@@ -141,12 +143,11 @@
         .section_first{
             height: 930px;
             text-align: center;
-            background-image: url('http://gxcl-shop.qiniu.520mro.com/idkklt3di7354tqs1e14.png');
+            /*background-image: url('http://gxcl-shop.qiniu.520mro.com/idkklt3di7354tqs1e14.png');*/
         }
-        .section_first h1{
+        .section_first h2{
             padding-top: 73px;
-            color: white;
-            font-size: 45px;
+            color: #333;
             margin-bottom: 70px;
         }
         .section_first img{
@@ -159,7 +160,7 @@
                 background-position: center;
                 padding-bottom: 20px;
             }
-            .section_first h1{
+            .section_first h2{
                 padding-top: 9.8vw;
                 font-size: 24px;
                 margin-bottom: 40px;
@@ -184,14 +185,13 @@
 
         /*E-sectionFirst*/
         /*H-sectionText*/
-        .section_text h1{
+        .section_text h2{
             text-align: center;
-            font-size: 45px;
-            padding-top: 130px;
-            padding-bottom: 100px;
+            padding-top: 10rem;
+            padding-bottom: 7.8rem;
         }
         @media screen and (max-width: 768px) {
-            .section_text h1{
+            .section_text h2{
                 font-size: 24px;
                 padding-top: 40px;
                 padding-bottom: 40px;
@@ -205,7 +205,7 @@
             background-size: contain;
         }
         .section_second>.section_second_list{
-            width: 18.75vw;
+            width: 36rem;
             cursor: pointer;
             font-size: 1.25vw;
             color: white;
@@ -246,7 +246,7 @@
         }
         .section_second .section_second_text h1{
             padding-top: 3.28vw;
-            font-size: 1.25vw;
+            font-size: 2rem;
         }
         .section_second .section_second_text h2{
             font-weight: 400;
@@ -417,23 +417,21 @@
         </div>
     </section>
     <article>
-        <h1>云电商是什么?</h1>
-        <h3 class="PC">专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式</h3>
-        <h3 class="PC">提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户</h3>
-        <h3 class="PC">快速开启工业电子商务。</h3>
+        <h2>云电商是什么?</h2>
+        <h5 class="PC bottom-animate">专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户快速开启工业电子商务。</h5>
         <p class="Phone">
             专业致力于工业品领域的B2B、S2B、 S2B2B的全程电子商务解决方案，支持自营、联营、兼营等多种运营模式提供OMS+ ERP +云仓+ WMS+ CRM等信息化支撑，帮助客户快速开启工业电子商务。
         </p>
     </article>
     <section class="section_first">
-        <h1>我们的支持</h1>
-        <img src="image/goods-e/table-1.png" alt="">
+        <h2>我们支持</h2>
+        <img src="http://gxcl-shop.qiniu.520mro.com/y5amv1xgppujap6phon5.png" alt="我们支持" class="bottom-animate">
         <div class="Phone blow-up" @click="blowUp('image/goods-e/table-1.png')">
             <span style="margin-right: 10px;">点击查看大图</span><i class="el-icon-zoom-in"></i>
         </div>
     </section>
     <section class="section_text">
-        <h1>我们的功能</h1>
+        <h2>我们的功能</h2>
     </section>
     <section class="section_second PC">
         <div class="section_second_list">
@@ -684,6 +682,7 @@
         </div>
         <div class="special_line_between"></div>
     </section>
+    <div style="height: 10rem" class="PC"></div>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
@@ -717,6 +716,11 @@
             blowUp(url){
                 window.open(url,'_blank')
             }
+        },
+        mounted(){
+            new elementAnimate([...document.getElementsByClassName('bottom-animate')],'titleTranslateNoVolume 1s forwards')
+            new elementAnimate([...document.getElementsByClassName('left-animate')],'leftFormFlyIn 0.5s ease-out forwards')
+            new elementAnimate([...document.getElementsByClassName('right-animate')],'rightFormFlyIn 0.5s ease-out forwards')
         }
     })
     //保证进入时header为一屏高度

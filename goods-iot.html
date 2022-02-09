@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品介绍-物联网IOT</title>
+    <meta name="keywords"
+          content="工业物联网，云ERP，电商ERP，在线进销存，云CRM，云WMS、MRO商城，MRO数据中台、梅施，苏州梅施，和稷工业,梅施科技,梅施软件,梅施云商,工业品电商,工业SAAS软件"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="./css/ms-animation.css">
+    <script src="./js/elementAnimate.js"></script>
+    <script src="lib/element-ui/lib/index.js"></script>
+    <style>
+        body header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/1gryrosk7f1yi8eo7lad.png");
+            height: 720px;
+        }
+        header .header_contain{
+            top: 27rem;
+            left: 39rem;
+            text-align: left;
+        }
+        header .header_contain h3{
+            color: white;
+            font-weight: 100;
+        }
+        header .header_contain button{
+            color: white;
+            height: 4rem;
+            width: 17.6rem;
+            background-color: #45BBFF;
+            border-radius: 0.3rem;
+            border: 0!important;
+        }
+        @media screen and (max-width: 768px) {
+            header{
+                height: 100vh!important;
+            }
+        }
+
+        /*H-sectionCard*/
+        .section_card{
+            width: 120rem;
+            margin: 0 auto 62px auto;
+        }
+        .section_card>h2{
+            text-align: center;
+            padding-top: 6.1rem;
+            margin-bottom: 3.8rem;
+        }
+        .section_card>h5{
+            color: #666;
+            text-align: center;
+            margin-bottom: 6.1rem;
+            font-weight: 100;
+        }
+        .section_card .item-box{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .section_card .item-box>div{
+            width: 39.6rem;
+            background: #19346E;
+            position: relative;
+        }
+        .section_card .item-box>div>img{
+            transform: translateY(-1px);
+            transition:0.5s;
+            width: 0;
+            position: absolute;
+            left: 50%;
+        }
+        .section_card .item-box>div>div{
+            display: flex;
+            align-items: center;
+            height: 7.8rem;
+            width: 21rem;
+            margin: 0 auto;
+            justify-content: space-between;
+            color: white;
+            cursor: pointer;
+        }
+        .section_card .active{
+            width: 100% !important;
+            left: 0!important;
+        }
+        .section_card .item-content{
+            margin-top: 5.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .section_card .text-left{
+            text-align: right;
+        }
+        .section_card .item-content>div{
+            padding-top: 13.4rem;
+        }
+        .section_card .text-left div{
+            padding-top: 3.2rem;
+        }
+        .section_card .item-content>div>div{
+            margin-bottom: 11.1rem;
+        }
+        .section_card .item-content h4{
+            border-left: 0.6rem solid #0C7EF2;
+            padding-left: 1.3rem;
+            margin-bottom: 2.2rem;
+        }
+        .section_card .text-left h4{
+            border-right: 0.6rem solid #0C7EF2;
+            border-left: 0!important;
+            padding-right: 1.3rem;
+            margin-bottom: 2.2rem;
+        }
+        .section_card .item-content p{
+            color: #999;
+            width: 48rem;
+            padding-left: 1.9rem;
+            margin-bottom: 1.9rem;
+        }
+        .section_card .text-left p{
+            padding-left: 0;
+        }
+        /*E-sectionCard*/
+
+        /*H-sectionTwo*/
+        .section_two{
+            background-color: #F5F8FC;
+            min-height: 100px;
+            text-align: center;
+            padding-top: 6.7rem;
+            padding-bottom: 9.1rem;
+        }
+        .section_two>div{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .section_two h5{
+            margin-top: 2rem;
+            margin-bottom: 4.9rem;
+            font-weight: 100;
+            color: #666;
+        }
+        .section_two .item-box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .section_two .item-box div{
+            width: 15rem;
+            height: 15rem;
+            box-shadow: 1rem 1rem 2rem 0rem rgba(240, 243, 248, 0.82);
+            border-radius: 1rem;
+            background: linear-gradient(180deg, #F3F5F8, #FFFFFF);
+            border: 0.2px solid #FFFFFF;
+        }
+        .section_two .item-box div:hover{
+            width: 15rem;
+            height: 15rem;
+            background: linear-gradient(180deg, #e7ecf3, #f3f6fa);
+            box-shadow: 1rem 1rem 8rem 0rem rgba(227, 233, 242, 0.9);
+            border-radius: 1rem;
+            border: 0.2px solid transparent;
+        }
+        .section_two .item-box div img{
+            padding-top: 3.2rem;
+            margin-bottom: 1rem;
+        }
+        /*E-sectionTwo*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">设备物联网集成</h1>
+            <h3>它可将产品、工厂、系统和机器设备连接在一起</h3>
+            <button>立即咨询</button>
+        </div>
+    </header>
+    <section class="section_card PC">
+        <h2>梅施—工业物联网</h2>
+        <h5 class="bottom-animate">梅施IOT团队致力于工业物联解决方案创新设计与应用开发服务，基于微服务框架，提供设备接入、数据采集、运行监控、设备管理、数据分析、运营
+            管理等能力支撑服务，携手行业系统集成商，为企业客户快速搭建低成本的物联网应用。</h5>
+        <div class="item-box">
+            <div @click="activeTab=1">
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/3bkaua3f385fpehvaya0.png" alt="系统架构">
+                    <h3>系统架构</h3>
+                </div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/ufwhiu8rlyxdndmukf0j.png" alt="" :class="{active:activeTab===1}">
+            </div>
+            <div @click="activeTab=2">
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/9toh7cem8t66ixn53yli.png" alt="硬件架构">
+                    <h3>硬件架构</h3>
+                </div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/ufwhiu8rlyxdndmukf0j.png" alt="" :class="{active:activeTab===2}">
+            </div>
+            <div @click="activeTab=3">
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/t3yumwq9n70patka0dpq.png" alt="业务体系标准">
+                    <h3>业务体系标准</h3>
+                </div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/ufwhiu8rlyxdndmukf0j.png" alt="" :class="{active:activeTab===3}">
+            </div>
+        </div>
+        <div v-if="activeTab===1" class="item-content" key="1">
+            <img src="http://gxcl-shop.qiniu.520mro.com/h5lwbc52e6o4j48n3bag.png" alt="系统架构" class="left-animate">
+            <div>
+                <div class="right-animate">
+                    <h4>产品优势</h4>
+                    <p>基于设备全生命周期，遵循设备TPM管理标准，构建设备管理企业应用生态圈</p>
+                    <p>与设备互联互通，打通企业内部数据流、业务流、管理流，实现信息透明化</p>
+                    <p>基于大数据分析算法，对设备进行实时检测、备件寿命预测等</p>
+                </div>
+                <div class="right-animate">
+                    <h4>支持协议</h4>
+                    <p>主流PLC、Modbus 、OPC 、CNC 等工业标准协议</p>
+                    <p>RS232 , RS485串口协议 </p>
+                    <p>显示器图像识别,视频监控采集 </p>
+                </div>
+                <div class="right-animate">
+                    <h4>平台优势 </h4>
+                    <p>业务模块微服务化，简化代码的复杂度</p>
+                    <p>SAAS架构，实现多租户下数据和权限的隔离  </p>
+                    <p>容器化部署，实现跨平台部署，简化部署操作</p>
+                    <p>基于微服务架构实现对服务的性能监控和告警</p>
+                </div>
+            </div>
+        </div>
+        <div v-else-if="activeTab===2" class="item-content text-left">
+            <div class="left-animate">
+                <div>
+                    <h4>主要功能</h4>
+                    <p>支持各种类型装备的数据采集与告警通知，装备服务工程师可在线远 程故障诊断，简单故障支持远程维护</p>
+                    <p>装备服务平台为厂家的客户提供装备监控、备件仓库功能</p>
+                </div>
+                <div>
+                    <h4>高效、安全的设备接入与管理</h4>
+                    <p>梅施云支持多种接入协议，并提供一机一密、双向证书、通道加密等 多重安全防护，简化设备接入与管理 </p>
+                </div>
+                <div>
+                    <h4>支持多种类型装备</h4>
+                    <p>基于工业云平台架构，支持多种类型装备数据采集，统一数据采集服 务平台，支持海量设备接入 </p>
+                </div>
+            </div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/87l7eb6gwwqjih6iw1i6.png" alt="" class="right-animate">
+        </div>
+        <div v-else-if="activeTab===3" class="item-content" key="3">
+            <img src="http://gxcl-shop.qiniu.520mro.com/wngd20z8zgchfrc174e6.png" alt="业务体系标准" class="left-animate">
+            <div style="width: 44.1rem">
+                <div class="right-animate">
+                    <h4>描述</h4>
+                    <p style="width: unset">系统围绕设备资产管理、设备运行管理、设备维修管理、设
+                        备维保管理、设备点检管理、设备备件管理、设备统计报表
+                        等各个环节，提供针对设备的台账、盘点、现场点检、巡检、
+                        维修、保养、转移、报废等设备全生命周期跟踪管理。以预
+                        防性维护及远程移动端报修为核心，帮助企业实现设备的全
+                        面信息化管理，提升设备综合效率。
+                    </p>
+                    <p style="width: unset">系统提供设备故障手机端报修，实施快捷、简单，提高了维
+                        修效率，减少了故障维修时间。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_two">
+        <h2>系统功能设计</h2>
+        <div>
+            <h5 class="bottom-animate">由于产线设备多，生产节拍可控，EIMS系统需要稳定可靠且实时响应，支持高并发。EIMS系统在离散行业及流程行业应用广泛，我们采用大量应用案例
+                的成熟的系统框架来实现。
+            </h5>
+            <div class="item-box">
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/uggdrrlfprr6p25p7nd0.png" alt="设备台账">
+                    <p>设备台账</p>
+                </div>
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/7d1rkuohtiwg8udsgfnq.png" alt="OEE分析">
+                    <p>OEE分析</p>
+                </div>
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/mwvbinmua6v9mq4q6jue.png" alt="维修保养">
+                    <p>维修保养</p>
+                </div>
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/i35uhlvbbseimhzeuj0f.png" alt="点巡检">
+                    <p>点巡检</p>
+                </div>
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/2isbr1rhp7gay7pob5nn.png" alt="备品备件">
+                    <p>备品备件</p>
+                </div>
+                <div>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/c0vrs9gu0i8y6q7wfp7q.png" alt="设备监测">
+                    <p>设备监测</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    //保证进入时header为一屏高度
+    //let h = document.documentElement.clientHeight || document.body.clientHeight;
+    //let header=document.getElementsByTagName('header')[0];
+    //header.style.height=h+'px';
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left',
+                activeTab:1
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        },
+        watch:{
+            activeTab(newQuestion, oldQuestion){
+                this.$nextTick(()=>{
+                    let arr=document.getElementsByClassName('left-animate')
+                    for (let i = 0; i <arr.length ; i++) {
+                        arr[i].style.animation ='leftFormFlyIn 0.5s ease-out forwards'
+                    }
+                    arr=document.getElementsByClassName('right-animate')
+                    for (let i = 0; i <arr.length ; i++) {
+                        arr[i].style.animation ='rightFormFlyIn 0.5s ease-out forwards'
+                    }
+                })
+            }
+        },
+        mounted(){
+            new elementAnimate([...document.getElementsByClassName('bottom-animate')],'titleTranslateNoVolume 1s forwards')
+            new elementAnimate([...document.getElementsByClassName('left-animate')],'leftFormFlyIn 0.5s ease-out forwards')
+            new elementAnimate([...document.getElementsByClassName('right-animate')],'rightFormFlyIn 0.5s ease-out forwards')
+        }
+    })
+</script>
+</body>
+</html>

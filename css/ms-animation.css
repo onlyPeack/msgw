@@ -29,10 +29,17 @@
 /*主体隐藏一半时间后由左侧飞入*/
 @keyframes leftFormFlyIn {
     0%{
-        transform: translateX(-100vw);
+        transform: translateX(-20vw);
     }
-    50%{
-        transform: translateX(-100vw);
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*主体隐藏一半时间后由左侧飞入*/
+@keyframes rightFormFlyIn {
+    0%{
+        transform: translateX(20vw);
     }
     100%{
         transform: translateX(0);
@@ -51,4 +58,5 @@
         transform: translateX(0);
     }
 }
+
 

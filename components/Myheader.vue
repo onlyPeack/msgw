@@ -69,12 +69,13 @@
                 </el-dropdown>
             </li>
             <li><a href="./about-us.html"><span>关于梅施</span></a></li>
-            <!--            <li style="width: 100px">-->
-            <!--                <button>登录</button>-->
-            <!--            </li>-->
-            <!--            <li style="width: 100px;margin-left: 15px">-->
-            <!--                <button>注册</button>-->
-            <!--            </li>-->
+                        <li style="width: 100px">
+                            <button @click="goLogin" class="button">登录</button>
+                        </li>
+                        <li style="width: 100px;margin-left: 15px">
+<!--                            <button @click="goRegister" class="button">免费试用</button>-->
+                            <button style="background: #2497F7;color: white;border: 0;font-family: unset" @click="goRegister">免费试用</button>
+                        </li>
         </ul>
         <i class="iconfont menuBtn" v-if="!isShow" @click="isShow=!isShow">&#xe653;</i>
         <i class="iconfont menuBtn" v-else @click="isShow=!isShow"
@@ -238,6 +239,15 @@
             },1000/120))
 
 
+        },
+        methods:{
+            goLogin(){
+                window.open('http://cloud.msebc.com/#/login','_blank')
+            },
+
+            goRegister(){
+                window.open('http://cloud.msebc.com/#/login?index=1','_blank')
+            }
         }
 
     }
@@ -266,10 +276,6 @@
 
     /*清除公共样式*/
     @import "../css/reset.css";
-
-    #app {
-        font-family: 'MicrosoftYaHei-Bold';
-    }
 
     button {
         cursor: pointer;
@@ -343,7 +349,11 @@
         border-radius: 5px;
         border: 1px solid white;
     }
-
+    .nav_list .button:hover{
+        background-color: white;
+        color: #2497F7;
+        border-color: #2497F7;
+    }
     /*H-element ui 样式*/
     .el-dropdown-link {
         cursor: pointer;
@@ -411,7 +421,6 @@
     }
 
     .header_title {
-        font-size: 4.06vw;
         color: white;
     }
 
@@ -430,7 +439,6 @@
 
     .header_contain button {
         width: 200px;
-        font-size: 17px;
         height: 54px;
         margin-top: 70px;
         border: 2px solid white;

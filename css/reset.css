@@ -9,17 +9,23 @@ th, td { /* table elements 表格元素 */
 }
 
 /* 设置默认字体 */
+html{
+    font-size: 62.5%;
+}
 body,
 button, input, select, textarea { /* for ie */
     /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
-    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+    font:1.4rem 思源, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
-
-h1 { font-size: 18px; /* 18px / 12px = 1.5 */color: #404040 }
-h2 { font-size: 16px; }
-h3 { font-size: 14px; }
-h4, h5, h6 { font-size: 100%; }
-
+h1 { font-size: 6.8rem; /* 18px / 12px = 1.5 */color: #404040 }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.2rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 100%; }
+p{
+    font-size: 1.6rem;
+}
 address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
 code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
 small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
@@ -56,4 +62,9 @@ table {
 hr {
     border: none;
     height: 1px;
+}
+
+@font-face {
+    font-family: '思源';
+    src: url(./FCF390F9ED3C225EA7F2B499B3F38D83.ttf);
 }

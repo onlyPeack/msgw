@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品-WMS</title>
+    <meta name="keywords"
+          content="工业物联网，云ERP，电商ERP，在线进销存，云CRM，云WMS、MRO商城，MRO数据中台、梅施，苏州梅施，和稷工业,梅施科技,梅施软件,梅施云商,工业品电商,工业SAAS软件"/>
+    <meta name="description" content="梅施云围绕工业品领域，为行业客户提供从进销存，客户管理、生产管理、项目管理、供应链协同、电子商务、在线学习等互联网+解决方案，基于saas化业务协同和数据中台，构建产品链与服务链，打通上下游两端需求对接,形成产业生态服务平台。">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <link rel="icon" href="image/index/ms-icon.ico" type="image/x-icon"/>
+    <!--    支持es6基础语法-->
+    <script src="js/browser.min.js"></script>
+    <!--    支持promise语法-->
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/http-vue-loader/httpVueLoader.js"></script>
+    <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
+    <script src="lib/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="./css/ms-animation.css">
+    <script src="./js/elementAnimate.js"></script>
+    <style>
+        header {
+            background-image: url("http://gxcl-shop.qiniu.520mro.com/74n7hci8x8v8ynj4072k.png");
+        }
+        /*H-sectionNewFirst*/
+        .section_new_first{
+            text-align: center;
+            padding-top: 7.2rem;
+            width: 120rem;
+            margin: 0 auto;
+        }
+        .section_new_first>h5{
+            font-weight: normal;
+            margin-top: 4.6rem;
+            margin-bottom: 5.5rem;
+        }
+        .section_new_first>div{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .section_new_first div h5{
+            font-weight: normal;
+            margin-top: 2.5rem;
+            margin-bottom: 5.2rem;
+        }
+        .section_new_first div div{
+            width: 25%;
+        }
+        /*E-sectionNewFirst*/
+        /*H-sectionFirst*/
+        .section_first{
+            height: 33.33vw;
+            background-color: black;
+            background-image: url('image/goods-WMS/1.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            /*background-position:36.97vw 0px;*/
+            color: white;
+            text-indent: 12.5vw;
+
+        }
+        .section_first h1{
+            padding-top: 12.5vw;
+            font-size: 1.66vw;
+            color: white;
+        }
+        .section_first h2{
+            font-size: 1.66vw;
+            margin-top: 0.78vw;
+            margin-bottom: 1.56vw;
+        }
+        .section_first h3{
+            font-size: 0.93vw;
+            font-weight: 400;
+            margin-bottom: 0.52vw;
+        }
+        /*E-sectionFirst*/
+        /*H-sectionSecond*/
+        .section_second{
+            height: 33.33vw;
+            background-image: url('image/goods-WMS/2.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            /*background-position:13.54vw 5.05vw;*/
+            color: black;
+            text-indent: 47.39vw;
+        }
+        .section_second h1{
+            padding-top: 12.5vw;
+            font-size: 1.66vw;
+        }
+        .section_second h2{
+            font-size: 1.66vw;
+            margin-top: 15px;
+            color: #404040;
+            margin-bottom: 30px;
+        }
+        .section_second h3{
+            font-size: 0.93vw;
+            font-weight: 400;
+            margin-bottom: 0.52vw;
+            color: #404040;
+        }
+        /*E-sectionSecond*/
+        /*H-sectionThird*/
+        .section_third{
+            height: 33.33vw;
+            background-color: black;
+            background-image: url('image/goods-WMS/3.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*background-position:52.78vw 0px;*/
+            color: white;
+            text-indent: 12.5vw;
+
+        }
+        .section_third h1{
+            padding-top: 12.5vw;
+            font-size: 1.66vw;
+            color: white;
+        }
+        .section_third h2{
+            font-size: 1.66vw;
+            margin-top: 0.78vw;
+            margin-bottom: 1.56vw;
+        }
+        .section_third h3{
+            font-size: 0.93vw;
+            font-weight: 400;
+            margin-bottom: 0.52vw;
+        }
+        /*E-sectionThird*/
+        /*H-sectionUsAdvantage*/
+        .section_us_advantage{
+            position: relative;
+        }
+        .section_us_advantage h1{
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        .section_us_advantage>div{
+            display: flex;
+            width: 94%;
+            margin: 0 auto;
+            height: 233px;
+        }
+        .section_us_advantage>div>div{
+            width: 50%;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .section_us_advantage>div>div>img{
+            width: 40px;
+            margin-bottom: 15px;
+        }
+        .section_us_advantage>div>div>h2{
+            color: #5A5A5A;
+            font-size: 15px;
+            margin-bottom: 10px;
+
+        }
+        .section_us_advantage>div>div>h3{
+            color: #828282;
+            font-weight: normal;
+            text-align: left;
+            line-height: 18px;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        .section_us_advantage .special_line_between{
+            position: absolute;
+            width: 1px;
+            background: linear-gradient(0deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.99) 50%, rgba(236, 236, 236, 0) 100%);
+            height: 100%;
+            top: 0;
+            left: 50vw;
+        }
+        .line_between{
+            height: 1px!important;
+            padding: 0!important;
+            background: linear-gradient(90deg, rgba(236, 236, 236, 0) 0%, rgba(236, 236, 236, 0.97) 52%, rgba(236, 236, 236, 0) 100%);
+        }
+        /*E-sectionUsAdvantage*/
+        /*H-sectionFourthPhone*/
+        .section_fourth_Phone h1{
+            text-align: center;
+            font-size: 24px;
+            margin: 40px 0;
+        }
+        .section_fourth_Phone>div{
+            width: 81%;
+            margin: 0 auto 20px auto;
+            border-radius: 999px;
+            box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.15);
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+
+        }
+        .section_fourth_Phone>div>img{
+            width: 50px;
+        }
+        .section_fourth_Phone>div>div{
+            margin-left: 20px;
+            padding-right: 44px;
+        }
+        .section_fourth_Phone>div h2{
+            font-size: 15px;
+            color: #5A5A5A;
+            margin-bottom: 10px;
+        }
+        .section_fourth_Phone h3{
+            color: #828282;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        /*E-sectionFourthPhone*/
+        /*H-sectionMsg*/
+        .section_msg{
+            text-align: center;
+            background-color: #F5F8FC;
+            padding-top: 7.1rem;
+        }
+        .section_msg.right{
+            background-color: #fff;
+        }
+        .section_msg h3{
+            text-align: left;
+            margin-bottom: 4rem;
+        }
+        .section_msg>div{
+            display: flex;
+            width: 120rem;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .section_msg h2{
+            margin-bottom: 3rem;
+        }
+        .section_msg p{
+            color: #666;
+            margin-bottom: 3.2rem;
+            text-align: left;
+        }
+        .section_msg i{
+            width:0.7rem;
+            height: 0.7rem;
+            background-color: #666;
+            display: inline-block;
+            transform: rotate(45deg);
+            margin-right: 1.3rem;
+            vertical-align: middle;
+        }
+        .section_msg>div>div .ellipsis{
+            font-size: 2.4rem;
+            padding-left: 1.85rem;
+        }
+        .section_msg div div button{
+            float: left;
+            background: #2A89F1;
+            border-radius: 2rem;
+            border: 0;
+            color: white;
+            padding: 0.6rem 2.3rem;
+        }
+        .section_msg.other button{
+            color: #2A89F1;
+            background-color: white;
+            border: 1px solid #2A89F1;
+        }
+        /*E-sectionMsg*/
+        .T_footer{
+            margin-top: 11.45vw;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <Myheader></Myheader>
+    <header>
+        <div class="header_contain">
+            <h1 class="header_title">梅施云CRM</h1>
+            <h2>营销型的CRM客户关系管理系统</h2>
+            <a href="http://erptest.msebc.com/#/login?trial=1"><button>免费体验</button></a>
+        </div>
+    </header>
+    <section class="section_us_advantage Phone">
+        <h1>WMS核心功能说明</h1>
+        <div>
+            <div>
+                <img src="image/goods-WMS/dck.png" alt="多仓库管理">
+                <h2>多货主，多仓库管理</h2>
+                <h3>可维护多货主、多仓库其础信息，不同的货主可以配遇不同的操作流程，并且货主数据独立分开。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/zyjk.png" alt="全程作业监控">
+                <h2>全程作业监控</h2>
+                <h3>对仓库内业务的进程进行记录和监控，降低人员操作失误，提高仓储运作效率。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/pda.png" alt="全程PDA作业">
+                <h2>全程PDA作业</h2>
+                <h3>库内操作全程无纸化操作，大幅提升人员操作效率。可视化界面清晰、速度快、操作简易。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/jxh.png" alt="商品精细化管理">
+                <h2>商品精细化管理</h2>
+                <h3>支持多码管理， 支持优良品、残次品区分管理，支持批次管理。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/no-code.png" alt="无条码解决方案">
+                <h2>无条码解决方案</h2>
+                <h3>针对工业领域部分品牌商品没有规则条码，既可以打印系统生成的条码，又可以通过无条码方式进行仓库出入库。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/clpz.png" alt="多种作业策略配置">
+                <h2>多种作业策略配置</h2>
+                <h3>系统提供强大的上架策略，拣选策略、波次策略、分配策略等，当仓库收到出入库指令后会根据策略自动下发合适的操作指令，解决仓库瓶颈。</h3>
+            </div>
+        </div>
+        <div class="line_between"></div>
+        <div>
+            <div>
+                <img src="image/goods-WMS/kcgl.png" alt="全方位库存管理">
+                <h2>全方位库存管理</h2>
+                <h3>不管是收货、上架、 拣货和发货，还是仓库内的移库、盘点和调拨，系统都提供了完整的交易历史。并且随时记录库存状态的变化。</h3>
+            </div>
+            <div>
+                <img src="image/goods-WMS/ckrw.png" alt="仓库任务调度管控">
+                <h2>仓库任务调度管控</h2>
+                <h3>针对库内所有操作任务，管理员可根据任务内容进行主管分配或者操作人员可自主领取任务，系统记录每个人员的工作量，便于进行KPI考核。</h3>
+            </div>
+        </div>
+        <div class="special_line_between"></div>
+    </section>
+    <section class="section_new_first">
+        <h2>梅施云CRM</h2>
+        <h5>梅施云CRM是一种营销型的CRM客户关系管理系统，提供营销获客、销售管理、服务管理于一体智能化CRM管理平台，侧重潜在客户信息获取、挖掘和
+            转化服务，将企业同客户互动的过程数字化，帮助企业洞察与分析客户。</h5>
+        <div class="bottom-animate">
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/lravvlgsoar4t2mlg0g3.png" alt="客户信息管理">
+                <h5>客户信息管理</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/w1grdz5umqkucf54oo7z.png" alt="联系人管理">
+                <h5>联系人管理</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/fxa8t1xgeq7ne5uzdubn.png" alt="下次联系时间提醒">
+                <h5>下次联系时间提醒</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/xu0jv4kzba5zc09pipcf.png" alt="跟踪记录">
+                <h5>跟踪记录</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/v7zjpzk56bhkcs5v769r.png" alt="导入/导出">
+                <h5>导入/导出</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/hi0i7321oq5745ifpvw8.png" alt="办公OA">
+                <h5>办公OA</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/ponfc2ndtdz07n6g24lg.png" alt="数据共享/分配/回收">
+                <h5>数据共享/分配/回收</h5>
+            </div>
+            <div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/xqcak0gnh2c4a9ivm7fn.png" alt="统计分析">
+                <h5>统计分析</h5>
+            </div>
+        </div>
+
+    </section>
+    <section class="section_msg">
+        <h2>梅施云库</h2>
+        <div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/4cgf0dbcaw82vnma3geh.png" alt="梅施云库" class="left-animate">
+            <div class="right-animate">
+                <p><i></i>汇聚海量行业客户库，快速检索找到目标客户</p>
+                <p><i></i>提供企查查等外部数据导入，洞察客户事实</p>
+                <p class="ellipsis">...</p>
+                <button>免费试用</button>
+            </div>
+        </div>
+    </section>
+    <section class="section_msg other right">
+        <h2>客户管理</h2>
+        <div>
+            <div class="left-animate">
+                <h3>客户管理</h3>
+                <p><i></i>以客户为中心，科学记录客户档案</p>
+                <p><i></i>自定义管理标签，有针对性的高效跟进</p>
+                <p><i></i>智能展示当前客户信息及服务记录</p>
+                <p><i></i>360度客户信息动态关联展示</p>
+                <button>免费试用</button>
+            </div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/ae0cgen6ib813p92xbp5.png" alt="客户管理" class="right-animate">
+        </div>
+    </section>
+    <section class="section_msg other">
+        <div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/sbxh8q02hr6tv3it6ehr.png" alt="销售管理" class="left-animate">
+            <div class="right-animate">
+                <h3>销售管理</h3>
+                <p><i></i>商机信息关联产品明细</p>
+                <p><i></i>支持CPQ灵活敏捷报价管理</p>
+                <p><i></i>实现与ERP原生集成，落地一体化</p>
+                <p><i></i>商机销售流程可自定义</p>
+                <button>免费试用</button>
+            </div>
+        </div>
+    </section>
+    <section class="section_msg other right">
+        <div>
+            <div class="left-animate">
+                <h3>智能化分析</h3>
+                <p><i></i>目标完成情况分析</p>
+                <p><i></i>营销数据分析</p>
+                <p><i></i>支持敏感数据脱敏保护服务</p>
+                <p><i></i>支持企业私有云部署</p>
+                <button>免费试用</button>
+            </div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/dydfiwqrcmxf9k5hnbgc.png" alt="智能化分析" class="right-animate">
+        </div>
+    </section>
+    <section class="section_msg other">
+        <div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/af8k8iww6oeguqagouq3.png" alt="营销自动化" class="left-animate">
+            <div class="right-animate">
+                <h3>营销自动化</h3>
+                <p><i></i>借助营销自动化工具，实现个性推送，提升效率</p>
+                <p style="margin-bottom: 0;"><i></i>对客户线索精细化培育，将客户一步一步转换成</p>
+                <p style="padding-left: 2rem;">高频率、高客单价客户</p>
+                <button>免费试用</button>
+            </div>
+        </div>
+    </section>
+    <section class="section_third_Phone Phone">
+        <div>
+            <img src="image/goods-WMS/1777.png" alt="全程条码化追踪" style="width: 100%">
+            <img src="image/goods-WMS/27777.png" alt="全程条码化追踪" style="width: 100%">
+            <img src="image/goods-WMS/37777.png" alt="全程条码化追踪" style="width: 100%">
+        </div>
+    </section>
+    <section class="section_fourth_Phone Phone">
+        <h1>带来的价值</h1>
+        <div>
+            <img src="image/goods-WMS/gfgl.png" alt="规范管理">
+            <div>
+                <h2>规范管理</h2>
+                <h3>优化岗位职责，实现优胜略汰采购业务整合统一 ,数据准确</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/dowm.png" alt="提效降错">
+            <div>
+                <h2>提效降错</h2>
+                <h3>使用PDA，差错率降到1%，流水线分包，效率提升10倍</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/up.png" alt="提升积极性">
+            <div>
+                <h2>提升积极性</h2>
+                <h3>操作简单，快速上手，员工绩效考核，公平公正</h3>
+            </div>
+        </div>
+        <div>
+            <img src="image/goods-WMS/more-science.png" alt="仓储规划更科学">
+            <div>
+                <h2>仓储规划更科学</h2>
+                <h3>提升仓库空间利用率，缩短了仓库作业路径</h3>
+            </div>
+        </div>
+    </section>
+    <Myfooter></Myfooter>
+    <Myaside></Myaside>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                tabPosition: 'left'
+                // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
+            }
+        },
+        components:{
+            'Myfooter':httpVueLoader('components/Myfooter.vue'),
+            'Myaside':httpVueLoader('components/Myaside.vue'),
+            'Myheader':httpVueLoader('components/Myheader.vue')
+        },
+        mounted(){
+            new elementAnimate([...document.getElementsByClassName('bottom-animate')],'titleTranslateNoVolume 1s forwards')
+            new elementAnimate([...document.getElementsByClassName('left-animate')],'leftFormFlyIn 0.5s ease-out forwards')
+            new elementAnimate([...document.getElementsByClassName('right-animate')],'rightFormFlyIn 0.5s ease-out forwards')
+        }
+    })
+    //保证进入时header为一屏高度
+    let h = document.documentElement.clientHeight || document.body.clientHeight;
+    let header=document.getElementsByTagName('header')[0];
+    header.style.height=h+'px';
+</script>
+</body>
+</html>

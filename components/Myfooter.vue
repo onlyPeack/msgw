@@ -186,19 +186,56 @@
                 <span>梅施信息科技有限公司All Rights Reserved</span><div style="height: 10pt"></div>
                 <span>苏ICP备20015156号-1 | </span><img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png" alt=""><span>苏公网安备32050902101170</span>
             </div>
-
+            <footer class="Phone ">
+                <div class="ms-cloud">
+                    <div style="border-right: 2px solid rgba(255,255,255,.2)">
+                        <img src="http://gxcl-shop.qiniu.520mro.com/g6aerppt8413h6poo8eu.png" alt="">
+                        <a href="tel:0512-63632706">
+                            <span>电话咨询</span>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/k0rn475236nyl4jpudxo.png" alt="">
+                        <a href="http://cloud.msebc.com/#/phoneRegister">
+                            <span>免费试用</span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </section>
     </div>
 
 </template>
 
 <script>
+    function debounce(fn, wait) {
+        var timeout = null;
+        return function() {
+            if(timeout !== null) clearTimeout(timeout);
+            timeout = setTimeout(fn, wait);
+        }
+    }
     module.exports = {
         data() {
             return {
                 isShow: false,
                 activeName:'5'
             }
+        },
+        mounted(){
+            let element =document.getElementsByClassName('ms-cloud')[0]
+            document.addEventListener('scroll',debounce (function () {
+                console.log('到底部了',document.documentElement.clientHeight,document.documentElement.scrollTop,document.body.scrollHeight)
+                if(document.documentElement.clientHeight + document.documentElement.scrollTop>=document.body.scrollHeight-80){
+                    element.style.position='relative'
+                    element.style.backgroundColor='#283036'
+                }else{
+                    element.style.position='fixed'
+                    element.style.backgroundColor='#10151F'
+                }
+            },1000/120))
+
+
         },
 
     }
@@ -217,7 +254,7 @@
     }
 
     .T_footer{
-        height: 20.02vw;
+        min-height: 20.02vw;
         padding-top: 50px;
         /*background-image: url('../image/index/sett47.png');*/
         background-size: contain;
@@ -331,6 +368,32 @@
         .T_footer_message_item div{
             font-size: 12px;
             opacity: .7;
+        }
+        .T_footer .ms-cloud{
+            height: 3.33vh;
+            background-color: #10151F;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 999;
+            display: flex;
+            padding: 2vh 0;
+        }
+        .ms-cloud div{
+            width: 49vw;
+            font-size: 16px;
+            line-height: 3.33vh;
+            text-align: center;
+        }
+        .ms-cloud div img{
+            margin: 0;
+            width: 20px;
+            vertical-align: middle;
+        }
+        .ms-cloud div span{
+            margin-left: 10px;
+            color: #fff;
         }
     }
 </style>

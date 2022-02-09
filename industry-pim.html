@@ -32,9 +32,8 @@
         .section_card{
             margin-bottom: 62px;
         }
-        .section_card>h1{
+        .section_card>h2{
             text-align: center;
-            font-size: 2.34vw;
             padding-top: 5.2vw;
             margin-bottom: 5.2vw;
         }
@@ -113,52 +112,53 @@
             line-height: 18px;
         }
         /*E-sectionFourthPhone*/
-        /*H-article*/
-        article h1{
-            padding-top: 10.41vw;
-            font-size: 2.34vw;
+        /*H-sectionThird*/
+        .section_third{
+            color: white;
+            height: 80.7rem;
             text-align: center;
-            margin-bottom: 6.25vw;
+            background-image: url(http://gxcl-shop.qiniu.520mro.com/m1arm32ty8u3cd0dahly.png);
         }
-        @media screen and (max-width: 768px) {
-            article h1{
-                font-size: 24px;
-                margin-bottom: 8.25vw;
-            }
+        .section_third h2{
+            padding-top: 6.1rem;
+        }
+        /*H-article*/
+        article h2{
+            padding-top: 9.8rem;
+            text-align: center;
         }
         /*E-article*/
-        /*H-sectionSecond*/
-        .section_second{
-            height: 31.25vw;
-            background-repeat: no-repeat;
-            color: white;
-            background-size: contain;
-            text-indent: 16.14vw;
+        /*H-sectionMsg*/
+        .section_msg{
+            text-align: center;
+            background-color: #F5F8FC;
         }
-        .section_second h1{
-            padding-top: 13.02vw;
-            font-size: 1.25vw;
-            margin-bottom: 1.56vw;
-            font-weight: 400;
-            color: white;
+        .section_msg.right{
+            background-color: #fff;
         }
-        .section_second h3{
-            font-size: 0.93vw;
-            font-weight: 400;
-            margin-bottom: 15px;
-            color: white;
+        .section_msg h3{
+            text-align: left;
+            margin-bottom: 4rem;
         }
-        .even{
-            color: #404040;
-            text-indent: 60.41vw;
+        .section_msg>div{
+            display: flex;
+            width: 130rem;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
         }
-        .even h1{
-            color: #404040;
+        .section_msg h2{
+            margin-bottom: 3rem;
         }
-        .even h3{
-            color: #404040;
+        .section_msg p{
+            color: #666;
+            margin-bottom: 3.2rem;
+            text-align: left;
         }
-        /*E-sectionSecond*/
+        .section_msg div div{
+            width: 38.4rem;
+        }
+        /*E-sectionMsg*/
     </style>
 </head>
 <body>
@@ -171,7 +171,7 @@
         </div>
     </header>
     <section class="section_card PC">
-        <h1>产品概述</h1>
+        <h2>产品概述</h2>
         <el-row>
             <div class="section_first">
                 <el-col :span="3">
@@ -231,24 +231,44 @@
         </div>
     </section>
 
+    <section class="section_third">
+        <h2>梅施中台产品逻辑</h2>
+    </section>
     <article>
-        <h1>主要产品</h1>
+        <h2>产品功能</h2>
     </article>
-    <section class="section_second PC" style="background-image:url('image/industry/industry-pim/qjxx.png');">
-        <h1>器件选型</h1>
-        <h3>提供在线选型工具，为工控电气企业提供快速嵌入</h3>
-        <h3>官网/商城提供器件选型与替换解决方案。</h3>
+    <section class="section_msg right">
+        <div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/kyfsd4bbs3vo6pcmmrnc.png" alt="海量产品管理" class="left-animate">
+            <div class="right-animate">
+                <h3>海量产品管理</h3>
+                <p>多条产品线全覆盖，支持多维搜索：目录、品牌、 制造商物料号MPN，关键词、SKU号，智能匹配 </p>
+                <p>批量操作上万条数据，商品信息快速积累，支持内 外百万级产品库信息管理。</p>
+                <p>各大品牌的面价根据品牌官方调价实时更新</p>
+            </div>
+        </div>
     </section>
-    <section class="section_second even PC" style="background-image:url('image/industry/industry-pim/gywk.png');">
-        <h1>工业文库</h1>
-        <h3>通过快速搜索在线帮助客户查找样本、操作手册、</h3>
-        <h3>面价、证书、视频等文档资料，打通微信分享。</h3>
+    <section class="section_msg">
+        <div>
+            <div class="left-animate">
+                <h3>器件选型</h3>
+                <p>提供在线选型工具，为工控电气企业提供快速嵌入 官网/商城提供器件选型与替换解决方案。</p>
+            </div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/yjw3xxb6snbhh4l669h9.png" alt="器件选型" class="right-animate">
+        </div>
     </section>
-    <section class="section_second PC" style="background-image:url('image/industry/industry-pim/3.png');">
-        <h1>MRO营销通</h1>
-        <h3>帮助企业开发MRO营销APP，支持产品WEB 3D在</h3>
-        <h3>线展示解决方案，打通线上线下信息。</h3>
+    <section class="section_msg right">
+        <div>
+            <img src="http://gxcl-shop.qiniu.520mro.com/1o29kuq7zkw659wm6x42.png" alt="MRO营销通" class="left-animate">
+            <div class="right-animate">
+                <h3>MRO营销通</h3>
+                <p>帮助企业开发MRO营销APP，支持产品图片详情，在线展示和 选型，支持附件样本下载，打通线上线下信息。</p>
+            </div>
+        </div>
     </section>
+
+
+
     <section class="section_second_Phone Phone" style="margin-bottom: -21pt;">
         <img src="image/industry/industry-pim/器件选型.png" alt="器件选型" style="width: 100%">
         <img src="image/industry/industry-pim/工业文库.png" alt="工业文库" style="width: 100%">

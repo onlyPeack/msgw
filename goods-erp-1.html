@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="lib/element-ui/lib/theme-chalk/index.css">
     <script src="lib/element-ui/lib/index.js"></script>
-
+    <link rel="stylesheet" href="./lib/swiper/package/swiper-bundle.min.css">
     <style>
         header {
             background-image: url("http://gxcl-shop.qiniu.520mro.com/gfi8i0fcv7vnfbfyiaf0.png");
@@ -30,14 +30,13 @@
             overflow: auto;
             font-family: MicrosoftYaHei;
         }
-        .section_fourth>h1{
-            padding-top: 100px;
-            font-size: 45px;
-            margin-bottom: 130px;
+        .section_fourth>h2{
+            padding-top: 80px;
+            margin-bottom: 90px;
         }
 
         @media screen and (max-width: 768px) {
-            .section_fourth>h1{
+            .section_fourth>h2{
                 padding-top: 40px;
                 font-size: 24px;
                 margin-bottom: 40px;
@@ -51,20 +50,18 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin: 0 auto;
-            width: 80%;
+            width: 1200px;
         }
         .section_items>div{
-            width: 20.63%;
-            height: 160px;
+            width: 25%;
+            height: 140px;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
         .section_items img{
-            margin-bottom: 25px;
             transition: .5s;
         }
-        .section_items h2{
-            font-size: 20px;
+        .section_items h5{
             line-height: 40px;
             color: #5a5a5a;
             margin-bottom: 10px;
@@ -84,7 +81,7 @@
                 margin-bottom: 0;
                 height: 120px;
             }
-            .section_items h2{
+            .section_items h5{
                 font-size: 14px;
             }
             .section_items img{
@@ -94,6 +91,56 @@
         }
 
         /*E-sectionItems*/
+        /*H-sectionScroll*/
+        .section_scroll{
+            background: #F5F8FC;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+        .section_scroll h2{
+            text-align: center;
+        }
+        .section_scroll .swiper-container{
+            width: 1400px;
+        }
+        .section_scroll .swiper-slide{
+            display: flex;
+            justify-content: space-around;
+        }
+        .section_scroll .swiper-slide>div{
+            display: flex;
+            align-items: center;
+            padding-bottom: 4rem;
+            width: 120rem;
+            justify-content: space-around;
+        }
+        .section_scroll .swiper-slide .right{
+            text-align: right;
+        }
+        .section_scroll .swiper-slide h3{
+            color: #404040;
+            margin-bottom: 4.7rem;
+        }
+        .section_scroll .swiper-slide p{
+            color: #666;
+            margin-bottom: 3.2rem;
+        }
+        .section_scroll .swiper-slide button{
+            color: white;
+            background-color: #2A89F1;
+            border-radius: 999px;
+            border: 0;
+            padding: 0.7rem 2.3rem;
+            font-size: 1.6rem;
+        }
+        .section_scroll .ms-pagination{
+            transition: .5s;
+        }
+        .section_scroll .swiper-pagination-bullet-active{
+            width: 2.4rem;
+            border-radius: 999px;
+        }
+        /*E-sectionScroll*/
         /*H-sectionFirst*/
         .section_first{
             height: 47.08vw;
@@ -147,18 +194,21 @@
         /*E-sectionFirst*/
         /*H-sectionSecond*/
         .section_second{
-            margin-top: 100px;
-            padding-left: 18.75%;
+            width: 120rem;
+            margin: 0 auto;
+            padding-top: 100px;
+            display: flex;
+            justify-content: space-between;
         }
         .section_second_img{
-            width: 15.83vw;
-            float: left;
-            margin-right: 1.04vw;
+            width: 28.8rem;
+            height: 55rem;
             cursor: pointer;
             position: relative;
         }
         .section_second_img>img{
             width: 100%;
+            height: 55rem;
         }
         .section_second_img:hover .ghostImg{
             opacity: 1;
@@ -168,7 +218,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 15.83vw;
+            height: 55rem;
+            /*width: 28.8rem;*/
         }
         .section_second>img{
             margin-top: 120px;
@@ -191,13 +242,14 @@
                 height: auto;
             }
         }
-
-
-
-
-
         /*E-sectionSecond*/
-
+        /*H-sectionThree*/
+        .section_three{
+            width: 120rem;
+            margin: 100px auto 0 auto;
+            padding-bottom: 12.3rem;
+        }
+        /*E-sectionThree*/
     </style>
 </head>
 <body>
@@ -211,56 +263,136 @@
             </div>
     </header>
     <section class="section_fourth">
-        <h1>梅施ERP</h1>
+        <h2>梅施ERP</h2>
     </section>
     <section class="section_items">
         <div>
             <img src="image/goods-all-erp/xtbg.png" alt="">
-            <h2>协同办公</h2>
+            <h5>协同办公</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/cggl.png" alt="">
-            <h2>采购管理</h2>
+            <h5>采购管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/kcgl.png" alt="">
-            <h2>库存管理</h2>
+            <h5>库存管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/xsgl.png" alt="">
-            <h2>销售管理</h2>
+            <h5>销售管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/khgx.png" alt="">
-            <h2>客户关系管理</h2>
+            <h5>客户关系管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/rlzy.png" alt="">
-            <h2>人力资源</h2>
+            <h5>人力资源</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/cwgl.png" alt="">
-            <h2>财务管理</h2>
+            <h5>财务管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/jcgl.png" alt="">
-            <h2>决策分析</h2>
+            <h5>决策分析</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/jcsj.png" alt="">
-            <h2>基础数据</h2>
+            <h5>基础数据</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/xtgl.png" alt="">
-            <h2>系统管理</h2>
+            <h5>系统管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/zjgl.png" alt="">
-            <h2>资金管理</h2>
+            <h5>资金管理</h5>
         </div>
         <div>
             <img src="image/goods-all-erp/scgl.png" alt="">
-            <h2>生产管理</h2>
+            <h5>生产管理</h5>
+        </div>
+    </section>
+    <section class="section_scroll">
+        <h2>产品优势</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/5dky9chn8rwb3vwvaslw.png" alt="">
+                        <div>
+                            <h3>01、功能丰富，按需组装</h3>
+                            <p>支持采购、销售、库存及资金往来业务</p>
+                            <p>支持购销计税、存货成本核算、销售毛利计算</p>
+                            <p>支持采购、销售、库存及资金往来业务 拷贝</p>
+                            <p>支持购销计税、存货成本核算、销售毛利计算 拷贝</p>
+                            <button @click="blowUp('http://cloud.msebc.com/#/login?index=1')">立即体验</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="right">
+                        <div>
+                            <h3>02、行业特性，简单易用</h3>
+                            <p>界面统一规范，简洁易用，导航式操作</p>
+                            <p>无需安装、自动升级，云端备份数据</p>
+                            <p>云器件库快速导入，免除商品初始化麻烦</p>
+                            <p>灵活自定义，快速实现业务扩张与收缩</p>
+                            <button @click="blowUp('http://cloud.msebc.com/#/login?index=1')">立即体验</button>
+                        </div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/ol72z64xm3744weprdf9.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/6lcep7h5lshh4qf1yg2m.png" alt="" style="width: 60.2rem">
+                        <div>
+                            <h3>03、随时随地，移动协同</h3>
+                            <p>支持移动端应用，随时随地访问</p>
+                            <p>24小时高效协同工作，实时掌控</p>
+                            <p>支持移动单据审批和任务流转</p>
+                            <button @click="blowUp('http://cloud.msebc.com/#/login?index=1')">立即体验</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="right">
+                        <div>
+                            <h3>04、灵活配置，数据联查</h3>
+                            <p>支持列表及单据字段灵活UI配置</p>
+                            <p>首页统计卡片与图表自由配置</p>
+                            <p>用户、岗位的功能和数据权限精细配置</p>
+                            <p>业务单据字段栏目灵活配置 拷贝</p>
+                            <p>报表数据无限层穿透钻取</p>
+                            <button @click="blowUp('http://cloud.msebc.com/#/login?index=1')">立即体验</button>
+                        </div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/3bwuwgobv4fo487txib9.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="http://gxcl-shop.qiniu.520mro.com/uhu95tt6doyb3yz380gh.png" alt="安全可靠，实时备份" style="width: 67.93rem">
+                        <div>
+                            <h3>05、安全可靠，实时备份</h3>
+                            <p>云端实时备份，阿里云盾实时防护</p>
+                            <p>严格管控数据库，所有操作可审计</p>
+                            <p>支持敏感数据脱敏保护服务</p>
+                            <p>支持企业私有云部署</p>
+                            <button @click="blowUp('http://cloud.msebc.com/#/login?index=1')">立即体验</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
     </section>
     <section class="section_first">
@@ -298,11 +430,16 @@
             <img src="image/goods-all-erp/4@2x.png" alt="" class="Phone">
             <img src="image/goods-all-erp/4.png" alt="" class="ghostImg PC">
         </div>
-        <img src="image/goods-all-erp/dbd.png" alt="" style="width: 82%" @click="blowUp('image/goods-all-erp/dbd.png')">
+<!--        <img src="image/goods-all-erp/dbd.png" alt="" style="width: 82%" @click="blowUp('image/goods-all-erp/dbd.png')">-->
+    </section>
+    <section class="section_three" style="font-size: 0">
+        <img src="http://gxcl-shop.qiniu.520mro.com/50a090t91obhcxjb7ces.png" alt="" style="position: sticky;top: 0">
+        <img src="http://gxcl-shop.qiniu.520mro.com/abm3ervssxlwcvqxdm76.png" alt="">
     </section>
     <Myfooter></Myfooter>
     <Myaside></Myaside>
 </div>
+<script src="lib/swiper/package/swiper-bundle.min.js"></script>
 <script>
     new Vue({
         el: '#app',
@@ -322,6 +459,31 @@
             blowUp(url){
                 window.open(url,'_blank')
             }
+        },
+        mounted(){
+            let swiper=new Swiper ('.swiper-container', {
+                loop: true, // 循环模式选项
+                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return `<span class="${className} ms-pagination"></span>`;
+                    },
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    hideOnClick:true,
+                },
+            })
+            setTimeout(function () {
+                swiper.update()
+            },10)
         }
     })
     //保证进入时header为一屏高度

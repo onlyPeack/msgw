@@ -252,10 +252,10 @@
         /*E-sectionCard*/
         /*H-sectionList*/
         .section_list {
-            height: 31.25vw;
             background-image: url('http://gxcl-shop.qiniu.520mro.com/4t7deh9oy2yk5g8sibx2.png');
             margin-top: 5.2vw;
-            padding-top: 4.16vw;
+            padding-top: 8.5rem;
+            padding-bottom: 5.1rem;
             background-repeat: no-repeat;
         }
 
@@ -263,7 +263,7 @@
             font-size: 2.34vw;
             color: white;
             text-align: center;
-            margin-bottom: 3.75vw;
+            margin-bottom: 5.4rem;
         }
 
         .section_list > div {
@@ -272,18 +272,18 @@
 
         .section_list div {
             color: white;
-            font-size: 1.25vw;
+            font-size: 2.2rem;
             line-height: 40px;
         }
 
         .section_list div .el-tabs__item {
-            height: 4.16vw;
-            line-height: 4.16vw;
+            height: 6rem;
+            line-height: 6rem;
         }
 
         .section_list > div h1 {
             text-align: left;
-            font-size: 1.77vw;
+            font-size: 3.2rem;
             font-weight: 400;
         }
 
@@ -293,30 +293,34 @@
 
         .section_list_contain h1 {
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 2.4rem;
+            margin-top: 2.6rem;
         }
 
-        .section_list_contain h2 {
+        .section_list_contain h4 {
             font-weight: 400;
             line-height: 24px;
-            font-size: 24px;
             margin-bottom: 15px;
         }
 
         .section_list_contain a {
-            color: #3782FE;
+            color: white;
         }
 
         .section_list_contain button {
-            color: #3782FE;
-            background-color: white;
             width: 110px;
             height: 32px;
             border-radius: 16px;
             border: 0;
             font-size: 16px;
-            font-family: 微软雅黑;
             margin-top: 50px;
+            background-color: #2A89F1;
+        }
+
+        .section_list_contain button:last-child {
+            background-color: unset;
+            border: 1px solid #fff;
+            margin-left: 20px;
         }
 
         @media screen and (max-width: 768px) {
@@ -385,6 +389,19 @@
         }
 
         /*E-footer*/
+        /*H-tips*/
+        .tips{
+            width: 392px;
+            height: 160px;
+            border-radius: 10px;
+            background-color: #fff;
+            position: fixed;
+            left: 30px;
+            top: 80vh;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
+        }
+        /*E-tips*/
     </style>
 </head>
 <body>
@@ -437,9 +454,7 @@
                         <img src="image/index/e-erp.png">
                         <h1>电商ERP一体化</h1>
                         <h3>专业为工业品销售企业提供电商系统及
-                            服务，集成订单管理、供应链管理、商
-                            城运营、仓储管理、移动商城等按需定
-                            制系统，为企业快速构建..
+                            服务，集成订单管理、供应链管理、商城运营、仓储管理、移动商城等按需定制系统，为企业快速构建..
                         </h3>
                         <el-button type="text" class="button"><a href="project-erp.html">了解更多》</a></el-button>
                     </el-card>
@@ -490,29 +505,18 @@
         </el-row>
     </section>
     <section class="section_list">
-        <h1>我们的产品</h1>
+        <h1 style="font-size: 4rem">我们的产品</h1>
         <div>
             <el-tabs :tab-position="tabPosition">
-                <el-tab-pane label="云ERP">
+                <el-tab-pane :label="item.label" v-for="item in myGoods">
                     <div class="section_list_contain">
-                        <h1>梅施云ERP</h1>
-                        <h2>标准版、专业版、生产版，满足行业中小企业一切需要。</h2>
-                        <button><a href="http://erp.msebc.com/">免费试用</a></button>
-                    </div>
-                </el-tab-pane>
-                <el-tab-pane label="WMS">
-                    <div class="section_list_contain">
-                        <h1>梅施云WMS</h1>
-                        <h2>工业领域领先的一体化仓储方案，提升仓库作业效率。</h2>
-                        <button><a href="http://erp.msebc.com/">免费试用</a></button>
-                    </div>
-                </el-tab-pane>
-                <el-tab-pane label="云课堂">
-                    <div class="section_list_contain">
-                        <h1>梅施云课堂</h1>
-                        <h2>快速搭建你的自动化技术学院，自动化企业培训，一站式搞定</h2>
-                        <h2>搭系统、找课程、排考试、约讲师、管数据。</h2>
-                        <button><a href="http://erp.msebc.com/">免费试用</a></button>
+                        <h1>{{item.label}}</h1>
+                        <div v-if="item.content instanceof Array">
+                            <h4 v-for="child in item.content">{{child}}</h4>
+                        </div>
+                        <h4 v-else>{{item.content}}</h4>
+                        <button><a :href="item.leftLink">免费试用</a></button>
+                        <button><a :href="item.rightLink">查看详情</a></button>
                     </div>
                 </el-tab-pane>
             </el-tabs>
@@ -524,6 +528,19 @@
     <!--    </footer>-->
     <Myfooter></Myfooter>
     <Myaside></Myaside>
+    <div class="tips PC" v-if="isTip">
+        <div style="text-align: right;padding-top: 15px;padding-right: 20px;cursor: pointer">
+            <img src="http://gxcl-shop.qiniu.520mro.com/cr6lc5hlz04gj5hdkt31.png" alt="close" @click="isTip=false">
+        </div>
+        <div style="display: flex;align-items: center;padding-left: 27px;">
+            <img src="http://gxcl-shop.qiniu.520mro.com/mqhzzcv2ih07b91ab28w.png" alt="梅施云">
+            <span style="font-size: 22px;color: #333;margin-left: 15px;">立即注册，免费试用30天</span>
+        </div>
+        <div style="margin-top: 15px;padding-left: 90px;">
+            <el-button style="background: #2497F7;color: white;border: 0;font-size: 20px;font-family: unset" @click="goRegister">免费试用</el-button>
+            <el-button style="border: 2px solid #2497F7;color: #2497F7;font-size: 20px;padding: 10px 18px;font-family: unset" @click="goQQ">咨询客服</el-button>
+        </div>
+    </div>
 </div>
 <script src="./js/elementAnimate.js"></script>
 <script>
@@ -534,12 +551,12 @@
 </script>
 <script src="lib/swiper/package/swiper-bundle.min.js"></script>
 <script>
-
     new Vue({
         el: '#app',
         data: function () {
             return {
                 visible: false,
+                isTip:true,
                 tabPosition: 'left',
                 timeout: 100,
                 arrow: 'hover',
@@ -560,6 +577,43 @@
                         mobile:['践行梅花精神','不畏艰难','撬动浩瀚的IT宇宙'],
                         pic:'http://gxcl-shop.qiniu.520mro.com/yew83t7cdf6d9o9r6mfa.png'
                     }
+                ],
+                myGoods:[
+                    {
+                        label:'云ERP',
+                        title:'梅施云ERP',
+                        content:'标准版、专业版、生产版，满足行业中小企业一切需要。',
+                        leftLink:'http://erp.msebc.com/',
+                        rightLink:'./goods-erp-1.html'
+                    },
+                    {
+                        label:'MRO电商',
+                        title:'MRO电商',
+                        content:'为行业企业构建MRO专业B2B商城，助力MRO企业迈进产业互联网新时代。',
+                        leftLink:'http://erp.msebc.com/',
+                        rightLink:'http://erp.msebc.com/'
+                    },
+                    {
+                        label:'云CRM',
+                        title:'梅施云CRM',
+                        content:'为工业品贸易商、工程商、集成商和品牌商，量身定制信息化解决方案，支持私有云和SAAS云灵活部署。',
+                        leftLink:'http://erp.msebc.com/',
+                        rightLink:'./goods-crm.html'
+                    },
+                    {
+                        label:'物联网IOT',
+                        title:'物联网IOT',
+                        content:'IOT快速开发平台连结工业物理世界的利器，快速构建个性化应用和数字孪生工厂。',
+                        leftLink:'http://erp.msebc.com/',
+                        rightLink:'./goods-iot.html'
+                    },
+                    {
+                        label:'云课堂',
+                        title:'梅施云课堂',
+                        content:['快速搭建你的自动化技术学院，自动化企业培训，一站式搞定','搭系统、找课程、排考试、约讲师、管数据。'],
+                        leftLink:'http://erp.msebc.com/',
+                        rightLink:'http://erp.msebc.com/'
+                    },
                 ]
                 // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
             }
@@ -600,6 +654,14 @@
             setTimeout(function () {
                 swiper.update()
             },10)
+        },
+        methods:{
+            goQQ(){
+                window.open('http://wpa.qq.com/msgrd?v=3&uin=3368906505&site=qq&menu=yes','_blank')
+            },
+            goRegister(){
+                window.open('http://cloud.msebc.com/#/login?index=1','_blank')
+            }
         }
     })
 
